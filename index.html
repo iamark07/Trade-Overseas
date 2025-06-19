@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/fevicon.webp" type="image/png" />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- owl caraousel link-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <title>Trade Overseas</title>
+
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Announcement Bar -->
+    <div class="top-header-bar announcement-bar lg:flex hidden">
+        <i class="ri-megaphone-fill announcement-bar-icon px-5"></i>
+        <div class="announcement-bar-slider">
+            <span><i class="ri-fire-fill"></i> Summer Sale: Up to 50% OFF on Electronics!</span>
+            <div class="announcement-bar-divider"></div>
+            <span><i class="ri-truck-fill"></i> Free Global Shipping on Orders Above $100!</span>
+            <div class="announcement-bar-divider"></div>
+            <span><i class="ri-gift-fill"></i> New Arrivals: Explore Trending Products!</span>
+            <div class="announcement-bar-divider"></div>
+            <span><i class="ri-shield-check-fill"></i> 100% Buyer Protection Guaranteed!</span>
+        </div>
+    </div>
+    <!-- Header -->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <!-- Header/Navbar -->
+        <header class="ecom-header">
+            <div class="container mx-auto flex justify-between items-center px-5 py-5 md:px-8 gap-10 relative">
+                <!-- Delivery & Language Selectors -->
+                <div class="header-selectors items-center gap-4 hidden lg:flex">
+                    <button class="header-location-btn flex items-center gap-2" id="open-location-modal">
+                        <span class="text-sm">Deliver to:</span>
+                        <span class="header-flag">🇮🇳</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <button class="header-lang-btn flex items-center gap-2" id="open-lang-modal">
+                        <i class="ri-global-line text-lg"></i>
+                        <span class="header-lang text-sm">EN</span>
+                        <span class="header-currency text-sm">INR</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                </div>
+                <!-- Logo -->
+                <a href="index.html" class="ecom-header-logo absolute top-5 left-1/2 -translate-x-1/2">
+                    <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" />
+                </a>
+                <!-- Navigation -->
+                <nav class="ecom-header-nav flex-1 justify-center gap-6 hidden">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Categories</a>
+                    <a href="#" class="nav-link">Deals</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+                <!-- User Actions -->
+                <div class="ecom-header-actions">
+                    <button class="ecom-header-icon-btn" title="Wishlist">
+                        <i class="ri-heart-3-line"></i>
+                    </button>
+                    <button class="ecom-header-icon-btn" title="Cart">
+                        <i class="ri-shopping-cart-2-line"></i>
+                        <span class="ecom-header-cart-badge">2</span>
+                    </button>
+                    <button class="ecom-header-icon-btn" title="Sign In">
+                        <i class="ri-user-3-line"></i>
+                        <span class="header-sign-in-btn">Sign in</span>
+                    </button>
+                    <div class="header-profile-group relative" id="header-profile-group">
+                        <button class="header-profile-btn flex items-center gap-2" id="open-profile-dropdown">
+                            <span class="header-profile-avatar">A</span>
+                            <span class="header-profile-name hidden md:inline">Amit</span>
+                            <i class="ri-arrow-down-s-line text-lg"></i>
+                        </button>
+                        <div class="header-profile-dropdown" id="profile-dropdown">
+                            <a href="#" class="header-profile-dropdown-link"><i class="ri-user-3-line"></i> My
+                                Account</a>
+                            <a href="#" class="header-profile-dropdown-link"><i class="ri-file-list-3-line"></i>
+                                Orders</a>
+                            <a href="#" class="header-profile-dropdown-link"><i class="ri-heart-3-line"></i>
+                                Wishlist</a>
+                            <div class="header-profile-dropdown-divider"></div>
+                            <a href="#" class="header-profile-dropdown-link logout"><i class="ri-logout-box-r-line"></i>
+                                Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hamburger (Mobile) -->
+                <button class="ecom-header-hamburger" aria-label="Open menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </header>
+        <div class="hero-content">
+            <div class="container mx-auto px-5 md:px-10">
+                <h1 class="hero-title">Discover & Trade Globally With <br><span>Confidence</span></h1>
+                <p class="hero-subtitle">Find millions of products, trusted suppliers, and unbeatable deals-delivered to
+                    your doorstep worldwide.</p>
+                <form class="hero-searchbox" action="#" method="get">
+                    <div class="relative w-full">
+                        <input type="text" id="searchInput"/>
+
+                        <!-- Flip placeholder wrapper -->
+                        <div id="flipPlaceholder"
+                            class="">
+                            <div class="animate-flip-placeholder">
+                                <div>Search products, brands and more...</div>
+                                <div>iPhones 15 Pro Max</div>
+                                <div>T-Shirts</div>
+                                <div>Kitchen Accessories</div>
+                                <div>Smart Watches</div>
+                                <div>Search products, brands and more...</div> <!-- Duplicate for loop -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="file" class="hidden" id="image-search-input" title="Image Search"></input>
+                    <label for="image-search-input" class="hero-searchbox-camera"><i class="ri-camera-line"></i></label>
+                    <button type="submit" class="hero-searchbox-btn"><i class="ri-search-line"></i></button>
+                </form>
+                <div class="hero-frequent-row">
+                    <span class="hero-frequent-label">Frequently searched:</span>
+                    <a href="#" class="hero-frequent-pill">iphones 15 pro max</a>
+                    <a href="#" class="hero-frequent-pill">T-Shirts</a>
+                    <a href="#" class="hero-frequent-pill">Kitchen Accessories</a>
+                    <a href="#" class="hero-frequent-pill">Smart Watches</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Location Modal Popup-->
+    <div class="header-modal" id="location-modal">
+        <div class="header-modal-content">
+            <button class="header-modal-close" id="close-location-modal"><i class="ri-close-line"></i></button>
+            <h3 class="header-modal-title">Select your delivery location</h3>
+            <p class="header-modal-desc">Choose your country to see products and offers for your region.</p>
+            <select class="header-modal-select">
+                <option value="IN">🇮🇳 India</option>
+                <option value="US">🇺🇸 United States</option>
+                <option value="GB">🇬🇧 United Kingdom</option>
+                <option value="AE">🇦🇪 UAE</option>
+                <option value="CN">🇨🇳 China</option>
+            </select>
+            <button class="header-modal-save">Save</button>
+        </div>
+    </div>
+    <!-- Language/Currency Modal Popup-->
+    <div class="header-modal" id="lang-modal">
+        <div class="header-modal-content">
+            <button class="header-modal-close" id="close-lang-modal"><i class="ri-close-line"></i></button>
+            <h3 class="header-modal-title">Set language and currency</h3>
+            <p class="header-modal-desc">Select your preferred language and currency. You can update the settings at any
+                time.</p>
+            <div class="header-modal-row">
+                <label>Language</label>
+                <select class="header-modal-select">
+                    <option>English</option>
+                    <option>हिन्दी</option>
+                    <option>العربية</option>
+                    <option>中文</option>
+                </select>
+            </div>
+            <div class="header-modal-row">
+                <label>Currency</label>
+                <select class="header-modal-select">
+                    <option>INR - Indian Rupee</option>
+                    <option>USD - US Dollar</option>
+                    <option>AED - Dirham</option>
+                    <option>CNY - Yuan</option>
+                </select>
+            </div>
+            <button class="header-modal-save">Save</button>
+        </div>
+    </div>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <!-- custom script link -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
