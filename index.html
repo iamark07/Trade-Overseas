@@ -28,7 +28,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
     <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
 
     <title>Trade Overseas</title>
 
@@ -56,7 +58,7 @@
         <div class="hero-overlay"></div>
         <!-- Header/Navbar -->
         <header class="ecom-header">
-            <div class="container mx-auto flex justify-between items-center px-5 py-5 md:px-8 gap-10 relative">
+            <div class="container mx-auto flex justify-between items-center px-5 py-3 sm:py-5 md:px-8 gap-10 relative">
                 <!-- Delivery & Language Selectors -->
                 <div class="header-selectors items-center gap-4 hidden lg:flex">
                     <button class="header-location-btn flex items-center gap-2" id="open-location-modal">
@@ -72,7 +74,7 @@
                     </button>
                 </div>
                 <!-- Logo -->
-                <a href="index.html" class="ecom-header-logo absolute top-5 left-1/2 -translate-x-1/2">
+                <a href="index.html" class="ecom-header-logo lg:absolute lg:top-5 lg:left-1/2 lg:-translate-x-1/2">
                     <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" />
                 </a>
                 <!-- Navigation -->
@@ -84,7 +86,7 @@
                     <a href="#" class="nav-link">Contact</a>
                 </nav>
                 <!-- User Actions -->
-                <div class="ecom-header-actions">
+                <div class="ecom-header-actions hidden lg:flex">
                     <button class="ecom-header-icon-btn" title="Wishlist">
                         <i class="ri-heart-3-line"></i>
                     </button>
@@ -116,53 +118,109 @@
                     </div>
                 </div>
                 <!-- Hamburger (Mobile) -->
-                <button class="ecom-header-hamburger" aria-label="Open menu">
+                <button class="ecom-header-hamburger lg:hidden" aria-label="Open menu">
                     <i class="ri-menu-line"></i>
                 </button>
             </div>
         </header>
-        <div class="hero-content">
+        <div class="hero-content w-full">
             <div class="container mx-auto px-5 md:px-10">
-                <h1 class="hero-title">Discover & Trade Globally With <br><span>Confidence</span></h1>
-                <p class="hero-subtitle">Find millions of products, trusted suppliers, and unbeatable deals-delivered to
-                    your doorstep worldwide.</p>
-                <form class="hero-searchbox" action="#" method="get">
-                    <div class="relative w-full">
-                        <input type="text" id="searchInput"/>
+                <div class="w-full lg:max-w-4xl">
+                    <h1 class="hero-title text-2xl sm:text-3xl lg:text-5xl">Discover & Trade Globally With <br
+                            class="hidden lg:block"><span>Confidence</span></h1>
+                    <p class="hero-subtitle text-sm sm:text-base">Find millions of products, trusted suppliers, and
+                        unbeatable deals-delivered to your doorstep worldwide.</p>
+                    <form class="hero-searchbox overflow-hidden" action="#" method="get">
+                        <div class="relative w-[188px] sm:w-full">
+                            <input type="text" id="searchInput" class="w-full" />
 
-                        <!-- Flip placeholder wrapper -->
-                        <div id="flipPlaceholder"
-                            class="">
-                            <div class="animate-flip-placeholder">
-                                <div>Search products, brands and more...</div>
-                                <div>iPhones 15 Pro Max</div>
-                                <div>T-Shirts</div>
-                                <div>Kitchen Accessories</div>
-                                <div>Smart Watches</div>
-                                <div>Search products, brands and more...</div> <!-- Duplicate for loop -->
+                            <!-- Flip placeholder wrapper -->
+                            <div id="flipPlaceholder" class="">
+                                <div class="animate-flip-placeholder">
+                                    <div>Search products, brands and more...</div>
+                                    <div>iPhones 15 Pro Max</div>
+                                    <div>T-Shirts</div>
+                                    <div>Kitchen Accessories</div>
+                                    <div>Smart Watches</div>
+                                    <div>Search products, brands and more...</div> <!-- Duplicate for loop -->
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div
+                            class="absolute top-1/2 -translate-y-1/2 right-[3px] gap-1 sm:gap-2 flex items-center bg-white z-10">
+                            <input type="file" class="hidden" id="image-search-input" title="Image Search"></input>
+                            <label for="image-search-input" class="hero-searchbox-camera"><i
+                                    class="ri-camera-line"></i></label>
+                            <button type="submit" class="hero-searchbox-btn"><i class="ri-search-line"></i></button>
+                        </div>
 
-                    <input type="file" class="hidden" id="image-search-input" title="Image Search"></input>
-                    <label for="image-search-input" class="hero-searchbox-camera"><i class="ri-camera-line"></i></label>
-                    <button type="submit" class="hero-searchbox-btn"><i class="ri-search-line"></i></button>
-                </form>
-                <div class="hero-frequent-row">
-                    <span class="hero-frequent-label">Frequently searched:</span>
-                    <a href="#" class="hero-frequent-pill">iphones 15 pro max</a>
-                    <a href="#" class="hero-frequent-pill">T-Shirts</a>
-                    <a href="#" class="hero-frequent-pill">Kitchen Accessories</a>
-                    <a href="#" class="hero-frequent-pill">Smart Watches</a>
+                    </form>
+                    <div class="hero-frequent-row">
+                        <span class="hero-frequent-label hidden lg:block">Frequently searched:</span>
+                        <a href="#" class="hero-frequent-pill">iphones 15 pro max</a>
+                        <a href="#" class="hero-frequent-pill">T-Shirts</a>
+                        <a href="#" class="hero-frequent-pill">Kitchen Accessories</a>
+                        <a href="#" class="hero-frequent-pill">Smart Watches</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-profile-info">
+                <span class="mobile-menu-profile-avatar">A</span>
+                <div class="mobile-menu-profile-details">
+                    <div class="mobile-menu-profile-name">Amit Kumar</div>
+                    <div class="mobile-menu-profile-email">amit@email.com</div>
+                </div>
+            </div>
+            <a href="#" class="mobile-menu-profile-logout">
+                <i class="ri-logout-circle-line"></i>
+                <span>Logout</span>
+            </a>
+            <!-- <button class="mobile-menu-close" id="close-mobile-menu"><i class="ri-close-line"></i></button> -->
+        </div>
+        <div class="mobile-menu-content">
+            <!-- Navigation -->
+            <nav class="mobile-menu-nav">
+                <a href="#" class="mobile-menu-nav-link active"><i class="ri-home-4-line"></i> Home</a>
+                <a href="#" class="mobile-menu-nav-link"><i class="ri-apps-2-line"></i> Categories</a>
+                <a href="#" class="mobile-menu-nav-link"><i class="ri-flashlight-line"></i> Deals</a>
+                <a href="#" class="mobile-menu-nav-link"><i class="ri-information-line"></i> About</a>
+                <a href="#" class="mobile-menu-nav-link"><i class="ri-contacts-book-line"></i> Contact</a>
+            </nav>
+            <div class="mobile-menu-divider"></div>
+            <!-- User Actions -->
+            <div class="mobile-menu-actions">
+                <a href="#" class="mobile-menu-action-link"><i class="ri-user-3-line"></i> My Account</a>
+                <a href="#" class="mobile-menu-action-link"><i class="ri-file-list-3-line"></i> Orders</a>
+                <a href="#" class="mobile-menu-action-link"><i class="ri-heart-3-line"></i> Wishlist</a>
+                <a href="#" class="mobile-menu-action-link"><i class="ri-shopping-cart-2-line"></i> Cart <span
+                        class="badge">2</span></a>
+                <a href="#" class="mobile-menu-action-link"><i class="ri-user-3-line"></i> Sign In / Register</a>
+            </div>
+            <div class="mobile-menu-divider"></div>
+            <!-- Selectors -->
+            <div class="mobile-menu-selectors">
+                <button class="mobile-menu-selector-btn flex items-center gap-1" id="mobile-open-location-modal">
+                    <span class="text-xs">Deliver to:</span>
+                    <span class="header-flag">🇮🇳</span>
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <button class="mobile-menu-selector-btn flex items-center gap-1" id="mobile-open-lang-modal">
+                    <i class="ri-global-line text-xs"></i>
+                    <span class="header-lang text-xs">EN</span>
+                    <span class="header-currency text-xs">INR</span>
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+            </div>
 
-
-
-
+        </div>
+    </div>
 
     <!-- Location Modal Popup-->
     <div class="header-modal" id="location-modal">

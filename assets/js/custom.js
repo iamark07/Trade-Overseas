@@ -58,3 +58,36 @@ if (profileGroup && profileBtn) {
         }
     });
 }
+
+// Mobile menu toggle
+const hamburger = document.querySelector('.ecom-header-hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+function toggleMobileMenu(show) {
+    if (show) {
+        mobileMenu.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+    } else {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+    }
+}
+hamburger?.addEventListener('click', () => toggleMobileMenu(true));
+closeMobileMenu?.addEventListener('click', () => toggleMobileMenu(false));
+mobileMenuOverlay?.addEventListener('click', () => toggleMobileMenu(false));
+
+// Mobile menu selectors open same modals as desktop
+const mobileOpenLocation = document.getElementById('mobile-open-location-modal');
+const mobileOpenLang = document.getElementById('mobile-open-lang-modal');
+mobileOpenLocation?.addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleMobileMenu(false);
+    modalToggle('location-modal', true);
+});
+mobileOpenLang?.addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleMobileMenu(false);
+    modalToggle('lang-modal', true);
+});
