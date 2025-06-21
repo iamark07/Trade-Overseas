@@ -1,93 +1,67 @@
-// // Announcement bar slider duplication for seamless animation
-// window.addEventListener('DOMContentLoaded', function() {
-//     const slider = document.querySelector('.announcement-bar-slider');
-//     if (slider) {
-//         const clone = slider.cloneNode(true);
-//         slider.parentNode.appendChild(clone);
-//     }
-// });
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize AOS
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+        once: true, // whether animation should happen only once - while scrolling down
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuButton = document.querySelector(".mobile-menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const searchBar = document.getElementById("mobile-search-bar");
 
-// Modal open/close for header selectors
-function modalToggle(modalId, show) {
-    const modal = document.getElementById(modalId);
-    if (!modal) return;
-    if (show) {
-        modal.classList.add('active');
-    } else {
-        modal.classList.remove('active');
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
     }
-}
-document.addEventListener('DOMContentLoaded', function() {
-    // Location modal
-    document.getElementById('open-location-modal')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        modalToggle('location-modal', true);
-    });
-    document.getElementById('close-location-modal')?.addEventListener('click', function() {
-        modalToggle('location-modal', false);
-    });
-    // Language modal
-    document.getElementById('open-lang-modal')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        modalToggle('lang-modal', true);
-    });
-    document.getElementById('close-lang-modal')?.addEventListener('click', function() {
-        modalToggle('lang-modal', false);
-    });
-    // Close modal on outside click
-    document.querySelectorAll('.header-modal').forEach(function(modal) {
-        modal.addEventListener('mousedown', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
+
+    // --- Categories Dropdown Logic ---
+    const categoriesBtn = document.querySelector(".all-categories-btn");
+    const categoriesDropdown = document.getElementById("categories-dropdown");
+
+    if (categoriesBtn && categoriesDropdown) {
+        categoriesBtn.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents the window click event from firing immediately
+            categoriesDropdown.classList.toggle('active');
+            categoriesBtn.classList.toggle('active');
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener('click', (event) => {
+            if (!categoriesDropdown.contains(event.target) && !categoriesBtn.contains(event.target)) {
+                categoriesDropdown.classList.remove('active');
+                categoriesBtn.classList.remove('active');
             }
         });
-    });
-});
+    }
 
-// Profile dropdown open/close
-const profileGroup = document.getElementById('header-profile-group');
-const profileBtn = document.getElementById('open-profile-dropdown');
-if (profileGroup && profileBtn) {
-    profileBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        profileGroup.classList.toggle('open');
-    });
-    document.addEventListener('mousedown', function(e) {
-        if (!profileGroup.contains(e.target)) {
-            profileGroup.classList.remove('open');
+    // --- Full-Screen Search Overlay Logic ---
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchInput = searchOverlay.querySelector('input');
+    const openSearchDesktop = document.getElementById('search-trigger');
+    const openSearchMobile = document.getElementById('search-trigger-mobile');
+    const closeSearchBtn = document.getElementById('close-search-btn');
+
+    const openSearch = (e) => {
+        e.preventDefault();
+        searchOverlay.classList.add('search-overlay-visible');
+        searchOverlay.classList.remove('search-overlay-hidden');
+        setTimeout(() => searchInput.focus(), 400); // Focus after transition
+    };
+
+    const closeSearch = () => {
+        searchOverlay.classList.remove('search-overlay-visible');
+        searchOverlay.classList.add('search-overlay-hidden');
+    };
+
+    openSearchDesktop.addEventListener('click', openSearch);
+    openSearchMobile.addEventListener('click', openSearch);
+    closeSearchBtn.addEventListener('click', closeSearch);
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchOverlay.classList.contains('search-overlay-visible')) {
+            closeSearch();
         }
     });
-}
-
-// Mobile menu toggle
-const hamburger = document.querySelector('.ecom-header-hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-const closeMobileMenu = document.getElementById('close-mobile-menu');
-
-function toggleMobileMenu(show) {
-    if (show) {
-        mobileMenu.classList.add('active');
-        mobileMenuOverlay.classList.add('active');
-    } else {
-        mobileMenu.classList.remove('active');
-        mobileMenuOverlay.classList.remove('active');
-    }
-}
-hamburger?.addEventListener('click', () => toggleMobileMenu(true));
-closeMobileMenu?.addEventListener('click', () => toggleMobileMenu(false));
-mobileMenuOverlay?.addEventListener('click', () => toggleMobileMenu(false));
-
-// Mobile menu selectors open same modals as desktop
-const mobileOpenLocation = document.getElementById('mobile-open-location-modal');
-const mobileOpenLang = document.getElementById('mobile-open-lang-modal');
-mobileOpenLocation?.addEventListener('click', function(e) {
-    e.preventDefault();
-    toggleMobileMenu(false);
-    modalToggle('location-modal', true);
-});
-mobileOpenLang?.addEventListener('click', function(e) {
-    e.preventDefault();
-    toggleMobileMenu(false);
-    modalToggle('lang-modal', true);
 });

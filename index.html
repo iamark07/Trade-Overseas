@@ -29,243 +29,601 @@
 
     <!-- Google Fonts: Inter -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
 
     <title>Trade Overseas</title>
 
 </head>
 
-<body class="overflow-x-hidden">
-    <!-- Announcement Bar -->
-    <div class="top-header-bar announcement-bar lg:flex hidden">
-        <i class="ri-megaphone-fill announcement-bar-icon px-5"></i>
-        <div class="announcement-bar-slider">
-            <span><i class="ri-fire-fill"></i> Summer Sale: Up to 50% OFF on Electronics!</span>
-            <div class="announcement-bar-divider"></div>
-            <span><i class="ri-truck-fill"></i> Free Global Shipping on Orders Above $100!</span>
-            <div class="announcement-bar-divider"></div>
-            <span><i class="ri-gift-fill"></i> New Arrivals: Explore Trending Products!</span>
-            <div class="announcement-bar-divider"></div>
-            <span><i class="ri-shield-check-fill"></i> 100% Buyer Protection Guaranteed!</span>
-        </div>
-    </div>
-    <!-- Header -->
+<body class="overflow-x-hidden bg-[#fafafa] font-['Inter']">
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <!-- Header/Navbar -->
-        <header class="ecom-header">
-            <div class="container mx-auto flex justify-between items-center px-5 py-3 sm:py-5 md:px-8 gap-10 relative">
-                <!-- Delivery & Language Selectors -->
-                <div class="header-selectors items-center gap-4 hidden lg:flex">
-                    <button class="header-location-btn flex items-center gap-2" id="open-location-modal">
-                        <span class="text-sm">Deliver to:</span>
-                        <span class="header-flag">🇮🇳</span>
-                        <i class="ri-arrow-down-s-line"></i>
-                    </button>
-                    <button class="header-lang-btn flex items-center gap-2" id="open-lang-modal">
-                        <i class="ri-global-line text-lg"></i>
-                        <span class="header-lang text-sm">EN</span>
-                        <span class="header-currency text-sm">INR</span>
-                        <i class="ri-arrow-down-s-line"></i>
-                    </button>
+    <header class="bg-gray-900 shadow-md z-50 text-white overflow-hidden">
+        <!-- Header Content -->
+        <div class="relative z-10">
+            <div class="container mx-auto px-5 md:px-10 relative">
+                <!-- Background Aurora Effect -->
+                <div class="absolute top-0 left-0 w-full h-full z-0">
+                    <div class="aurora-blob blob-1"></div>
+                    <div class="aurora-blob blob-2"></div>
                 </div>
-                <!-- Logo -->
-                <a href="index.html" class="ecom-header-logo lg:absolute lg:top-5 lg:left-1/2 lg:-translate-x-1/2">
-                    <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" />
-                </a>
-                <!-- Navigation -->
-                <nav class="ecom-header-nav flex-1 justify-center gap-6 hidden">
-                    <a href="#" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link">Categories</a>
-                    <a href="#" class="nav-link">Deals</a>
-                    <a href="#" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Contact</a>
-                </nav>
-                <!-- User Actions -->
-                <div class="ecom-header-actions hidden lg:flex">
-                    <button class="ecom-header-icon-btn" title="Wishlist">
-                        <i class="ri-heart-3-line"></i>
-                    </button>
-                    <button class="ecom-header-icon-btn" title="Cart">
-                        <i class="ri-shopping-cart-2-line"></i>
-                        <span class="ecom-header-cart-badge">2</span>
-                    </button>
-                    <button class="ecom-header-icon-btn" title="Sign In">
-                        <i class="ri-user-3-line"></i>
-                        <span class="header-sign-in-btn">Sign in</span>
-                    </button>
-                    <div class="header-profile-group relative" id="header-profile-group">
-                        <button class="header-profile-btn flex items-center gap-2" id="open-profile-dropdown">
-                            <span class="header-profile-avatar">A</span>
-                            <span class="header-profile-name hidden md:inline">Amit</span>
-                            <i class="ri-arrow-down-s-line text-lg"></i>
+                <!-- Desktop Header -->
+                <div class="flex justify-between items-center py-5 relative z-10">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="index.html">
+                            <img class="h-10 md:h-16" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
+                        </a>
+                    </div>
+
+                    <!-- Attractive Search Bar -->
+                    <div class="flex-grow max-w-xl w-full px-4 hidden lg:block">
+                        <form
+                            class="flex items-center bg-gray-900 border border-gray-700 rounded-full shadow-sm focus-within:ring-2 focus-within:ring-blue-500 transition-all duration-200">
+
+                            <!-- Search Icon -->
+                            <label for="header-search-icon" class="pl-4 text-gray-400 text-xl">
+                                <i class="ri-search-line"></i>
+                            </label>
+
+                            <!-- Input Field -->
+                            <input type="search" id="header-search-icon"
+                                placeholder="Search for products, brands and more"
+                                class="w-full bg-transparent text-white placeholder-gray-400 px-3 py-4 rounded-full focus:outline-none" />
+
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                class="bg-[#3B82F6] hover:bg-blue-700 text-white font-[500] px-6 py-2 rounded-full ml-2 mr-2 transition-all duration-200">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+
+
+                    <!-- Header Icons -->
+                    <div class="flex items-center space-x-5 lg:space-x-6">
+                        <button id="search-button-mobile" class="focus:outline-none lg:hidden">
+                            <i class="ri-search-line text-2xl"></i>
                         </button>
-                        <div class="header-profile-dropdown" id="profile-dropdown">
-                            <a href="#" class="header-profile-dropdown-link"><i class="ri-user-3-line"></i> My
-                                Account</a>
-                            <a href="#" class="header-profile-dropdown-link"><i class="ri-file-list-3-line"></i>
-                                Orders</a>
-                            <a href="#" class="header-profile-dropdown-link"><i class="ri-heart-3-line"></i>
-                                Wishlist</a>
-                            <div class="header-profile-dropdown-divider"></div>
-                            <a href="#" class="header-profile-dropdown-link logout"><i class="ri-logout-box-r-line"></i>
-                                Logout</a>
+                        <a href="#" class="hidden lg:flex header-icon items-center space-x-2 text-white rounded-md" title="Wishlist">
+                            <i class="ri-heart-line text-2xl"></i>
+                            <span class="font-medium hidden xl:block">Wishlist</span>
+                        </a>
+                        <a href="#" class="header-icon  hidden lg:flex items-center space-x-2 text-white rounded-md relative" title="Cart">
+                            <div class="relative">
+                                <i class="ri-shopping-cart-line text-2xl"></i>
+                                <span class="absolute -top-[6px] -right-[6px] -mt-1 -mr-1 bg-[#f54d0b] text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">3</span>
+                            </div>
+                            <span class="font-medium hidden xl:block">Cart</span>
+                        </a>
+                        <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md" title="Account">
+                            <i class="ri-user-line text-2xl"></i>
+                            <span class="font-medium hidden xl:block">Account</span>
+                        </a>
+                        <div class="menu-hamburger lg:hidden">
+                            <i class="ri-menu-line text-2xl"></i>
                         </div>
                     </div>
                 </div>
-                <!-- Hamburger (Mobile) -->
-                <button class="ecom-header-hamburger lg:hidden" aria-label="Open menu">
-                    <i class="ri-menu-line"></i>
-                </button>
-            </div>
-        </header>
-        <div class="hero-content w-full">
-            <div class="container mx-auto px-5 md:px-10">
-                <div class="w-full lg:max-w-4xl">
-                    <h1 class="hero-title text-2xl sm:text-3xl lg:text-5xl">Discover & Trade Globally With <br
-                            class="hidden lg:block"><span>Confidence</span></h1>
-                    <p class="hero-subtitle text-sm sm:text-base">Find millions of products, trusted suppliers, and
-                        unbeatable deals-delivered to your doorstep worldwide.</p>
-                    <form class="hero-searchbox overflow-hidden" action="#" method="get">
-                        <div class="relative w-[188px] sm:w-full">
-                            <input type="text" id="searchInput" class="w-full" />
 
-                            <!-- Flip placeholder wrapper -->
-                            <div id="flipPlaceholder" class="">
-                                <div class="animate-flip-placeholder">
-                                    <div>Search products, brands and more...</div>
-                                    <div>iPhones 15 Pro Max</div>
-                                    <div>T-Shirts</div>
-                                    <div>Kitchen Accessories</div>
-                                    <div>Smart Watches</div>
-                                    <div>Search products, brands and more...</div> <!-- Duplicate for loop -->
+                <!-- Mobile Header -->
+                <div class="hidden flex justify-between items-center py-3">
+                    <!-- Logo -->
+                    <div>
+                        <a href="index.html">
+                            <img class="h-12" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
+                        </a>
+                    </div>
+                    <!-- Mobile Icons -->
+                    <div class="flex items-center space-x-4">
+                        
+                        <button class="mobile-menu-button focus:outline-none">
+                            <i class="ri-menu-line text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Search Bar (hidden by default) -->
+            <div id="mobile-search-bar" class="hidden md:hidden px-4 pb-4">
+                <form class="flex">
+                    <input type="search" placeholder="Search for Products..."
+                        class="bg-gray-800 border border-gray-700 text-gray-200 rounded-l-md w-full py-2.5 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded-r-md transition duration-300">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Categories Bar -->
+            <nav class="categories-bar w-full bg-gray-900 shadow-sm border-t border-gray-700 hidden lg:block">
+                <div
+                    class="container mx-auto px-5 md:px-10 flex items-center justify-between gap-4 overflow-x-auto py-2 hide-scrollbar">
+                    <!-- Left: USP/Offer -->
+                    <div class="categories-left hidden flex items-center gap-2 text-white font-medium text-sm">
+                        <i class="ri-star-smile-line text-lg text-[#06b6d4]"></i>
+                        <span>Shop by Category</span>
+                    </div>
+                    <!-- Center: All Categories Button -->
+                    <div class="relative flex items-center justify-center">
+                        <button
+                            class="all-categories-btn flex items-center gap-2 py-2 rounded-lg text-white font-semibold text-sm transition-colors duration-200">
+                            <i class="ri-apps-2-line text-lg"></i>
+                            <span>All Categories</span>
+                            <i class="ri-arrow-down-s-line text-base transition-transform duration-200"></i>
+                        </button>
+                        <!-- Static Dropdown (for now) -->
+                        <div id="categories-dropdown"
+                            class="all-categories-dropdown absolute left-0 top-full mt-2 w-56 bg-gray-800 rounded-lg shadow-2xl border border-gray-700 py-2 z-50">
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-smartphone-line"></i> Mobiles</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-tv-2-line"></i> Electronics</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-t-shirt-air-line"></i> Fashion</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-home-4-line"></i> Home</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-restaurant-2-line"></i> Kitchen</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-heart-pulse-line"></i> Health</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-basketball-line"></i> Sports</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-macbook-line"></i> Laptops</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-tools-line"></i> Tools</a>
+                            <a href="#"
+                                class="dropdown-category-link flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white text-sm"><i
+                                    class="ri-leaf-line"></i> Groceries</a>
+                        </div>
+                    </div>
+                    <!-- Right: Quick Links -->
+                    <div class="categories-right flex items-center gap-3 text-white text-sm font-medium">
+                        <a href="#"
+                            class="category-quick-link hover:text-[#06b6d4] transition flex items-center gap-1"><i
+                                class="ri-fire-line"></i> Deals</a>
+                        <a href="#"
+                            class="category-quick-link hover:text-[#06b6d4] transition flex items-center gap-1"><i
+                                class="ri-star-line"></i> New Arrivals</a>
+                        <a href="#"
+                            class="category-quick-link hover:text-[#06b6d4] transition flex items-center gap-1"><i
+                                class="ri-medal-line"></i> Best Sellers</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative flex items-center text-center overflow-hidden">
+            <!-- Background Video -->
+            <div class="absolute inset-0 z-0">
+                <video src="assets/videos/hero-video.mp4" autoplay muted loop
+                    class="w-full h-full object-cover"></video>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/50 to-black/50"></div>
+            </div>
+
+            <!-- Content Container -->
+            <div class="relative z-10 container mx-auto px-5 md:px-10 py-44 text-white">
+                <!-- Main Headline -->
+                <div class="mb-8">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl drop-shadow-lg">
+                        <span
+                            class="bg-white font-semibold leading-tight tracking-tight from-cyan-500 to-cyan-300 bg-clip-text text-transparent">
+                            Global Trade, Reimagined
+                        </span>
+                    </h1>
+                    <p class="mt-4 text-sm sm:text-lg text-white max-w-xl mx-auto">
+                        We connect your business to the world with reliability, efficiency and innovation.
+                    </p>
+                </div>
+
+                <!-- Service Pods -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-6 max-w-4xl mx-auto">
+
+                    <!-- Card 1: Sourcing -->
+                    <div
+                        class="text-center bg-black/10 backdrop-blur-sm border border-white/20 rounded-2xl sm:py-6 sm:px-5 py-4 px-3 transition-all duration-300">
+                        <i class="ri-shield-check-line text-xl sm:text-3xl mb-4 text-cyan-300"></i>
+                        <h3 class="text-sm sm:text-lg font-[500] text-white mb-2">Quality Sourcing</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm">Vetted suppliers, guaranteed quality.</p>
+                    </div>
+
+                    <!-- Card 2: Sales -->
+                    <div
+                        class="text-center bg-black/10 backdrop-blur-sm border border-white/20 rounded-2xl sm:py-6 sm:px-5 py-4 px-3 transition-all duration-300">
+                        <i class="ri-flashlight-line text-xl sm:text-3xl mb-4 text-cyan-300"></i>
+                        <h3 class="text-sm sm:text-lg font-[500] text-white mb-2">Global Reach</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm">Connecting you to buyers, fast.</p>
+                    </div>
+
+                    <!-- Card 3: Logistics -->
+                    <div
+                        class="text-center col-span-2 md:col-span-1 bg-black/10 backdrop-blur-sm border border-white/20 rounded-2xl sm:py-6 sm:px-5 py-4 px-3 transition-all duration-300">
+                        <i class="ri-truck-line text-xl sm:text-3xl mb-4 text-cyan-300"></i>
+                        <h3 class="text-sm sm:text-lg font-[500] text-white mb-2">Efficient Logistics</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm">End-to-end shipping, simplified.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Benefits Section -->
+        <section id="features" class="bg-gray-100 py-16">
+            <div class="container mx-auto px-5 md:px-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-0">
+                    <!-- Feature 1 -->
+                    <div class="feature-item text-center p-6 md:border-r border-slate-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Best Quality Product</h3>
+                        <p class="text-gray-500 text-sm">Best Quality of Product at a single place.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-item text-center p-6 lg:border-r border-slate-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Buy Global Products</h3>
+                        <p class="text-gray-500 text-sm">Multiple requirement, One Place for Global Business.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-item text-center p-6 md:border-r border-slate-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sell Internationally</h3>
+                        <p class="text-gray-500 text-sm">Sell Your product over the seas and grow your business globally.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-item text-center p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Grow Your Business</h3>
+                        <p class="text-gray-500 text-sm">Grow your business in multiple Countries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engaging About/Showcase Section (Revised) -->
+        <section id="trade-blueprint" class="relative bg-white py-16 md:py-24 overflow-hidden">
+            <div class="container mx-auto px-5 md:px-10 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-[700] text-gray-900 inline-block relative mb-4">Your Global Ambition, <br>Our Blueprint</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        We simplify international trade with smart solutions and proven expertise.
+                    </p>
+                </div>
+
+                <!-- Staggered Row 1 -->
+                <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                    <!-- Image Banner -->
+                    <div class="overflow-hidden">
+                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Strategic Sourcing"
+                            class="h-full w-full object-cover">
+                    </div>
+                    <!-- Content -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Strategic Sourcing</h3>
+                        <p class="text-gray-600 mb-6">We don't just find suppliers; we forge partnerships. Our process is
+                            a deep, investigative journey to find partners who share our commitment to excellence.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-flask-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Tangible Quality Assurance</h4>
+                                    <p class="text-gray-600 text-sm">Hands-on inspections and sample testing to guarantee the product you specified is the product you receive.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-shake-hands-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Long-term Partnership Building</h4>
+                                    <p class="text-gray-600 text-sm">We focus on creating sustainable relationships that
+                                        grow stronger over time, ensuring consistent quality and reliability.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-price-tag-3-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Competitive Pricing Analysis</h4>
+                                    <p class="text-gray-600 text-sm">Thorough market research and cost analysis to ensure you get the best value for your investment.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-shield-check-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Deep-Dive Vetting</h4>
+                                    <p class="text-gray-600 text-sm">Comprehensive audits of financial health, ethical
+                                        practices, and performance history.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Staggered Row 2 -->
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Content -->
+                    <div class="">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Logistics</h3>
+                        <p class="text-gray-600 mb-6">We view logistics not as a cost, but as a critical advantage. Our
+                            mission is to eliminate friction from your supply chain through a resilient, intelligent
+                            network.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-global-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Integrated Global Network</h4>
+                                    <p class="text-gray-600 text-sm">From factory dock to final destination, your
+                                        shipment is managed in one unified system for unparalleled control.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-radar-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Proactive Risk Management</h4>
+                                    <p class="text-gray-600 text-sm">Our specialists use predictive data to anticipate
+                                        and resolve potential hurdles before they cause delays.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-eye-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Real-time Visibility</h4>
+                                    <p class="text-gray-600 text-sm">Track your shipments with complete transparency
+                                        through our advanced monitoring and reporting systems.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                    <i class="ri-truck-line text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Multi-modal Transportation</h4>
+                                    <p class="text-gray-600 text-sm">Optimized shipping solutions combining air, sea, and land transport for maximum efficiency.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Image Banner -->
+                    <div class="overflow-hidden">
+                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Intelligent Logistics"
+                            class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="featured-products" class="py-16 md:py-24">
+            <div class="container mx-auto px-5 md:px-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 inline-block relative">
+                            Our Featured Products
+                            <span
+                                class="hidden absolute -bottom-3 left-1/2 -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
+                        </h2>
+                    </div>
+                    <p class="hidden mt-8 text-lg text-gray-600 max-w-2xl mx-auto">
+                        Explore a curated selection of our top-quality products, sourced and delivered with excellence.
+                    </p>
+                </div>
+
+                <div class="flex gap-10 flex-col">
+                    <div class="bg-white shadow-sm p-7">
+                        <h2 class="text-xl md:text-2xl mb-4 font-semibold text-gray-900 inline-block relative">
+                            Electronics Items
+                        </h2>
+                        <!-- Products Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 ">
+
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <a href="#">
+                                        <img src="assets/images/products-images/-original-imagg8dddyyzjnxn.webp"
+                                            alt="Product Name" class="product-image">
+                                    </a>
+                                    <div class="product-actions">
+                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-left">
+                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
+                                    <a href="#">
+                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
+                                    </a>
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-400">
+                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-half-s-line"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xl font-[600] roboto text-blue-600"><span
+                                                class="font-[600] mr-1">₹</span>299</p>
+                                        <button class="add-to-cart-btn">
+                                            <i class="ri-shopping-cart-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <a href="#">
+                                        <img src="assets/images/products-images/-original-imagg8dddyyzjnxn.webp"
+                                            alt="Product Name" class="product-image">
+                                    </a>
+                                    <div class="product-actions">
+                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-left">
+                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
+                                    <a href="#">
+                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
+                                    </a>
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-400">
+                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-half-s-line"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xl font-[600] roboto text-blue-600"><span
+                                                class="font-[600] mr-1">₹</span>299</p>
+                                        <button class="add-to-cart-btn">
+                                            <i class="ri-shopping-cart-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <a href="#">
+                                        <img src="assets/images/products-images/-original-imagg8dddyyzjnxn.webp"
+                                            alt="Product Name" class="product-image">
+                                    </a>
+                                    <div class="product-actions">
+                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-left">
+                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
+                                    <a href="#">
+                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
+                                    </a>
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-400">
+                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-half-s-line"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xl font-[600] roboto text-blue-600"><span
+                                                class="font-[600] mr-1">₹</span>299</p>
+                                        <button class="add-to-cart-btn">
+                                            <i class="ri-shopping-cart-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <a href="#">
+                                        <img src="assets/images/products-images/xs-db1024-03-3bros-original-imahfzpbtgzpktkk.webp"
+                                            alt="Product Name" class="product-image">
+                                    </a>
+                                    <div class="product-actions">
+                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-left">
+                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
+                                    <a href="#">
+                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
+                                    </a>
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-400">
+                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-half-s-line"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xl font-[600] roboto text-blue-600"><span
+                                                class="font-[600] mr-1">₹</span>299</p>
+                                        <button class="add-to-cart-btn">
+                                            <i class="ri-shopping-cart-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <a href="#">
+                                        <img src="assets/images/products-images/xs-db1024-03-3bros-original-imahfzpbtgzpktkk.webp"
+                                            alt="Product Name" class="product-image">
+                                    </a>
+                                    <div class="product-actions">
+                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-left">
+                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
+                                    <a href="#">
+                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
+                                    </a>
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-400">
+                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                class="ri-star-half-s-line"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xl font-[600] roboto text-blue-600"><span
+                                                class="font-[600] mr-1">₹</span>299</p>
+                                        <button class="add-to-cart-btn">
+                                            <i class="ri-shopping-cart-line"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="absolute top-1/2 -translate-y-1/2 right-[3px] gap-1 sm:gap-2 flex items-center bg-white z-10">
-                            <input type="file" class="hidden" id="image-search-input" title="Image Search"></input>
-                            <label for="image-search-input" class="hero-searchbox-camera"><i
-                                    class="ri-camera-line"></i></label>
-                            <button type="submit" class="hero-searchbox-btn"><i class="ri-search-line"></i></button>
-                        </div>
-
-                    </form>
-                    <div class="hero-frequent-row">
-                        <span class="hero-frequent-label hidden lg:block">Frequently searched:</span>
-                        <a href="#" class="hero-frequent-pill">iphones 15 pro max</a>
-                        <a href="#" class="hero-frequent-pill">T-Shirts</a>
-                        <a href="#" class="hero-frequent-pill">Kitchen Accessories</a>
-                        <a href="#" class="hero-frequent-pill">Smart Watches</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-header">
-            <div class="mobile-menu-profile-info">
-                <span class="mobile-menu-profile-avatar">A</span>
-                <div class="mobile-menu-profile-details">
-                    <div class="mobile-menu-profile-name">Amit Kumar</div>
-                    <div class="mobile-menu-profile-email">amit@email.com</div>
+                <!-- View All Button -->
+                <div class="text-center mt-12 hidden">
+                    <a href="#"
+                        class="inline-block bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                        View All Products
+                    </a>
                 </div>
             </div>
-            <a href="#" class="mobile-menu-profile-logout">
-                <i class="ri-logout-circle-line"></i>
-                <span>Logout</span>
-            </a>
-            <!-- <button class="mobile-menu-close" id="close-mobile-menu"><i class="ri-close-line"></i></button> -->
-        </div>
-        <div class="mobile-menu-content">
-            <!-- Navigation -->
-            <nav class="mobile-menu-nav">
-                <a href="#" class="mobile-menu-nav-link active"><i class="ri-home-4-line"></i> Home</a>
-                <a href="#" class="mobile-menu-nav-link"><i class="ri-apps-2-line"></i> Categories</a>
-                <a href="#" class="mobile-menu-nav-link"><i class="ri-flashlight-line"></i> Deals</a>
-                <a href="#" class="mobile-menu-nav-link"><i class="ri-information-line"></i> About</a>
-                <a href="#" class="mobile-menu-nav-link"><i class="ri-contacts-book-line"></i> Contact</a>
-            </nav>
-            <div class="mobile-menu-divider"></div>
-            <!-- User Actions -->
-            <div class="mobile-menu-actions">
-                <a href="#" class="mobile-menu-action-link"><i class="ri-user-3-line"></i> My Account</a>
-                <a href="#" class="mobile-menu-action-link"><i class="ri-file-list-3-line"></i> Orders</a>
-                <a href="#" class="mobile-menu-action-link"><i class="ri-heart-3-line"></i> Wishlist</a>
-                <a href="#" class="mobile-menu-action-link"><i class="ri-shopping-cart-2-line"></i> Cart <span
-                        class="badge">2</span></a>
-                <a href="#" class="mobile-menu-action-link"><i class="ri-user-3-line"></i> Sign In / Register</a>
-            </div>
-            <div class="mobile-menu-divider"></div>
-            <!-- Selectors -->
-            <div class="mobile-menu-selectors">
-                <button class="mobile-menu-selector-btn flex items-center gap-1" id="mobile-open-location-modal">
-                    <span class="text-xs">Deliver to:</span>
-                    <span class="header-flag">🇮🇳</span>
-                    <i class="ri-arrow-down-s-line"></i>
-                </button>
-                <button class="mobile-menu-selector-btn flex items-center gap-1" id="mobile-open-lang-modal">
-                    <i class="ri-global-line text-xs"></i>
-                    <span class="header-lang text-xs">EN</span>
-                    <span class="header-currency text-xs">INR</span>
-                    <i class="ri-arrow-down-s-line"></i>
-                </button>
-            </div>
+        </section>
 
-        </div>
-    </div>
-
-    <!-- Location Modal Popup-->
-    <div class="header-modal" id="location-modal">
-        <div class="header-modal-content">
-            <button class="header-modal-close" id="close-location-modal"><i class="ri-close-line"></i></button>
-            <h3 class="header-modal-title">Select your delivery location</h3>
-            <p class="header-modal-desc">Choose your country to see products and offers for your region.</p>
-            <select class="header-modal-select">
-                <option value="IN">🇮🇳 India</option>
-                <option value="US">🇺🇸 United States</option>
-                <option value="GB">🇬🇧 United Kingdom</option>
-                <option value="AE">🇦🇪 UAE</option>
-                <option value="CN">🇨🇳 China</option>
-            </select>
-            <button class="header-modal-save">Save</button>
-        </div>
-    </div>
-    <!-- Language/Currency Modal Popup-->
-    <div class="header-modal" id="lang-modal">
-        <div class="header-modal-content">
-            <button class="header-modal-close" id="close-lang-modal"><i class="ri-close-line"></i></button>
-            <h3 class="header-modal-title">Set language and currency</h3>
-            <p class="header-modal-desc">Select your preferred language and currency. You can update the settings at any
-                time.</p>
-            <div class="header-modal-row">
-                <label>Language</label>
-                <select class="header-modal-select">
-                    <option>English</option>
-                    <option>हिन्दी</option>
-                    <option>العربية</option>
-                    <option>中文</option>
-                </select>
-            </div>
-            <div class="header-modal-row">
-                <label>Currency</label>
-                <select class="header-modal-select">
-                    <option>INR - Indian Rupee</option>
-                    <option>USD - US Dollar</option>
-                    <option>AED - Dirham</option>
-                    <option>CNY - Yuan</option>
-                </select>
-            </div>
-            <button class="header-modal-save">Save</button>
-        </div>
-    </div>
+    </main>
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -275,6 +633,9 @@
     <!-- custom script link -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>
