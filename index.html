@@ -40,7 +40,7 @@
 
     <header class="bg-[#092a54] relative z-50 text-white font-['Poppins']">
         <!-- Top Bar -->
-        <div class="border-b border-white/10 text-xs text-gray-300">
+        <div class="hidden md:block border-b border-white/10 text-xs text-gray-300">
             <div class="container mx-auto px-5 md:px-10 flex justify-between items-center py-2">
                 <div class="flex items-center gap-6">
                     <a href="#" class="hover:text-amber-400 transition-colors duration-300 flex items-center gap-2">
@@ -80,7 +80,7 @@
                     <form>
                         <div class="relative">
                             <input type="search" placeholder="What are you looking for?"
-                                class="w-full bg-white/5 border-2 border-transparent focus:border-amber-400 rounded-lg pl-5 pr-14 py-3.5 text-white placeholder-gray-400 focus:outline-none focus:ring-0 focus:bg-white/10 transition-all duration-100">
+                                class="w-full bg-white/5 border-2 border-transparent focus:border-amber-400 rounded-lg pl-5 pr-14 py-3.5 text-white placeholder-gray-400 focus:outline-none focus:ring-0 transition-all duration-100">
                             <button type="submit"
                                 class="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-amber-400 transition-colors duration-300">
                                 <i class="ri-search-line text-xl"></i>
@@ -97,13 +97,13 @@
                     <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md group" title="Wishlist">
                         <div class="relative">
                             <i class="ri-heart-line text-3xl group-hover:text-amber-400 transition-colors duration-300"></i>
-                            <span class="absolute -top-2 -right-2 bg-amber-500 text-black text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">2</span>
+                            <span class="absolute -top-2 -right-2 bg-amber-500 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">2</span>
                         </div>
                     </a>
                     <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md relative group" title="Cart">
                         <div class="relative">
                             <i class="ri-shopping-cart-line text-3xl group-hover:text-amber-400 transition-colors duration-300"></i>
-                            <span class="absolute -top-2 -right-2 bg-amber-500 text-black text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">3</span>
+                            <span class="absolute -top-2 -right-2 bg-amber-500 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">3</span>
                         </div>
                     </a>
                     <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md group py-2 px-3 hover:bg-white/10 transition-colors duration-300" title="Account">
@@ -206,31 +206,40 @@
         </section>
 
         <!-- Features/Benefits Section -->
-        <section id="features" class="bg-gray-100 py-16">
+        <section id="features" class="bg-gray-50 py-16">
             <div class="container mx-auto px-5 md:px-10">
-                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-0">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-10 gap-x-8 text-center">
                     <!-- Feature 1 -->
-                    <div class="feature-item text-center px-4 py-2 sm:p-6 md:border-r border-slate-200">
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Best Quality Product</h3>
-                        <p class="text-gray-500 text-xs sm:text-sm">Best Quality of Product at a single place.</p>
+                    <div>
+                        <div class="flex justify-center mb-3">
+                            <i class="ri-award-line text-4xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Best Quality Product</h3>
+                        <p class="text-gray-500 text-sm">Top quality products, all in one place.</p>
                     </div>
-
                     <!-- Feature 2 -->
-                    <div class="feature-item text-center px-4 py-2 sm:p-6 lg:border-r border-slate-200">
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Buy Global Products</h3>
-                        <p class="text-gray-500 text-xs sm:text-sm">Multiple requirement, One Place for Global Business.</p>
+                    <div>
+                        <div class="flex justify-center mb-3">
+                            <i class="ri-global-line text-4xl text-cyan-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Buy Global Products</h3>
+                        <p class="text-gray-500 text-sm">All your global business needs, one platform.</p>
                     </div>
-
                     <!-- Feature 3 -->
-                    <div class="feature-item text-center px-4 py-2 sm:p-6 md:border-r border-slate-200">
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Sell Internationally</h3>
-                        <p class="text-gray-500 text-xs sm:text-sm">Sell Your product over the seas and grow your business globally.</p>
+                    <div>
+                        <div class="flex justify-center mb-3">
+                            <i class="ri-ship-line text-4xl text-blue-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sell Internationally</h3>
+                        <p class="text-gray-500 text-sm">Expand your reach and grow globally.</p>
                     </div>
-
                     <!-- Feature 4 -->
-                    <div class="feature-item text-center px-4 py-2 sm:p-6">
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Grow Your Business</h3>
-                        <p class="text-gray-500 text-xs sm:text-sm">Grow your business in multiple Countries.</p>
+                    <div>
+                        <div class="flex justify-center mb-3">
+                            <i class="ri-bar-chart-grouped-line text-4xl text-green-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Grow Your Business</h3>
+                        <p class="text-gray-500 text-sm">Succeed in multiple countries with ease.</p>
                     </div>
                 </div>
             </div>
@@ -238,6 +247,10 @@
 
         <!-- Engaging About/Showcase Section (Revised) -->
         <section id="trade-blueprint" class="relative bg-white py-16 md:py-24 overflow-hidden">
+            <!-- Decorative Background Objects -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-blue-100 via-cyan-100 to-transparent rounded-full opacity-60 z-0"></div>
+            <div class="absolute top-1/2 right-0 w-72 h-72 bg-gradient-to-tr from-amber-100 via-yellow-100 to-transparent rounded-full opacity-50 z-0"></div>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-gradient-to-r from-cyan-100 via-blue-100 to-transparent rounded-3xl opacity-40 z-0"></div>
             <div class="container mx-auto px-5 md:px-10 relative z-10">
                 <!-- Section Header -->
                 <div class="text-center mb-16 max-w-3xl mx-auto">
@@ -250,19 +263,16 @@
                 <!-- Staggered Row 1 -->
                 <div class="grid lg:grid-cols-2 gap-12 mb-16">
                     <!-- Image Banner -->
-                    <div class="overflow-hidden">
-                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Strategic Sourcing"
-                            class="h-full w-full object-cover">
+                    <div class="overflow-hidden rounded-2xl shadow-md">
+                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Strategic Sourcing" class="h-full w-full object-cover">
                     </div>
                     <!-- Content -->
                     <div>
                         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Strategic Sourcing</h3>
-                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We don't just find suppliers; we forge partnerships. Our process is
-                            a deep, investigative journey to find partners who share our commitment to excellence.</p>
+                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We don't just find suppliers; we forge partnerships. Our process is a deep, investigative journey to find partners who share our commitment to excellence.</p>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
                                     <i class="ri-flask-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Tangible Quality Assurance</h4>
@@ -270,18 +280,15 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
                                     <i class="ri-shake-hands-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Long-term Partnership Building</h4>
-                                    <p class="text-gray-600 text-sm">We focus on creating sustainable relationships that
-                                        grow stronger over time, ensuring consistent quality and reliability.</p>
+                                    <p class="text-gray-600 text-sm">We focus on creating sustainable relationships that grow stronger over time, ensuring consistent quality and reliability.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
                                     <i class="ri-price-tag-3-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Competitive Pricing Analysis</h4>
@@ -289,13 +296,11 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
                                     <i class="ri-shield-check-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Deep-Dive Vetting</h4>
-                                    <p class="text-gray-600 text-sm">Comprehensive audits of financial health, ethical
-                                        practices, and performance history.</p>
+                                    <p class="text-gray-600 text-sm">Comprehensive audits of financial health, ethical practices, and performance history.</p>
                                 </div>
                             </li>
                         </ul>
@@ -307,43 +312,34 @@
                     <!-- Content -->
                     <div class="order-2 sm:order-1">
                         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Smart Logistics</h3>
-                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We view logistics not as a cost, but as a critical advantage. Our
-                            mission is to eliminate friction from your supply chain through a resilient, intelligent
-                            network.</p>
+                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We view logistics not as a cost, but as a critical advantage. Our mission is to eliminate friction from your supply chain through a resilient, intelligent network.</p>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
                                     <i class="ri-global-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Integrated Global Network</h4>
-                                    <p class="text-gray-600 text-sm">From factory dock to final destination, your
-                                        shipment is managed in one unified system for unparalleled control.</p>
+                                    <p class="text-gray-600 text-sm">From factory dock to final destination, your shipment is managed in one unified system for unparalleled control.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
                                     <i class="ri-radar-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Proactive Risk Management</h4>
-                                    <p class="text-gray-600 text-sm">Our specialists use predictive data to anticipate
-                                        and resolve potential hurdles before they cause delays.</p>
+                                    <p class="text-gray-600 text-sm">Our specialists use predictive data to anticipate and resolve potential hurdles before they cause delays.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
                                     <i class="ri-eye-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Real-time Visibility</h4>
-                                    <p class="text-gray-600 text-sm">Track your shipments with complete transparency
-                                        through our advanced monitoring and reporting systems.</p>
+                                    <p class="text-gray-600 text-sm">Track your shipments with complete transparency through our advanced monitoring and reporting systems.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-800 text-white mr-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
                                     <i class="ri-truck-line text-xl"></i></div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Multi-modal Transportation</h4>
@@ -353,9 +349,8 @@
                         </ul>
                     </div>
                     <!-- Image Banner -->
-                    <div class="overflow-hidden order-1 sm:order-2">
-                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Intelligent Logistics"
-                            class="h-full w-full object-cover">
+                    <div class="overflow-hidden rounded-2xl shadow-md order-1 sm:order-2">
+                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Intelligent Logistics" class="h-full w-full object-cover">
                     </div>
                 </div>
             </div>
