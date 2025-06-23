@@ -124,7 +124,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #06b6d4; /* cyan-500 */
+    background-color: #fbbf24; /* cyan-500 */
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-out;
@@ -291,9 +291,9 @@ body {
 /* Hover effect for icons */
 
 /* --- Cart Badge --- */
-.header-icon .absolute {
-    border: 2px solid #1f2937; /* gray-800 */
-}
+/* .header-icon .absolute {
+    border: 2px solid #1f2937; 
+} */
 
 /* ------------------------- */
 /*   Creative Hero Section (Pods)  */
