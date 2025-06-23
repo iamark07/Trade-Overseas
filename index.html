@@ -38,32 +38,32 @@
 
 <body class="overflow-x-hidden bg-[#fafafa] font-['Inter']">
 
-    <header class="bg-[#092a54] relative z-50 text-white font-['Poppins']">
-        <!-- Top Bar -->
-        <div class="hidden md:block border-b border-white/10 text-xs text-gray-300">
-            <div class="container mx-auto px-5 md:px-10 flex justify-between items-center py-2">
-                <div class="flex items-center gap-6">
-                    <a href="#" class="hover:text-amber-400 transition-colors duration-300 flex items-center gap-2">
-                        <i class="ri-phone-line"></i>
-                        <span class="hidden sm:block">+1 (234) 567-890</span>
-                    </a>
-                    <a href="#" class="hover:text-amber-400 transition-colors duration-300 flex items-center gap-2">
-                        <i class="ri-mail-line"></i>
-                        <span class="hidden sm:block">contact@tradeoverseas.com</span>
-                    </a>
-                </div>
-                <div class="flex items-center gap-6">
-                    <a href="#" class="hover:text-amber-400 transition-colors duration-300 hidden md:block">Sell with Us</a>
-                    <a href="#" class="hover:text-amber-400 transition-colors duration-300 hidden md:block">Track Order</a>
-                    <div class="relative">
-                        <button class="flex items-center gap-1 hover:text-amber-400 transition-colors duration-300">
-                            <span>EN</span>
-                            <i class="ri-arrow-down-s-line"></i>
-                        </button>
-                    </div>
+    <!-- Top Bar -->
+    <div class="hidden border-b border-white/10 text-xs text-gray-300">
+        <div class="container mx-auto px-5 md:px-10 flex justify-between items-center py-2">
+            <div class="flex items-center gap-6">
+                <a href="#" class="hover:text-amber-400 transition-colors duration-300 flex items-center gap-2">
+                    <i class="ri-phone-line"></i>
+                    <span class="hidden sm:block">+1 (234) 567-890</span>
+                </a>
+                <a href="#" class="hover:text-amber-400 transition-colors duration-300 flex items-center gap-2">
+                    <i class="ri-mail-line"></i>
+                    <span class="hidden sm:block">contact@tradeoverseas.com</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#" class="hover:text-amber-400 transition-colors duration-300 hidden md:block">Sell with Us</a>
+                <a href="#" class="hover:text-amber-400 transition-colors duration-300 hidden md:block">Track Order</a>
+                <div class="relative">
+                    <button class="flex items-center gap-1 hover:text-amber-400 transition-colors duration-300">
+                        <span>EN</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
+    <header class="bg-gradient-to-r from-[#10223b] to-[#092a54] relative z-50 text-white font-['Poppins']">
 
         <!-- Main Header -->
         <div class="main-header">
@@ -75,44 +75,56 @@
                     </a>
                 </div>
 
-                <!-- Search Bar -->
-                <div class="flex-grow max-w-xl w-full px-8 hidden lg:block">
-                    <form>
-                        <div class="relative">
-                            <input type="search" placeholder="What are you looking for?"
-                                class="w-full bg-white/5 border-2 border-transparent focus:border-amber-400 rounded-lg pl-5 pr-14 py-3.5 text-white placeholder-gray-400 focus:outline-none focus:ring-0 transition-all duration-100">
-                            <button type="submit"
-                                class="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-amber-400 transition-colors duration-300">
-                                <i class="ri-search-line text-xl"></i>
-                            </button>
-                        </div>
-                    </form>
+                <!-- Unified Super Search Bar -->
+                <div class="w-full max-w-2xl ml-8 hidden lg:flex items-center justify-center">
+                    <div class="flex w-full bg-white rounded-full shadow-lg border border-gray-100 p-1 items-center gap-2">
+                        <!-- Location -->
+                        <span class="flex items-center gap-1 text-white text-sm font-medium bg-[#092a54] px-4 py-2 rounded-full cursor-pointer">
+                            <i class="ri-map-pin-line text-base text-white"></i> Mumbai, India <i class="ri-arrow-down-s-line text-xs"></i>
+                        </span>
+                        <!-- Search Bar -->
+                        <form class="flex-grow ml-2">
+                            <div class="relative">
+                                <input type="search" placeholder="What are you looking for?"
+                                    class="w-full bg-transparent border-none outline-none text-[#092a54] placeholder-gray-400 pl-2 pr-14 py-2 text-base">
+                                <button type="submit"
+                                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#092a54] text-white rounded-full w-[40px] h-[40px] flex items-center justify-center">
+                                    <i class="ri-search-line"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <!-- Language -->
+                        <span class="hidden flex items-center gap-1 text-[#092a54] text-sm font-medium bg-amber-100 px-4 py-2 rounded-full cursor-pointer border border-amber-200">
+                            <i class="ri-earth-line text-base text-amber-500"></i> EN <i class="ri-arrow-down-s-line text-xs"></i>
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Header Icons -->
-                <div class="flex items-center space-x-4 lg:space-x-5">
+                <div class="flex items-center space-x-3 lg:space-x-5">
                     <button id="search-button-mobile" class="focus:outline-none lg:hidden text-2xl hover:text-amber-400">
                         <i class="ri-search-line"></i>
                     </button>
-                    <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md group" title="Wishlist">
+                    <a href="#" class="header-icon hidden items-center space-x-2 text-white rounded-md group" title="Wishlist">
                         <div class="relative">
-                            <i class="ri-heart-line text-3xl group-hover:text-amber-400 transition-colors duration-300"></i>
-                            <span class="absolute -top-2 -right-2 bg-amber-500 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">2</span>
+                            <i class="ri-heart-line text-2xl group-hover:text-amber-400"></i>
+                            <span class="absolute -top-1 -right-1 bg-amber-400 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">2</span>
                         </div>
                     </a>
                     <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md relative group" title="Cart">
                         <div class="relative">
-                            <i class="ri-shopping-cart-line text-3xl group-hover:text-amber-400 transition-colors duration-300"></i>
-                            <span class="absolute -top-2 -right-2 bg-amber-500 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">3</span>
+                            <i class="ri-shopping-cart-line text-2xl group-hover:text-amber-400"></i>
+                            <span class="absolute -top-2 -right-3 bg-amber-400 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">3</span>
                         </div>
                     </a>
-                    <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md group py-2 px-3 hover:bg-white/10 transition-colors duration-300" title="Account">
-                        <i class="ri-user-line text-3xl group-hover:text-amber-400 transition-colors duration-300"></i>
+                    <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md group py-2 px-3 hover:bg-white/10" title="Account">
+                        <i class="ri-user-line text-2xl"></i>
                         <div class="hidden xl:block">
                             <p class="text-xs text-gray-400">Welcome</p>
                             <p class="font-semibold text-sm leading-tight">My Account</p>
                         </div>
                     </a>
+                    <a href="#" class="ml-2 bg-amber-400 text-[#092a54] font-[500] px-5 py-2 rounded-full text-sm shadow hover:bg-amber-500 hover:text-[#092a54] transition">Sign In / Register</a>
                     <div class="menu-hamburger lg:hidden text-2xl">
                         <i class="ri-menu-line"></i>
                     </div>
@@ -121,37 +133,36 @@
         </div>
 
         <!-- Categories Bar -->
-        <nav class="categories-bar w-full bg-[#0c3161] shadow-md border-t border-white/10 hidden lg:block">
-            <div class="container mx-auto px-5 md:px-10 flex items-center justify-between gap-4 py-1 hide-scrollbar">
+        <nav class="categories-bar w-full bg-[#f7faff] shadow-md border-t border-white/10 hidden lg:block">
+            <div class="container mx-auto px-5 md:px-10 flex items-center justify-between gap-4 py-[4px] hide-scrollbar">
                 <!-- All Categories Button -->
                 <div class="relative group">
-                    <button class="all-categories-btn flex items-center gap-3 py-3 px-5 bg-amber-400 text-black font-bold text-sm transition-colors duration-300 hover:bg-amber-500">
+                    <button class="all-categories-btn flex items-center gap-3 py-2 px-5 bg-[#092a54] text-white font-bold text-sm rounded-full hover:bg-amber-400 hover:text-[#092a54] transition">
                         <i class="ri-apps-2-line text-lg"></i>
                         <span>All Categories</span>
                     </button>
                     <!-- Mega Menu Dropdown -->
-                    <div class="all-categories-dropdown absolute -left-[6px] top-full mt-0 w-64 bg-white rounded-b-lg shadow-2xl border-t-2 border-amber-500 py-3 z-50 transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-amber-600 text-sm"><i class="ri-smartphone-line w-6 text-center"></i> Mobiles</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-amber-600 text-sm"><i class="ri-tv-2-line w-6 text-center"></i> Electronics</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-amber-600 text-sm"><i class="ri-t-shirt-air-line w-6 text-center"></i> Fashion</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-amber-600 text-sm"><i class="ri-home-4-line w-6 text-center"></i> Home</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-amber-600 text-sm"><i class="ri-restaurant-2-line w-6 text-center"></i> Kitchen</a>
+                    <div class="all-categories-dropdown absolute -left-[6px] top-[120%] mt-0 w-64 bg-white rounded-b-lg shadow-2xl border-t-2 border-amber-500 py-3 z-50 transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-smartphone-line w-6 text-center"></i> Mobiles</a>
+                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-tv-2-line w-6 text-center"></i> Electronics</a>
+                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-t-shirt-air-line w-6 text-center"></i> Fashion</a>
+                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-home-4-line w-6 text-center"></i> Home</a>
+                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-restaurant-2-line w-6 text-center"></i> Kitchen</a>
                     </div>
                 </div>
-
-                <!-- Right: Quick Links -->
-                <div class="categories-right flex items-center gap-3 text-white text-sm font-medium">
-                    <a href="#" class="category-quick-link hover:text-amber-400 transition px-3 py-2 flex items-center gap-1.5"><i class="ri-fire-line"></i> Deals</a>
-                    <a href="#" class="category-quick-link hover:text-amber-400 transition px-3 py-2 flex items-center gap-1.5"><i class="ri-star-line"></i> New Arrivals</a>
-                    <a href="#" class="category-quick-link hover:text-amber-400 transition px-3 py-2 flex items-center gap-1.5"><i class="ri-medal-line"></i> Best Sellers</a>
-                    <a href="#" class="category-quick-link hover:text-amber-400 transition px-3 py-2 flex items-center gap-1.5"><i class="ri-gift-line"></i> Gift Cards</a>
-                    <a href="#" class="category-quick-link hover:text-amber-400 transition px-3 py-2 flex items-center gap-1.5"><i class="ri-customer-service-2-line"></i> Customer Service</a>
+                <!-- Product-focused Quick Links (concise, includes Sell With Us) -->
+                <div class="categories-right flex items-center gap-3 text-[#092a54] text-sm font-bold">
+                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Verified Suppliers</a>
+                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Global Shipping</a>
+                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Bulk & B2B Solutions</a>
+                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Shipping & Logistics</a>
+                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Sell With Us</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class="hidden">
         <section id="hero" class="relative flex items-center text-center overflow-hidden">
             <!-- Background Video -->
             <div class="absolute inset-0 z-0">

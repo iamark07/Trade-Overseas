@@ -117,14 +117,14 @@ body {
 }
 
 /* Underline hover effect for quick links */
-.category-quick-link::after {
+/* .category-quick-link::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #fbbf24; /* cyan-500 */
+    background-color: #fbbf24;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-out;
@@ -133,7 +133,7 @@ body {
 .category-quick-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
-}
+} */
 
 /* ------------------------- */
 /*   Detailed Hero Section       */
