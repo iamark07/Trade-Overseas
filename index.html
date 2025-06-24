@@ -38,36 +38,10 @@
 
 <body class="overflow-x-hidden bg-[#fafafa] font-['Inter']">
 
-    <!-- Top Bar -->
-    <div class="hidden border-b border-white/10 text-xs text-gray-300">
-        <div class="container mx-auto px-5 md:px-10 flex justify-between items-center py-2">
-            <div class="flex items-center gap-6">
-                <a href="#" class="hover:text-amber-400 transition-colors duration-300 flex items-center gap-2">
-                    <i class="ri-phone-line"></i>
-                    <span class="hidden sm:block">+1 (234) 567-890</span>
-                </a>
-                <a href="#" class="hover:text-amber-400 transition-colors duration-300 flex items-center gap-2">
-                    <i class="ri-mail-line"></i>
-                    <span class="hidden sm:block">contact@tradeoverseas.com</span>
-                </a>
-            </div>
-            <div class="flex items-center gap-6">
-                <a href="#" class="hover:text-amber-400 transition-colors duration-300 hidden md:block">Sell with Us</a>
-                <a href="#" class="hover:text-amber-400 transition-colors duration-300 hidden md:block">Track Order</a>
-                <div class="relative">
-                    <button class="flex items-center gap-1 hover:text-amber-400 transition-colors duration-300">
-                        <span>EN</span>
-                        <i class="ri-arrow-down-s-line"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <header class="bg-gradient-to-r from-[#10223b] to-[#092a54] relative z-50 text-white font-['Poppins']">
-
+    <header class="sticky top-0 bg-gradient-to-r from-[#10223b] to-[#092a54] relative z-50 text-white font-['Poppins']">
         <!-- Main Header -->
         <div class="main-header">
-            <div class="container mx-auto px-5 md:px-10 flex justify-between items-center py-5">
+            <div class="container mx-auto px-5 flex justify-between items-center py-5">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="index.html">
@@ -77,16 +51,19 @@
 
                 <!-- Unified Super Search Bar -->
                 <div class="w-full max-w-2xl ml-8 hidden lg:flex items-center justify-center">
-                    <div class="flex w-full bg-white rounded-full shadow-lg border border-gray-100 p-1 items-center gap-2">
+                    <div
+                        class="flex w-full bg-white rounded-full shadow-lg border border-gray-100 p-1 items-center gap-2">
                         <!-- Location -->
-                        <span class="flex items-center gap-1 text-white text-sm font-medium bg-[#092a54] px-4 py-2 rounded-full cursor-pointer">
-                            <i class="ri-map-pin-line text-base text-white"></i> Mumbai, India <i class="ri-arrow-down-s-line text-xs"></i>
+                        <span
+                            class="flex items-center gap-1 text-white text-xs font-medium bg-[#092a54] px-4 py-2 h-[40px] rounded-full cursor-pointer text-nowrap">
+                            <i class="ri-map-pin-line text-sm text-white"></i> Mumbai, India <i
+                                class="ri-arrow-down-s-line text-xs"></i>
                         </span>
                         <!-- Search Bar -->
                         <form class="flex-grow ml-2">
                             <div class="relative">
                                 <input type="search" placeholder="What are you looking for?"
-                                    class="w-full bg-transparent border-none outline-none text-[#092a54] placeholder-gray-400 pl-2 pr-14 py-2 text-base">
+                                    class="w-full bg-transparent border-none outline-none text-[#092a54] placeholder-gray-400 pl-2 pr-14 py-2 text-sm">
                                 <button type="submit"
                                     class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#092a54] text-white rounded-full w-[40px] h-[40px] flex items-center justify-center">
                                     <i class="ri-search-line"></i>
@@ -94,130 +71,231 @@
                             </div>
                         </form>
                         <!-- Language -->
-                        <span class="hidden flex items-center gap-1 text-[#092a54] text-sm font-medium bg-amber-100 px-4 py-2 rounded-full cursor-pointer border border-amber-200">
-                            <i class="ri-earth-line text-base text-amber-500"></i> EN <i class="ri-arrow-down-s-line text-xs"></i>
+                        <span
+                            class="hidden flex items-center gap-1 text-[#092a54] text-xs font-medium bg-amber-100 px-4 py-2 rounded-full cursor-pointer border border-amber-200">
+                            <i class="ri-earth-line text-base text-amber-500"></i> EN <i
+                                class="ri-arrow-down-s-line text-xs"></i>
                         </span>
                     </div>
                 </div>
 
                 <!-- Header Icons -->
-                <div class="flex items-center space-x-3 lg:space-x-5">
-                    <button id="search-button-mobile" class="focus:outline-none lg:hidden text-2xl hover:text-amber-400">
+                <div class="flex items-center space-x-3 xl:space-x-5">
+                    <button id="search-button-mobile"
+                        class="focus:outline-none lg:hidden text-2xl hover:text-amber-400">
                         <i class="ri-search-line"></i>
                     </button>
-                    <a href="#" class="header-icon hidden items-center space-x-2 text-white rounded-md group" title="Wishlist">
+                    <a href="#" class="header-icon hidden items-center space-x-2 text-white rounded-md group"
+                        title="Wishlist">
                         <div class="relative">
                             <i class="ri-heart-line text-2xl group-hover:text-amber-400"></i>
-                            <span class="absolute -top-1 -right-1 bg-amber-400 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">2</span>
+                            <span
+                                class="absolute -top-1 -right-1 bg-amber-400 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">2</span>
                         </div>
                     </a>
-                    <a href="#" class="header-icon hidden items-center space-x-2 text-white rounded-md relative group" title="Cart">
+                    <a href="#" class="header-icon hidden items-center space-x-2 text-white rounded-md relative group"
+                        title="Cart">
                         <div class="relative">
                             <i class="ri-shopping-cart-line text-2xl group-hover:text-amber-400"></i>
-                            <span class="absolute -top-2 -right-3 bg-amber-400 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">3</span>
+                            <span
+                                class="absolute -top-2 -right-3 bg-amber-400 text-black text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#092a54]">3</span>
                         </div>
                     </a>
-                    <a href="#" class="header-icon hidden lg:flex items-center space-x-2 text-white rounded-md group py-2 px-3 hover:bg-white/10" title="Account">
+                    <a href="#"
+                        class="header-icon hidden lg:flex items-center xl:space-x-2 text-white rounded-md group py-2 px-3 hover:bg-white/10"
+                        title="Account">
                         <i class="ri-user-line text-2xl"></i>
                         <div class="hidden xl:block">
                             <p class="text-xs text-gray-400">Welcome</p>
-                            <p class="font-semibold text-sm leading-tight">My Account</p>
+                            <p class="font-semibold text-sm leading-tight text-nowrap">My Account</p>
                         </div>
                     </a>
-                    <a href="#" class="ml-2 bg-amber-400 text-[#092a54] font-[500] px-5 py-2 rounded-full text-sm shadow hover:bg-amber-500 hover:text-[#092a54] transition">Sign In / Register</a>
+                    <a href="#"
+                        class="hidden lg:flex text-nowrap ml-2 bg-[#ffca43] text-[#092a54] font-[400] px-5 py-2 rounded-full text-xs xl:text-sm shadow hover:bg-amber-400 hover:text-[#092a54] transition">Sign
+                        In / Register</a>
                     <div class="menu-hamburger lg:hidden text-2xl">
                         <i class="ri-menu-line"></i>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Categories Bar -->
-        <nav class="categories-bar w-full bg-[#f7faff] shadow-md border-t border-white/10 hidden lg:block">
-            <div class="container mx-auto px-5 md:px-10 flex items-center justify-between gap-4 py-[4px] hide-scrollbar">
-                <!-- All Categories Button -->
-                <div class="relative group">
-                    <button class="all-categories-btn flex items-center gap-3 py-2 px-5 bg-[#092a54] text-white font-bold text-sm rounded-full hover:bg-amber-400 hover:text-[#092a54] transition">
-                        <i class="ri-apps-2-line text-lg"></i>
-                        <span>All Categories</span>
-                    </button>
-                    <!-- Mega Menu Dropdown -->
-                    <div class="all-categories-dropdown absolute -left-[6px] top-[120%] mt-0 w-64 bg-white rounded-b-lg shadow-2xl border-t-2 border-amber-500 py-3 z-50 transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-smartphone-line w-6 text-center"></i> Mobiles</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-tv-2-line w-6 text-center"></i> Electronics</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-t-shirt-air-line w-6 text-center"></i> Fashion</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-home-4-line w-6 text-center"></i> Home</a>
-                        <a href="#" class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i class="ri-restaurant-2-line w-6 text-center"></i> Kitchen</a>
-                    </div>
-                </div>
-                <!-- Product-focused Quick Links (concise, includes Sell With Us) -->
-                <div class="categories-right flex items-center gap-3 text-[#092a54] text-sm font-bold">
-                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Verified Suppliers</a>
-                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Global Shipping</a>
-                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Bulk & B2B Solutions</a>
-                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Sell With Us</a>
-                    <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Help Center</a>
-                </div>
-            </div>
-        </nav>
     </header>
-
-    <main class="hidden">
-        <section id="hero" class="relative flex items-center text-center overflow-hidden">
-            <!-- Background Video -->
-            <div class="absolute inset-0 z-0">
-                <video src="assets/videos/hero-video.mp4" autoplay muted loop
-                    class="w-full h-full object-cover"></video>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/50 to-black/50"></div>
-            </div>
-
-            <!-- Content Container -->
-            <div class="relative z-10 container mx-auto px-5 md:px-10 py-36 sm:py-44 text-white">
-                <!-- Main Headline -->
-                <div class="mb-8">
-                    <h1 class="text-2xl sm:text-4xl md:text-6xl drop-shadow-lg">
-                        <span
-                            class="bg-white font-semibold leading-tight tracking-tight from-cyan-500 to-cyan-300 bg-clip-text text-transparent">
-                            Global Trade, Reimagined
-                        </span>
-                    </h1>
-                    <p class="mt-4 text-sm sm:text-lg text-white max-w-xl mx-auto">
-                        We connect your business to the world with reliability, efficiency and innovation.
-                    </p>
+    <!-- Categories Bar -->
+    <nav class="categories-bar w-full bg-[#ffffff] border-y border-black/10 hidden lg:block">
+        <div
+            class="container mx-auto px-5 flex items-center justify-between gap-4 py-[4px] hide-scrollbar">
+            <!-- All Categories Button -->
+            <div class="relative group">
+                <button
+                    class="all-categories-btn flex items-center gap-2 py-[6px] px-5 bg-[#092a54] text-white font-bold text-xs rounded-full hover:bg-amber-400 hover:text-[#092a54] transition">
+                    <i class="ri-apps-2-line text-lg"></i>
+                    <span>All Categories</span>
+                </button>
+                <!-- Mega Menu Dropdown -->
+                <div
+                    class="all-categories-dropdown absolute -left-[6px] top-[120%] mt-0 w-64 bg-white rounded-b-lg shadow-2xl border-t-2 border-amber-500 py-3 z-50 transition-all duration-300 opacity-0 invisible">
+                    <a href="#"
+                        class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i
+                            class="ri-smartphone-line w-6 text-center"></i> Mobiles</a>
+                    <a href="#"
+                        class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i
+                            class="ri-tv-2-line w-6 text-center"></i> Electronics</a>
+                    <a href="#"
+                        class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i
+                            class="ri-t-shirt-air-line w-6 text-center"></i> Fashion</a>
+                    <a href="#"
+                        class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i
+                            class="ri-home-4-line w-6 text-center"></i> Home</a>
+                    <a href="#"
+                        class="dropdown-category-link flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:text-amber-500 text-sm"><i
+                            class="ri-restaurant-2-line w-6 text-center"></i> Kitchen</a>
                 </div>
+            </div>
+            <!-- Product-focused Quick Links (concise, includes Sell With Us) -->
+            <div class="categories-right flex items-center gap-3 text-[#092a54] text-xs font-bold">
+                <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Verified Suppliers</a>
+                <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Global Shipping</a>
+                <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Bulk & B2B
+                    Solutions</a>
+                <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Sell With Us</a>
+                <a href="#" class="category-quick-link hover:underline px-3 py-2 transition">Help Center</a>
+            </div>
+        </div>
+    </nav>
 
-                <!-- Service Pods -->
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-6 max-w-4xl mx-auto">
-
-                    <!-- Card 1: Sourcing -->
-                    <div
-                        class="text-center bg-black/10 backdrop-blur-sm border border-white/20 rounded-2xl sm:py-6 sm:px-5 py-4 px-3 transition-all duration-300">
-                        <i class="ri-shield-check-line text-xl sm:text-3xl mb-4 text-cyan-300"></i>
-                        <h3 class="text-sm sm:text-lg font-[500] text-white mb-2">Quality Sourcing</h3>
-                        <p class="text-gray-300 text-xs sm:text-sm">Vetted suppliers, guaranteed quality.</p>
-                    </div>
-
-                    <!-- Card 2: Sales -->
-                    <div
-                        class="text-center bg-black/10 backdrop-blur-sm border border-white/20 rounded-2xl sm:py-6 sm:px-5 py-4 px-3 transition-all duration-300">
-                        <i class="ri-flashlight-line text-xl sm:text-3xl mb-4 text-cyan-300"></i>
-                        <h3 class="text-sm sm:text-lg font-[500] text-white mb-2">Global Reach</h3>
-                        <p class="text-gray-300 text-xs sm:text-sm">Connecting you to buyers, fast.</p>
-                    </div>
-
-                    <!-- Card 3: Logistics -->
-                    <div
-                        class="text-center col-span-2 md:col-span-1 bg-black/10 backdrop-blur-sm border border-white/20 rounded-2xl sm:py-6 sm:px-5 py-4 px-3 transition-all duration-300">
-                        <i class="ri-truck-line text-xl sm:text-3xl mb-4 text-cyan-300"></i>
-                        <h3 class="text-sm sm:text-lg font-[500] text-white mb-2">Efficient Logistics</h3>
-                        <p class="text-gray-300 text-xs sm:text-sm">End-to-end shipping, simplified.</p>
+    <main>
+        <!-- Swiper Category Slider Section -->
+        <section class="category-swiper-section bg-[#f8f8f8] shadow-sm relative z-10 ">
+            <div class="container mx-auto px-5 py-3">
+                <div class="swiper category-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Furniture -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/hero-section-chair.png" alt="Furniture" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Furniture</h3>
+                        </div>
+                        <!-- Electronics -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/t-shirt.png" alt="Electronics" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Electronics</h3>
+                        </div>
+                        <!-- Apparel -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/watch.png" alt="Apparel" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Apparel</h3>
+                        </div>
+                        <!-- Kitchenware -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/hero-section-chair.png" alt="Kitchenware" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Kitchenware</h3>
+                        </div>
+                        <!-- Decor -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/t-shirt.png" alt="Decor" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Decor</h3>
+                        </div>
+                        <!-- Decor -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/watch.png" alt="Decor" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Decor</h3>
+                        </div>
+                        <!-- Decor -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/hero-section-chair.png" alt="Decor" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Decor</h3>
+                        </div>
+                        <!-- Decor -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/watch.png" alt="Decor" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Decor</h3>
+                        </div>
+                        <!-- Decor -->
+                        <div class="swiper-slide category-slide-minimal">
+                            <div class="category-img-wrap">
+                                <img src="assets/images/products-images/t-shirt.png" alt="Decor" class="category-img-rounded">
+                            </div>
+                            <h3 class="category-slide-title">Decor</h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Masonry Product Section -->
+        <section class="creative-masonry-section">
+            <div class="container mx-auto px-5 py-6">
+                <div class="creative-masonry-grid">
+                    <!-- Large Card -->
+                    <a href="#" class="creative-card card-large bg-gradient-to-br from-[#f7e8c3] to-[#fff]">
+                        <img src="assets/images/banners/banner-1.jpg" alt="Wireless Earbuds" class="creative-card-img">
+                        <div class="creative-card-content overlay">
+                            <h3 class="creative-card-title">Wireless Earbuds</h3>
+                            <p class="creative-card-category">Audio & Gadgets</p>
+                        </div>
+                    </a>
+                    <!-- Tall Card -->
+                    <a href="#" class="creative-card card-tall bg-gradient-to-br from-[#e0f2fe] to-[#fff]">
+                        <img src="assets/images/banners/banner-5.jpg" alt="Fresh Produce" class="creative-card-img">
+                        <div class="creative-card-content overlay">
+                            <h3 class="creative-card-title">Fresh Produce</h3>
+                            <p class="creative-card-category">Groceries</p>
+                        </div>
+                    </a>
+                    <!-- Medium Card -->
+                    <a href="#" class="creative-card card-medium bg-gradient-to-br from-[#fce7f3] to-[#fff]">
+                        <img src="assets/images/banners/banner-3.jpg" alt="Premium Tees" class="creative-card-img">
+                        <div class="creative-card-content overlay">
+                            <h3 class="creative-card-title">Premium Tees</h3>
+                            <p class="creative-card-category">Apparel</p>
+                        </div>
+                    </a>
+                    <!-- Small Card -->
+                    <a href="#" class="creative-card card-small bg-gradient-to-br from-[#e0ffe8] to-[#fff]">
+                        <img src="assets/images/banners/banner-4.jpg" alt="Home Vases" class="creative-card-img">
+                        <div class="creative-card-content overlay">
+                            <h3 class="creative-card-title">Home Vases</h3>
+                            <p class="creative-card-category">Decor</p>
+                        </div>
+                    </a>
+                    <!-- Wide Card -->
+                    <a href="#" class="creative-card card-wide bg-gradient-to-br from-[#e0e7ff] to-[#fff]">
+                        <img src="assets/images/banners/banner-2.jpg" alt="Kitchen Staples" class="creative-card-img">
+                        <div class="creative-card-content overlay">
+                            <h3 class="creative-card-title">Kitchen Staples</h3>
+                            <p class="creative-card-category">Essentials</p>
+                        </div>
+                    </a>
+                    <!-- Square Card -->
+                    <a href="#" class="creative-card card-square bg-gradient-to-br from-[#fffde7] to-[#fff]">
+                        <img src="assets/images/banners/banner-6.jpg" alt="Eco Tableware" class="creative-card-img">
+                        <div class="creative-card-content overlay">
+                            <h3 class="creative-card-title">Eco Tableware</h3>
+                            <p class="creative-card-category">Kitchenware</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+
 
         <!-- Features/Benefits Section -->
-        <section id="features" class="bg-gray-50 py-16">
+        <section id="features" class="bg-gray-50 py-16 hidden">
             <div class="container mx-auto px-5 md:px-10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-10 gap-x-8 text-center">
                     <!-- Feature 1 -->
@@ -257,15 +335,22 @@
         </section>
 
         <!-- Engaging About/Showcase Section (Revised) -->
-        <section id="trade-blueprint" class="relative bg-white py-16 md:py-24 overflow-hidden">
+        <section id="trade-blueprint" class="hidden relative bg-white py-16 md:py-24 overflow-hidden">
             <!-- Decorative Background Objects -->
-            <div class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-blue-100 via-cyan-100 to-transparent rounded-full opacity-60 z-0"></div>
-            <div class="absolute top-1/2 right-0 w-72 h-72 bg-gradient-to-tr from-amber-100 via-yellow-100 to-transparent rounded-full opacity-50 z-0"></div>
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-gradient-to-r from-cyan-100 via-blue-100 to-transparent rounded-3xl opacity-40 z-0"></div>
+            <div
+                class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-blue-100 via-cyan-100 to-transparent rounded-full opacity-60 z-0">
+            </div>
+            <div
+                class="absolute top-1/2 right-0 w-72 h-72 bg-gradient-to-tr from-amber-100 via-yellow-100 to-transparent rounded-full opacity-50 z-0">
+            </div>
+            <div
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-gradient-to-r from-cyan-100 via-blue-100 to-transparent rounded-3xl opacity-40 z-0">
+            </div>
             <div class="container mx-auto px-5 md:px-10 relative z-10">
                 <!-- Section Header -->
                 <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-2xl md:text-4xl font-[700] text-gray-900 inline-block relative mb-4">Your Global Ambition, <br>Our Blueprint</h2>
+                    <h2 class="text-2xl md:text-4xl font-[700] text-gray-900 inline-block relative mb-4">Your Global
+                        Ambition, <br>Our Blueprint</h2>
                     <p class="text-gray-600 leading-relaxed text-sm md:text-base">
                         We simplify international trade with smart solutions and proven expertise.
                     </p>
@@ -275,43 +360,58 @@
                 <div class="grid lg:grid-cols-2 gap-12 mb-16">
                     <!-- Image Banner -->
                     <div class="overflow-hidden rounded-2xl shadow-md">
-                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Strategic Sourcing" class="h-full w-full object-cover">
+                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Strategic Sourcing"
+                            class="h-full w-full object-cover">
                     </div>
                     <!-- Content -->
                     <div>
                         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Strategic Sourcing</h3>
-                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We don't just find suppliers; we forge partnerships. Our process is a deep, investigative journey to find partners who share our commitment to excellence.</p>
+                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We don't just find suppliers; we forge
+                            partnerships. Our process is a deep, investigative journey to find partners who share our
+                            commitment to excellence.</p>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
-                                    <i class="ri-flask-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
+                                    <i class="ri-flask-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Tangible Quality Assurance</h4>
-                                    <p class="text-gray-600 text-sm">Hands-on inspections and sample testing to guarantee the product you specified is the product you receive.</p>
+                                    <p class="text-gray-600 text-sm">Hands-on inspections and sample testing to
+                                        guarantee the product you specified is the product you receive.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
-                                    <i class="ri-shake-hands-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
+                                    <i class="ri-shake-hands-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Long-term Partnership Building</h4>
-                                    <p class="text-gray-600 text-sm">We focus on creating sustainable relationships that grow stronger over time, ensuring consistent quality and reliability.</p>
+                                    <p class="text-gray-600 text-sm">We focus on creating sustainable relationships that
+                                        grow stronger over time, ensuring consistent quality and reliability.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
-                                    <i class="ri-price-tag-3-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
+                                    <i class="ri-price-tag-3-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Competitive Pricing Analysis</h4>
-                                    <p class="text-gray-600 text-sm">Thorough market research and cost analysis to ensure you get the best value for your investment.</p>
+                                    <p class="text-gray-600 text-sm">Thorough market research and cost analysis to
+                                        ensure you get the best value for your investment.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
-                                    <i class="ri-shield-check-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
+                                    <i class="ri-shield-check-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Deep-Dive Vetting</h4>
-                                    <p class="text-gray-600 text-sm">Comprehensive audits of financial health, ethical practices, and performance history.</p>
+                                    <p class="text-gray-600 text-sm">Comprehensive audits of financial health, ethical
+                                        practices, and performance history.</p>
                                 </div>
                             </li>
                         </ul>
@@ -323,52 +423,67 @@
                     <!-- Content -->
                     <div class="order-2 sm:order-1">
                         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Smart Logistics</h3>
-                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We view logistics not as a cost, but as a critical advantage. Our mission is to eliminate friction from your supply chain through a resilient, intelligent network.</p>
+                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We view logistics not as a cost, but as a
+                            critical advantage. Our mission is to eliminate friction from your supply chain through a
+                            resilient, intelligent network.</p>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
-                                    <i class="ri-global-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
+                                    <i class="ri-global-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Integrated Global Network</h4>
-                                    <p class="text-gray-600 text-sm">From factory dock to final destination, your shipment is managed in one unified system for unparalleled control.</p>
+                                    <p class="text-gray-600 text-sm">From factory dock to final destination, your
+                                        shipment is managed in one unified system for unparalleled control.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
-                                    <i class="ri-radar-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
+                                    <i class="ri-radar-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Proactive Risk Management</h4>
-                                    <p class="text-gray-600 text-sm">Our specialists use predictive data to anticipate and resolve potential hurdles before they cause delays.</p>
+                                    <p class="text-gray-600 text-sm">Our specialists use predictive data to anticipate
+                                        and resolve potential hurdles before they cause delays.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
-                                    <i class="ri-eye-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
+                                    <i class="ri-eye-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Real-time Visibility</h4>
-                                    <p class="text-gray-600 text-sm">Track your shipments with complete transparency through our advanced monitoring and reporting systems.</p>
+                                    <p class="text-gray-600 text-sm">Track your shipments with complete transparency
+                                        through our advanced monitoring and reporting systems.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
-                                    <i class="ri-truck-line text-xl"></i></div>
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
+                                    <i class="ri-truck-line text-xl"></i>
+                                </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Multi-modal Transportation</h4>
-                                    <p class="text-gray-600 text-sm">Optimized shipping solutions combining air, sea, and land transport for maximum efficiency.</p>
+                                    <p class="text-gray-600 text-sm">Optimized shipping solutions combining air, sea,
+                                        and land transport for maximum efficiency.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <!-- Image Banner -->
                     <div class="overflow-hidden rounded-2xl shadow-md order-1 sm:order-2">
-                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Intelligent Logistics" class="h-full w-full object-cover">
+                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Intelligent Logistics"
+                            class="h-full w-full object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Products Section -->
-        <section id="featured-products" class="py-16 md:py-24">
+        <section id="featured-products" class="py-16 md:py-24 hidden">
             <div class="container mx-auto px-5 md:px-10">
                 <!-- Section Header -->
                 <div class="text-center mb-16">
@@ -589,6 +704,25 @@
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Swiper('.category-swiper', {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                breakpoints: {
+                    415: { slidesPerView: 3, spaceBetween: 10 },
+                    768: { slidesPerView: 4, spaceBetween: 14 },
+                    1024: { slidesPerView: 6, spaceBetween: 14 },
+                    1280: { slidesPerView: 7, spaceBetween: 14 },
+                    1440: { slidesPerView: 9, spaceBetween: 24 }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
