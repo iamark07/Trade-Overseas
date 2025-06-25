@@ -38,7 +38,7 @@
 
 <body class="overflow-x-hidden bg-[#fafafa] font-['Inter']">
 
-    <header class="sticky top-0 bg-gradient-to-r from-[#10223b] to-[#092a54] relative z-50 text-white font-['Poppins']">
+    <header class="sticky top-0 bg-gradient-to-r from-[#10223b] to-[#092a54] z-50 text-white font-['Poppins']">
         <!-- Main Header -->
         <div class="main-header">
             <div class="container mx-auto px-5 flex justify-between items-center py-5">
@@ -80,7 +80,7 @@
                 </div>
 
                 <!-- Header Icons -->
-                <div class="flex items-center space-x-3 xl:space-x-5">
+                <div class="flex items-center space-x-5 lg:space-x-3 xl:space-x-5">
                     <button id="search-button-mobile"
                         class="focus:outline-none lg:hidden text-2xl hover:text-amber-400">
                         <i class="ri-search-line"></i>
@@ -165,7 +165,7 @@
 
     <main>
         <!-- Swiper Category Slider Section -->
-        <section class="category-swiper-section bg-[#f8f8f8] shadow-sm relative z-10 ">
+        <section class="category-swiper-section bg-[#f7f7f7] shadow-sm relative z-10 ">
             <div class="container mx-auto px-5 py-3">
                 <div class="swiper category-swiper">
                     <div class="swiper-wrapper">
@@ -292,7 +292,355 @@
             </div>
         </section>
         
+        <!-- Featured Products Section -->
+        <section id="featured-products" class="py-16 md:py-24">
+            <div class="container mx-auto px-5">
+                <!-- Section Header -->
+                <div class="mb-12">
+                    <div>
+                        <h2 class="text-2xl md:text-4xl font-[500] text-gray-900 inline-block relative">
+                            Our Featured Products
+                            <span
+                                class="hidden absolute -bottom-3 left-1/2 -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
+                        </h2>
+                    </div>
+                    <p class="hidden mt-8 text-lg text-gray-600 max-w-2xl mx-auto">
+                        Explore a curated selection of our top-quality products, sourced and delivered with excellence.
+                    </p>
+                </div>
 
+                <div class="flex gap-10 flex-col">
+                    <div class="bg-white shadow-sm px-4 py-7 sm:p-7 relative">
+                        <h2 class="text-lg md:text-2xl mb-4 font-[500] text-gray-900 inline-block relative">
+                            Electronics Items
+                        </h2>
+                        
+                        <!-- Swiper Products Slider -->
+                        <div class="swiper products-swiper relative">
+                            <div class="swiper-wrapper">
+                                <!-- Product 1 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/watch.png"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/t-shirt.png"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 4 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/t-shirt.png"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 5 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/watch.png"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 6 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 7 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/t-shirt.png"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 8 -->
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-image-container">
+                                            <a href="#">
+                                                <img src="assets/images/products-images/watch.png"
+                                                    alt="Product Name" class="product-image">
+                                            </a>
+                                            <div class="product-actions hidden md:flex">
+                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
+                                                <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
+                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <p class="product-category-text">Electronics</p>
+                                            <a href="#">
+                                                <h3 class="product-title-text">Modern Smartwatch</h3>
+                                            </a>
+                                            <div class="flex items-center mb-3">
+                                                <div class="text-yellow-400 text-sm">
+                                                    <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
+                                                        class="ri-star-half-s-line"></i>
+                                                </div>
+                                                <span class="text-[10px] sm:text-xs text-gray-500 ml-2">(4.5)</span>
+                                            </div>
+                                            <div class="flex flex-col gap-3 md:flex-row md:items-center justify-between">
+                                                <p class="text-base sm:text-xl font-[600] roboto"><span
+                                                        class="font-[600] mr-1">₹</span>299</p>
+                                                <button class="add-to-cart-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <!-- navigation buttons -->
+                        <div class="flex gap-3 absolute top-5 right-8">
+                            <!-- Navigation Arrows -->
+                            <div class="swiper-button-prev-custom"><i class="ri-arrow-left-s-line"></i></div>
+                            <div class="swiper-button-next-custom"><i class="ri-arrow-right-s-line"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View All Button -->
+                <div class="text-center mt-12 hidden">
+                    <a href="#"
+                        class="inline-block bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                        View All Products
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- Features/Benefits Section -->
         <section id="features" class="bg-gray-50 py-16 hidden">
@@ -482,214 +830,7 @@
             </div>
         </section>
 
-        <!-- Featured Products Section -->
-        <section id="featured-products" class="py-16 md:py-24 hidden">
-            <div class="container mx-auto px-5 md:px-10">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <div>
-                        <h2 class="text-2xl md:text-4xl font-semibold text-gray-900 inline-block relative">
-                            Our Featured Products
-                            <span
-                                class="hidden absolute -bottom-3 left-1/2 -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
-                        </h2>
-                    </div>
-                    <p class="hidden mt-8 text-lg text-gray-600 max-w-2xl mx-auto">
-                        Explore a curated selection of our top-quality products, sourced and delivered with excellence.
-                    </p>
-                </div>
-
-                <div class="flex gap-10 flex-col">
-                    <div class="bg-white shadow-sm p-7">
-                        <h2 class="text-xl md:text-2xl mb-4 font-semibold text-gray-900 inline-block relative">
-                            Electronics Items
-                        </h2>
-                        <!-- Products Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 ">
-
-                            <div class="product-card">
-                                <div class="product-image-container">
-                                    <a href="#">
-                                        <img src="assets/images/products-images/-original-imagg8dddyyzjnxn.webp"
-                                            alt="Product Name" class="product-image">
-                                    </a>
-                                    <div class="product-actions">
-                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
-                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
-                                    </div>
-                                </div>
-                                <div class="p-4 text-left">
-                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
-                                    <a href="#">
-                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
-                                    </a>
-                                    <div class="flex items-center mb-3">
-                                        <div class="text-yellow-400">
-                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-half-s-line"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xl font-[600] roboto text-blue-600"><span
-                                                class="font-[600] mr-1">₹</span>299</p>
-                                        <button class="add-to-cart-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image-container">
-                                    <a href="#">
-                                        <img src="assets/images/products-images/xs-db1024-03-3bros-original-imahfzpbtgzpktkk.webp"
-                                            alt="Product Name" class="product-image">
-                                    </a>
-                                    <div class="product-actions">
-                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
-                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
-                                    </div>
-                                </div>
-                                <div class="p-4 text-left">
-                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
-                                    <a href="#">
-                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
-                                    </a>
-                                    <div class="flex items-center mb-3">
-                                        <div class="text-yellow-400">
-                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-half-s-line"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xl font-[600] roboto text-blue-600"><span
-                                                class="font-[600] mr-1">₹</span>299</p>
-                                        <button class="add-to-cart-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image-container">
-                                    <a href="#">
-                                        <img src="assets/images/products-images/-original-imagg8dddyyzjnxn.webp"
-                                            alt="Product Name" class="product-image">
-                                    </a>
-                                    <div class="product-actions">
-                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
-                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
-                                    </div>
-                                </div>
-                                <div class="p-4 text-left">
-                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
-                                    <a href="#">
-                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
-                                    </a>
-                                    <div class="flex items-center mb-3">
-                                        <div class="text-yellow-400">
-                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-half-s-line"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xl font-[600] roboto text-blue-600"><span
-                                                class="font-[600] mr-1">₹</span>299</p>
-                                        <button class="add-to-cart-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image-container">
-                                    <a href="#">
-                                        <img src="assets/images/products-images/xs-db1024-03-3bros-original-imahfzpbtgzpktkk.webp"
-                                            alt="Product Name" class="product-image">
-                                    </a>
-                                    <div class="product-actions">
-                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
-                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
-                                    </div>
-                                </div>
-                                <div class="p-4 text-left">
-                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
-                                    <a href="#">
-                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
-                                    </a>
-                                    <div class="flex items-center mb-3">
-                                        <div class="text-yellow-400">
-                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-half-s-line"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xl font-[600] roboto text-blue-600"><span
-                                                class="font-[600] mr-1">₹</span>299</p>
-                                        <button class="add-to-cart-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-image-container">
-                                    <a href="#">
-                                        <img src="assets/images/products-images/-original-imagg8dddyyzjnxn.webp"
-                                            alt="Product Name" class="product-image">
-                                    </a>
-                                    <div class="product-actions">
-                                        <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
-                                        <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                        <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
-                                    </div>
-                                </div>
-                                <div class="p-4 text-left">
-                                    <p class="text-sm text-gray-500 mb-1">Electronics</p>
-                                    <a href="#">
-                                        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Smartwatch</h3>
-                                    </a>
-                                    <div class="flex items-center mb-3">
-                                        <div class="text-yellow-400">
-                                            <i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i
-                                                class="ri-star-half-s-line"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-2">(4.5)</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xl font-[600] roboto text-blue-600"><span
-                                                class="font-[600] mr-1">₹</span>299</p>
-                                        <button class="add-to-cart-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- View All Button -->
-                <div class="text-center mt-12 hidden">
-                    <a href="#"
-                        class="inline-block bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
-                        View All Products
-                    </a>
-                </div>
-            </div>
-        </section>
+        
 
     </main>
 
@@ -719,6 +860,26 @@
                     1024: { slidesPerView: 6, spaceBetween: 14 },
                     1280: { slidesPerView: 7, spaceBetween: 14 },
                     1440: { slidesPerView: 9, spaceBetween: 24 }
+                }
+            });
+
+            // Products Swiper
+            new Swiper('.products-swiper', {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next-custom',
+                    prevEl: '.swiper-button-prev-custom',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    340: { slidesPerView: 2, spaceBetween: 15 },
+                    640: { slidesPerView: 3, spaceBetween: 20 },
+                    1024: { slidesPerView: 4, spaceBetween: 20 },
+                    1280: { slidesPerView: 5, spaceBetween: 20 }
                 }
             });
         });
