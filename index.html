@@ -29,20 +29,17 @@
 
 <body class="overflow-x-hidden bg-[#fafafa] font-['Inter']">
 
-    <!-- Top Bar -->
-    <div
-        class="top-bar-section bg-gradient-to-r from-[#2a0f3e] to-slate-900 text-white py-2 premium-top-bar hidden lg:block">
+    <!-- Top Bar Section-->
+    <div class="top-bar-section bg-[#092a54] text-white py-2 premium-top-bar hidden">
         <div class="container mx-auto px-5 premium-header-container">
-            <div class="flex items-center justify-end text-xs">
-                <div class="hidden flex items-center space-x-6">
-                    <span class="flex items-center gap-1">
-                        <i class="ri-phone-line text-amber-400"></i>
-                        <span>+91 98765 43210</span>
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <i class="ri-mail-line text-amber-400"></i>
-                        <span>support@tradeoverseas.com</span>
-                    </span>
+            <div class="flex items-center justify-between text-xs">
+                <div class="flex items-center space-x-6">
+                    <ul class="flex gap-3">
+                        <li><a href="#"><i class="ri-facebook-line text-base"></i></a></li>
+                        <li><a href="#"><i class="ri-instagram-line text-base"></i></a></li>
+                        <li><a href="#"><i class="ri-twitter-line text-base"></i></a></li>
+                        <li><a href="#"><i class="ri-whatsapp-line text-base"></i></a></li>
+                    </ul>
                 </div>
                 <div class="flex items-center space-x-4">
                     <span class="flex items-center gap-1">
@@ -51,8 +48,8 @@
                         <i class="ri-arrow-down-s-line text-xs"></i>
                     </span>
                     <span class="flex items-center gap-1">
-                        <i class="ri-currency-line text-amber-400"></i>
-                        <span>INR</span>
+                        <i class="ri-user-line text-amber-400"></i>
+                        <span>My Account</span>
                         <i class="ri-arrow-down-s-line text-xs"></i>
                     </span>
                 </div>
@@ -60,203 +57,342 @@
         </div>
     </div>
 
-    <header class="sticky top-0 z-50 bg-white premium-header transition-all duration-200">
-        <!-- Main Header -->
-        <div class="bg-white">
-            <div class="container mx-auto px-5 py-4 premium-header-container">
-                <div class="flex items-center justify-between relative">
-                    <!-- Logo -->
-                    <div class="flex-shrink-0">
-                        <a href="index.html" class="flex items-center">
-                            <img class="h-12 hidden" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
-                            <div class="">
-                                <h1
-                                    class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent premium-logo-text">
-                                    Trade Overseas
-                                </h1>
-                                <p class="text-xs text-gray-500">Global Trade Solutions</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Search Bar -->
-                    <div class="max-w-3xl w-full mx-8 hidden lg:block premium-search-wrapper relative">
-                        <div class="relative w-full">
-                            <div
-                                class="w-full flex bg-gray-50 rounded-full border border-gray-200 transition-colors duration-300 premium-search-container">
-                                <div class="flex items-center px-4 py-3 gap-1 border-r border-gray-200 cursor-pointer">
-                                    <i class="ri-map-pin-line text-indigo-600"></i>
-                                    <span class="bg-transparent text-[13px] text-gray-700">Mumbai, India</span>
-                                    <i class="ri-arrow-drop-down-line text-xl"></i>
+    <!-- main header section -->
+    <header class="sticky top-0 z-50 duration-200">
+        <div class="flex justify-center main-header transition-all w-full">
+            <!-- inner Header -->
+            <div class="inner-header max-w-[1600px] w-full">
+                <div class="container mx-auto px-5 py-6 premium-header-container">
+                    <div class="flex items-center justify-between relative">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <a href="index.html" class="flex items-center">
+                                <img class="h-12" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
+                                <div class="hidden">
+                                    <h1 class="text-xl lg:text-2xl font-bold text-[#092a54] premium-logo-text">
+                                        Trade Overseas
+                                    </h1>
+                                    <p class="text-xs lg:text-sm text-gray-500">Global Trade Solutions</p>
                                 </div>
-                                <div class="flex-1 flex items-center px-4">
-                                    <input type="text" placeholder="Search for products, suppliers, or categories..."
-                                        class="py-3 w-full bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400">
-                                </div>
-                                <button type="submit"
-                                    class="px-4 xl:px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white rounded-r-full hover:from-indigo-700 hover:to-indigo-600 transition-all duration-300 flex items-center gap-2 premium-gradient-btn text-sm">
-                                    <i class="ri-search-line"></i>
-                                    <span class="hidden xl:inline">Search</span>
-                                </button>
-                            </div>
+                            </a>
                         </div>
-                    </div>
 
-                    <!-- Header Actions -->
-                    <div class="flex items-center gap-4 lg:gap-6 premium-header-actions">
-                        <!-- Mobile Search -->
-                        <button
-                            class="lg:hidden min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] group-hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
-                            <i class="ri-search-line text-xl text-gray-600 group-hover:text-purple-600 "></i>
-                        </button>
-
-                        <!-- Wishlist -->
-                        <a href="#" class="relative group hidden lg:block">
-                            <div
-                                class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] group-hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
-                                <i class="ri-heart-line text-xl text-gray-600 group-hover:text-purple-600 "></i>
-                            </div>
-                            <span
-                                class="absolute -top-2 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">2</span>
-                        </a>
-
-                        <!-- Cart -->
-                        <a href="#" class="relative group hidden lg:block">
-                            <div
-                                class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] group-hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
-                                <i class="ri-shopping-cart-line text-xl text-gray-600 group-hover:text-indigo-600 "></i>
-                            </div>
-                            <span
-                                class="absolute -top-2 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
-                        </a>
-
-                        <!-- User Account -->
-                        <div class="hidden items-center space-x-3">
-                            <div
-                                class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] hover:bg-purple-50 transition-colors duration-300 cursor-pointer premium-icon-btn">
-                                <i
-                                    class="ri-user-line text-xl text-gray-600 hover:text-indigo-600 transition-colors"></i>
-                            </div>
-                            <div class="hidden lg:block">
-                                <p class="text-xs text-gray-500">Welcome back</p>
-                                <p class="text-sm font-semibold text-gray-800">My Account</p>
+                        <!-- Search Bar -->
+                        <div class="lg:max-w-[470px] xl:max-w-2xl w-full mx-8 hidden lg:block premium-search-wrapper">
+                            <div class="relative w-full">
+                                <div
+                                    class="w-full flex bg-gray-50 rounded-full border border-gray-200 transition-colors duration-300 premium-search-container">
+                                    <div class="flex items-center px-4 lg:pl-4 lg:pr-[10px] xl:px-4 py-3 gap-1 border-r border-gray-200 cursor-pointer">
+                                        <i class="ri-map-pin-line text-[#092a54]"></i>
+                                        <span class="bg-transparent text-[11px] xl:text-[13px] text-gray-700">Mumbai, India</span>
+                                        <i class="ri-arrow-drop-down-line text-lg xl:text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 flex items-center px-4">
+                                        <input type="text" placeholder="Search for products, suppliers, or categories..."
+                                            class="py-3 w-full bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400">
+                                    </div>
+                                    <button type="submit"
+                                        class="px-4 xl:px-6 py-3 bg-[#092a54] text-white rounded-r-full transition-all duration-300 flex items-center gap-2 premium-gradient-btn text-sm">
+                                        <i class="ri-search-line"></i>
+                                        <span class="hidden xl:inline">Search</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Sign In Button -->
-                        <a href="#"
-                            class="hidden lg:inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-[500] text-sm rounded-full hover:from-indigo-700 hover:to-blue-600 transition-all duration-300 shadow-lg premium-gradient-btn text-nowrap">
-                            <i class="ri-login-box-line mr-2"></i>
-                            Sign In
-                        </a>
+                        <!-- Header Actions -->
+                        <div class="flex items-center gap-4 lg:gap-5 premium-header-actions">
+                            <!-- Mobile Search -->
+                            <button
+                                class="lg:hidden min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] group-hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
+                                <i class="ri-search-line text-xl text-gray-600 group-hover:text-[#092a54] "></i>
+                            </button>
 
-                        <!-- Mobile Menu -->
-                        <button class="lg:hidden p-2 text-gray-600 hover:text-indigo-600 transition-colors">
-                            <i class="ri-menu-line text-xl"></i>
-                        </button>
+                            <!-- Wishlist -->
+                            <a href="#" class="relative group hidden block">
+                                <div
+                                    class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
+                                    <i class="ri-heart-line text-xl text-gray-600 group-hover:text-[#092a54] "></i>
+                                </div>
+                                <span
+                                    class="absolute -top-2 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                            </a>
+
+                            <!-- Cart -->
+                            <a href="#" class="relative group hidden lg:block">
+                                <div
+                                    class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
+                                    <i class="ri-shopping-cart-line text-xl text-gray-600 group-hover:text-[#092a54] "></i>
+                                </div>
+                                <span
+                                    class="absolute -top-2 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                            </a>
+
+                            <!-- User Account -->
+                            <div class="hidden lg:flex items-center space-x-3">
+                                <div
+                                    class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] hover:bg-purple-50 transition-colors duration-300 cursor-pointer premium-icon-btn">
+                                    <i
+                                        class="ri-user-line text-xl text-gray-600 hover:text-[#092a54] transition-colors"></i>
+                                </div>
+                                <div class="hidden lg:block">
+                                    <p class="text-xs text-gray-500">Welcome back</p>
+                                    <p class="text-sm font-semibold text-gray-800">My Account</p>
+                                </div>
+                            </div>
+
+                            <!-- Sign In Button -->
+                            <a href="#"
+                                class="hidden flex items-center text-gray-700 font-[500] rounded-full transition-all duration-300 premium-gradient-btn text-nowrap">
+                                <i class="ri-login-box-line mr-2"></i>
+                                Sign In
+                            </a>
+
+                            <!-- Mobile Menu -->
+                            <button class="lg:hidden p-2 text-gray-600 hover:text-[#092a54] transition-colors">
+                                <i class="ri-menu-line text-xl"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Navigation Bar section-->
+        <nav class="navigaiton-bar-section bg-[#f8fbff] border-y border-gray-200 shadow-sm text-gray-700 premium-nav-bar">
+            <div class="container mx-auto px-5 premium-header-container">
+                <div class="flex items-center justify-between relative">
+                    <!-- Categories Dropdown -->
+                    <div class="group category-dropdown">
+                        <button
+                            class="flex items-center space-x-2 py-3 px-4 md:py-3 md:px-6 transition-colors duration-300 ">
+                            <i class="ri-apps-2-line md:text-xl"></i>
+                            <span class="font-[400] text-[10px] md:text-sm">All Categories</span>
+                            <i class="ri-arrow-down-s-line text-sm md:text-base"></i>
+                        </button>
+
+                        <!-- Mega Menu -->
+                        <div class="absolute top-full left-0 w-full grid lg:grid-cols-9 opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                            <div class="lg:col-span-2 bg-white shadow-2xl  transition-all duration-300 z-50 premium-mega-menu h-fit">
+                                <div class="header-category-scroll">
+                                    <div class="space-y-2 p-4">
+                                        <!-- Category Item Example -->
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/hero-section-chair.png" alt="Electronics" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Electronics</p>
+                                                    <p class="text-[10px] text-gray-500">Mobiles, Laptops, Cameras</p>
+                                                </div>
+                                            </a>             
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/t-shirt.png" alt="Fashion" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Fashion</p>
+                                                    <p class="text-[10px] text-gray-500">Men, Women, Kids</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Home & Garden</p>
+                                                    <p class="text-[10px] text-gray-500">Furniture, Decor, Tools</p>
+                                                </div>
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/watch.png" alt="Kitchen" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Kitchen</p>
+                                                    <p class="text-[10px] text-gray-500">Appliances, Utensils, Storage</p>
+                                                </div>
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/hero-section-chair.png" alt="Electronics" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Electronics</p>
+                                                    <p class="text-[10px] text-gray-500">Mobiles, Laptops, Cameras</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/t-shirt.png" alt="Fashion" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Fashion</p>
+                                                    <p class="text-[10px] text-gray-500">Men, Women, Kids</p>
+                                                </div>
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Home & Garden</p>
+                                                    <p class="text-[10px] text-gray-500">Furniture, Decor, Tools</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/watch.png" alt="Kitchen" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Kitchen</p>
+                                                    <p class="text-[10px] text-gray-500">Appliances, Utensils, Storage</p>
+                                                </div>
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Home & Garden</p>
+                                                    <p class="text-[10px] text-gray-500">Furniture, Decor, Tools</p>
+                                                </div>
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/watch.png" alt="Kitchen" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Kitchen</p>
+                                                    <p class="text-[10px] text-gray-500">Appliances, Utensils, Storage</p>
+                                                </div>
+                                            </a>
+                                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                                <ul class="p-3 space-y-2">
+                                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Appliances</a></li>
+                                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Utensils</a></li>
+                                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Storage</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Subcategories Hover Panel -->
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel" style="left: calc(100% + 16px); top: calc(0px - 16px)">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Mobiles</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Laptops</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Cameras</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Men</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Women</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Kids</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Furniture</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Decor</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Tools</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Appliances</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Utensils</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Storage</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Mobiles</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Laptops</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Cameras</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Men</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Women</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Kids</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Furniture</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Decor</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Tools</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Appliances</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Utensils</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Storage</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
+                                <ul class="p-3 space-y-2">
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Furniture</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Decor</a></li>
+                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Tools</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Fullscreen Subcategory Panel (hidden by default, shown on hover) -->
+                        <div class="fixed top-0 left-0 w-full h-full bg-white bg-opacity-95 z-50 hidden category-fullscreen-panel">
+                            <div class="max-w-5xl mx-auto p-8">
+                                <h2 class="text-2xl font-bold mb-4">Subcategories</h2>
+                                <div class="grid grid-cols-3 gap-6 subcategory-details">
+                                    <!-- Subcategory details will be dynamically shown here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-500 premium-nav-link">
+                            <span>Verified Suppliers</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-500 premium-nav-link">
+                            <span>Global Shipping</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-500 premium-nav-link">
+                            <span>B2B Solutions</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-500 premium-nav-link">
+                            <span>Sell With Us</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-500 premium-nav-link">
+                            <span>Help Center</span>
+                        </a>
+                    </div>
+
+                    <!-- Customer Service Badges -->
+                    <a href="#" class="hidden xl:flex items-center space-x-2">
+                        <span
+                            class="bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-[500] flex items-center gap-1 premium-customer-badge">
+                            <i class="ri-ship-line"></i>
+                            Free Shipping
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav class="navigaiton-bar-section bg-gradient-to-r from-indigo-600 to-indigo-500 text-white premium-nav-bar">
-        <div class="container mx-auto px-5 premium-header-container">
-            <div class="flex items-center justify-between">
-                <!-- Categories Dropdown -->
-                <div class="relative group">
-                    <button
-                        class="flex items-center space-x-2 py-2 px-4 md:py-3 md:px-6 bg-black/20 hover:bg-black/30 transition-colors duration-300 ">
-                        <i class="ri-apps-2-line md:text-xl"></i>
-                        <span class="font-[400] text-[10px] md:text-sm">All Categories</span>
-                        <i class="ri-arrow-down-s-line text-sm md:text-base"></i>
-                    </button>
-
-                    <!-- Mega Menu -->
-                    <div
-                        class="absolute top-full left-0 w-80 bg-white shadow-2xl rounded-b-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 premium-mega-menu">
-                        <div class="p-4">
-                            <div class="grid grid-cols-1 gap-4">
-                                <a href="#"
-                                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-purple-50 transition-colors">
-                                    <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                                        <i class="ri-smartphone-line text-purple-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-gray-800">Electronics</p>
-                                        <p class="text-xs text-gray-500">Phones, Laptops, Gadgets</p>
-                                    </div>
-                                </a>
-                                <a href="#"
-                                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-purple-50 transition-colors">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                                        <i class="ri-t-shirt-air-line text-blue-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-gray-800">Fashion</p>
-                                        <p class="text-xs text-gray-500">Clothing, Accessories</p>
-                                    </div>
-                                </a>
-                                <a href="#"
-                                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-purple-50 transition-colors">
-                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                                        <i class="ri-home-4-line text-green-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-gray-800">Home & Garden</p>
-                                        <p class="text-xs text-gray-500">Furniture, Decor</p>
-                                    </div>
-                                </a>
-                                <a href="#"
-                                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-purple-50 transition-colors">
-                                    <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                                        <i class="ri-restaurant-2-line text-orange-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-gray-800">Kitchen</p>
-                                        <p class="text-xs text-gray-500">Appliances, Utensils</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-300 premium-nav-link">
-                        <span>Verified Suppliers</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-300 premium-nav-link">
-                        <span>Global Shipping</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-300 premium-nav-link">
-                        <span>B2B Solutions</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-300 premium-nav-link">
-                        <span>Sell With Us</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-2 py-4 hover:text-amber-300 premium-nav-link">
-                        <span>Help Center</span>
-                    </a>
-                </div>
-
-                <!-- Customer Service Badges -->
-                <a href="#" class="hidden xl:flex items-center space-x-2">
-                    <span
-                        class="bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-[500] flex items-center gap-1 premium-customer-badge">
-                        <i class="ri-ship-line"></i>
-                        Free Shipping
-                    </span>
-                </a>
-            </div>
-        </div>
-    </nav>
 
     <main>
         <!-- Swiper Category Slider Section -->
-        <section class="category-swiper-section bg-[#f7f7f7] relative z-10 ">
+        <section class="hidden category-swiper-section bg-[#f7f7f7] relative z-10 ">
             <div class="container mx-auto px-5 py-3">
                 <div class="swiper category-swiper">
                     <div class="swiper-wrapper">
@@ -349,15 +485,14 @@
             <div class="hero-slider-container md:container md:mx-auto md:px-5">
                 <div class="hero-slider">
                     <div class="hero-slide active">
-                        <img src="assets/images/banners/hero-banner.webp" alt="Global Trade Solutions"
+                        <img src="assets/images/banners/banner-1.jpg" alt="Global Trade Solutions"
                             class="hero-slide-image">
                     </div>
                     <div class="hero-slide">
-                        <img src="assets/images/banners/hero-banner.webp" alt="Premium Products"
-                            class="hero-slide-image">
+                        <img src="assets/images/banners/banner-2.jpg" alt="Premium Products" class="hero-slide-image">
                     </div>
                     <div class="hero-slide">
-                        <img src="assets/images/banners/hero-banner.webp" alt="B2B Excellence" class="hero-slide-image">
+                        <img src="assets/images/banners/banner-3.jpg" alt="B2B Excellence" class="hero-slide-image">
                     </div>
                 </div>
                 <!-- Navigation Arrows -->
@@ -372,7 +507,7 @@
             </div>
         </section>
         <!-- Masonry Product Section -->
-        <section class="creative-masonry-section">
+        <section class="creative-masonry-section hidden">
             <div class="container mx-auto px-5 py-6 ;g:py-12">
                 <div class="creative-masonry-grid">
                     <!-- Large Card -->

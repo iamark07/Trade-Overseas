@@ -54,9 +54,11 @@
   position: relative;
   z-index: 1;
   padding: 0;
+  height: 650px;
 }
 .hero-slider-container {
   width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -64,11 +66,13 @@
   display: flex;
   position: relative;
   width: 100%;
+  height: 100%;
   /* height: 380px; */
   transition: height 0.3s;
 }
 .hero-slide {
   min-width: 100%;
+  height: 100%;
   /* height: 380px; */
   opacity: 0;
   pointer-events: none;
