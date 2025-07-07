@@ -624,15 +624,16 @@ body {
   gap: 0.5rem;
 }
 .footer-contact li {
-  color: #4f6888;
+  color: #232e3e;
   font-weight: 400;
   display: flex;
   align-items: center;
   gap: 0.6em;
+  font-size: 15px;
 }
 .footer-contact i {
   color: #4f6888;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 .footer-social {
   display: flex;
@@ -679,7 +680,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0 1.2rem 0;
-  font-size: 0.98rem;
+  font-size: 15px;
   color: #4f6888;
   background: #f7f8fa;
   border-top: 1px solid #e5e7eb;
@@ -725,10 +726,19 @@ body {
   .footer-logo {
     width: 180px;
   }
+  .footer-about {
+    font-size: 14px;
+  }
+  .footer-links li a{
+    font-size: 14px;
+  }
+  .footer-contact li {
+    font-size: 14px;
+  }
   .footer-bottom {
     flex-direction: column;
     gap: 0.3rem;
-    font-size: 0.92rem;
+    font-size: 14px;
     padding: 0.7rem 0 0.7rem 0;
   }
   .app-badges, .trust-badges {
