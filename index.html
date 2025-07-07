@@ -25,6 +25,9 @@
 
     <title>Trade Overseas</title>
 
+    <!-- Remix Icon CDN for footer icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body class="overflow-x-hidden bg-[#fafafa] font-['Inter']">
@@ -58,16 +61,16 @@
     </div>
 
     <!-- main header section -->
-    <header class="sticky top-0 z-50 duration-200">
+    <header class="sticky top-0 z-50 duration-200 shadow-md">
         <div class="flex justify-center main-header transition-all w-full">
             <!-- inner Header -->
             <div class="inner-header max-w-[1600px] w-full">
-                <div class="container mx-auto px-5 py-6 premium-header-container">
+                <div class="container mx-auto px-5 py-4 md:py-6 premium-header-container">
                     <div class="flex items-center justify-between relative">
                         <!-- Logo -->
                         <div class="flex-shrink-0">
                             <a href="index.html" class="flex items-center">
-                                <img class="h-12" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
+                                <img class="h-8 md:h-12" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
                                 <div class="hidden">
                                     <h1 class="text-xl lg:text-2xl font-bold text-[#092a54] premium-logo-text">
                                         Trade Overseas
@@ -82,13 +85,16 @@
                             <div class="relative w-full">
                                 <div
                                     class="w-full flex bg-gray-50 rounded-full border border-gray-200 transition-colors duration-300 premium-search-container">
-                                    <div class="flex items-center px-4 lg:pl-4 lg:pr-[10px] xl:px-4 py-3 gap-1 border-r border-gray-200 cursor-pointer">
+                                    <div
+                                        class="flex items-center px-4 lg:pl-4 lg:pr-[10px] xl:px-4 py-3 gap-1 border-r border-gray-200 cursor-pointer">
                                         <i class="ri-map-pin-line text-[#092a54]"></i>
-                                        <span class="bg-transparent text-[11px] xl:text-[13px] text-gray-700">Mumbai, India</span>
+                                        <span class="bg-transparent text-[11px] xl:text-[13px] text-gray-700">Mumbai,
+                                            India</span>
                                         <i class="ri-arrow-drop-down-line text-lg xl:text-xl"></i>
                                     </div>
                                     <div class="flex-1 flex items-center px-4">
-                                        <input type="text" placeholder="Search for products, suppliers, or categories..."
+                                        <input type="text"
+                                            placeholder="Search for products, suppliers, or categories..."
                                             class="py-3 w-full bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400">
                                     </div>
                                     <button type="submit"
@@ -122,7 +128,8 @@
                             <a href="#" class="relative group hidden lg:block">
                                 <div
                                     class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
-                                    <i class="ri-shopping-cart-line text-xl text-gray-600 group-hover:text-[#092a54] "></i>
+                                    <i
+                                        class="ri-shopping-cart-line text-xl text-gray-600 group-hover:text-[#092a54] "></i>
                                 </div>
                                 <span
                                     class="absolute -top-2 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
@@ -158,7 +165,8 @@
             </div>
         </div>
         <!-- Navigation Bar section-->
-        <nav class="navigaiton-bar-section bg-[#f8fbff] border-y border-gray-200 shadow-sm text-gray-700 premium-nav-bar">
+        <nav
+            class="navigaiton-bar-section bg-[#f8fbff] border-y border-gray-200 shadow-sm text-gray-700 premium-nav-bar hidden lg:block">
             <div class="container mx-auto px-5 premium-header-container">
                 <div class="flex items-center justify-between relative">
                     <!-- Categories Dropdown -->
@@ -171,52 +179,18 @@
                         </button>
 
                         <!-- Mega Menu -->
-                        <div class="absolute top-full left-0 w-full grid lg:grid-cols-9 opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                            <div class="lg:col-span-2 bg-white shadow-2xl  transition-all duration-300 z-50 premium-mega-menu h-fit">
+                        <div
+                            class="absolute top-full left-0 w-full grid lg:grid-cols-9 opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                            <div
+                                class="lg:col-span-2 bg-white shadow-2xl  transition-all duration-300 z-50 premium-mega-menu h-fit">
                                 <div class="header-category-scroll">
                                     <div class="space-y-2 p-4">
                                         <!-- Category Item Example -->
                                         <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/hero-section-chair.png" alt="Electronics" class="w-8 h-8 object-cover rounded" />
-                                                <div>
-                                                    <p class="font-semibold text-gray-800 text-xs">Electronics</p>
-                                                    <p class="text-[10px] text-gray-500">Mobiles, Laptops, Cameras</p>
-                                                </div>
-                                            </a>             
-                                        </div>
-                                        <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/t-shirt.png" alt="Fashion" class="w-8 h-8 object-cover rounded" />
-                                                <div>
-                                                    <p class="font-semibold text-gray-800 text-xs">Fashion</p>
-                                                    <p class="text-[10px] text-gray-500">Men, Women, Kids</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
-                                                <div>
-                                                    <p class="font-semibold text-gray-800 text-xs">Home & Garden</p>
-                                                    <p class="text-[10px] text-gray-500">Furniture, Decor, Tools</p>
-                                                </div>
-                                            </a>
-                                            
-                                        </div>
-                                        <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/watch.png" alt="Kitchen" class="w-8 h-8 object-cover rounded" />
-                                                <div>
-                                                    <p class="font-semibold text-gray-800 text-xs">Kitchen</p>
-                                                    <p class="text-[10px] text-gray-500">Appliances, Utensils, Storage</p>
-                                                </div>
-                                            </a>
-                                            
-                                        </div>
-                                        <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/hero-section-chair.png" alt="Electronics" class="w-8 h-8 object-cover rounded" />
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/hero-section-chair.png"
+                                                    alt="Electronics" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Electronics</p>
                                                     <p class="text-[10px] text-gray-500">Mobiles, Laptops, Cameras</p>
@@ -224,18 +198,21 @@
                                             </a>
                                         </div>
                                         <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/t-shirt.png" alt="Fashion" class="w-8 h-8 object-cover rounded" />
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/t-shirt.png" alt="Fashion"
+                                                    class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Fashion</p>
                                                     <p class="text-[10px] text-gray-500">Men, Women, Kids</p>
                                                 </div>
                                             </a>
-                                            
                                         </div>
                                         <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                                    alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Home & Garden</p>
                                                     <p class="text-[10px] text-gray-500">Furniture, Decor, Tools</p>
@@ -243,118 +220,879 @@
                                             </a>
                                         </div>
                                         <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/watch.png" alt="Kitchen" class="w-8 h-8 object-cover rounded" />
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/watch.png" alt="Kitchen"
+                                                    class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Kitchen</p>
-                                                    <p class="text-[10px] text-gray-500">Appliances, Utensils, Storage</p>
+                                                    <p class="text-[10px] text-gray-500">Appliances, Utensils, Storage
+                                                    </p>
                                                 </div>
                                             </a>
-                                            
                                         </div>
                                         <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/t-shirt.png"
+                                                    alt="Sports & Outdoor" class="w-8 h-8 object-cover rounded" />
                                                 <div>
-                                                    <p class="font-semibold text-gray-800 text-xs">Home & Garden</p>
-                                                    <p class="text-[10px] text-gray-500">Furniture, Decor, Tools</p>
+                                                    <p class="font-semibold text-gray-800 text-xs">Sports & Outdoor</p>
+                                                    <p class="text-[10px] text-gray-500">Fitness, Camping, Adventure</p>
                                                 </div>
                                             </a>
-                                            
                                         </div>
                                         <div class="relative group/category">
-                                            <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/watch.png" alt="Kitchen" class="w-8 h-8 object-cover rounded" />
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/watch.png" alt="Beauty & Health"
+                                                    class="w-8 h-8 object-cover rounded" />
                                                 <div>
-                                                    <p class="font-semibold text-gray-800 text-xs">Kitchen</p>
-                                                    <p class="text-[10px] text-gray-500">Appliances, Utensils, Storage</p>
+                                                    <p class="font-semibold text-gray-800 text-xs">Beauty & Health</p>
+                                                    <p class="text-[10px] text-gray-500">Cosmetics, Wellness, Personal
+                                                        Care</p>
                                                 </div>
                                             </a>
-                                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                                <ul class="p-3 space-y-2">
-                                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Appliances</a></li>
-                                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Utensils</a></li>
-                                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Storage</a></li>
-                                                </ul>
-                                            </div>
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/hero-section-chair.png"
+                                                    alt="Automotive" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Automotive</p>
+                                                    <p class="text-[10px] text-gray-500">Car Parts, Accessories, Tools
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                                    alt="Toys & Games" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Toys & Games</p>
+                                                    <p class="text-[10px] text-gray-500">Children's Toys, Board Games
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/t-shirt.png" alt="Books & Media"
+                                                    class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Books & Media</p>
+                                                    <p class="text-[10px] text-gray-500">Books, Movies, Music</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="relative group/category">
+                                            <a href="#"
+                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img src="assets/images/products-images/watch.png"
+                                                    alt="Office & Business" class="w-8 h-8 object-cover rounded" />
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-xs">Office & Business</p>
+                                                    <p class="text-[10px] text-gray-500">Office Supplies, Equipment</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Subcategories Hover Panel -->
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel" style="left: calc(100% + 16px); top: calc(0px - 16px)">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Mobiles</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Laptops</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Cameras</a></li>
-                                </ul>
+                            <!-- Enhanced Subcategories Hover Panel -->
+                            <!-- Electronics Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel"
+                                style="left: calc(100% + 16px); top: calc(0px - 16px)">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Electronics" class="category-icon">
+                                        Electronics
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Mobiles">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Mobiles</p>
+                                            <p class="subcategory-desc">Smartphones & Accessories</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Laptops">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Laptops</p>
+                                            <p class="subcategory-desc">Computers & Tablets</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Cameras">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Cameras</p>
+                                            <p class="subcategory-desc">DSLR & Digital Cameras</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Audio">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Audio</p>
+                                            <p class="subcategory-desc">Speakers & Headphones</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Smartphones">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Smartphones</p>
+                                            <p class="subcategory-desc">Latest Mobile Phones</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Tablets">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Tablets</p>
+                                            <p class="subcategory-desc">iPads & Android Tablets</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Gaming">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Gaming</p>
+                                            <p class="subcategory-desc">Consoles & Accessories</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Smart Home">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Smart Home</p>
+                                            <p class="subcategory-desc">IoT & Automation</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Popular in Electronics</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Gaming</a>
+                                        <a href="#" class="popular-tag">Smart Home</a>
+                                        <a href="#" class="popular-tag">Wearables</a>
+                                        <a href="#" class="popular-tag">Drones</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Men</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Women</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Kids</a></li>
-                                </ul>
+
+                            <!-- Fashion Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Fashion"
+                                            class="category-icon">
+                                        Fashion
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Men's Fashion">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Men's Fashion</p>
+                                            <p class="subcategory-desc">Clothing & Accessories</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Women's Fashion">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Women's Fashion</p>
+                                            <p class="subcategory-desc">Apparel & Jewelry</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Kids Fashion">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Kids Fashion</p>
+                                            <p class="subcategory-desc">Children's Clothing</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Footwear">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Footwear</p>
+                                            <p class="subcategory-desc">Shoes & Sneakers</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Accessories">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Accessories</p>
+                                            <p class="subcategory-desc">Watches & Belts</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Jewelry">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Jewelry</p>
+                                            <p class="subcategory-desc">Necklaces & Rings</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Bags">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Bags</p>
+                                            <p class="subcategory-desc">Handbags & Backpacks</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Sportswear">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Sportswear</p>
+                                            <p class="subcategory-desc">Athletic Clothing</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Trending in Fashion</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Summer Collection</a>
+                                        <a href="#" class="popular-tag">Sportswear</a>
+                                        <a href="#" class="popular-tag">Luxury Brands</a>
+                                        <a href="#" class="popular-tag">Accessories</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Furniture</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Decor</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Tools</a></li>
-                                </ul>
+
+                            <!-- Home & Garden Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden"
+                                            class="category-icon">
+                                        Home & Garden
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Furniture">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Furniture</p>
+                                            <p class="subcategory-desc">Home & Office Furniture</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Decor">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Decor</p>
+                                            <p class="subcategory-desc">Home Decoration</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Garden">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Garden</p>
+                                            <p class="subcategory-desc">Plants & Tools</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Tools">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Tools</p>
+                                            <p class="subcategory-desc">DIY & Hand Tools</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Lighting">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Lighting</p>
+                                            <p class="subcategory-desc">Lamps & Fixtures</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Storage">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Storage</p>
+                                            <p class="subcategory-desc">Organizers & Shelves</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Outdoor">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Outdoor</p>
+                                            <p class="subcategory-desc">Patio & BBQ</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Kitchen">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Kitchen</p>
+                                            <p class="subcategory-desc">Kitchen & Dining</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Popular in Home</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Smart Home</a>
+                                        <a href="#" class="popular-tag">Outdoor Living</a>
+                                        <a href="#" class="popular-tag">Storage Solutions</a>
+                                        <a href="#" class="popular-tag">Lighting</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Appliances</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Utensils</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Storage</a></li>
-                                </ul>
+
+                            <!-- Kitchen Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/watch.png" alt="Kitchen"
+                                            class="category-icon">
+                                        Kitchen
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Appliances">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Appliances</p>
+                                            <p class="subcategory-desc">Kitchen Electronics</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Utensils">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Utensils</p>
+                                            <p class="subcategory-desc">Cooking Tools</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Storage">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Storage</p>
+                                            <p class="subcategory-desc">Containers & Organizers</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Dining">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Dining</p>
+                                            <p class="subcategory-desc">Tableware & Serveware</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Small Appliances">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Small Appliances</p>
+                                            <p class="subcategory-desc">Blenders & Mixers</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Cookware">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Cookware</p>
+                                            <p class="subcategory-desc">Pots & Pans</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Bakeware">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Bakeware</p>
+                                            <p class="subcategory-desc">Baking Tools</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Cutlery">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Cutlery</p>
+                                            <p class="subcategory-desc">Knives & Forks</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Kitchen Essentials</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Coffee Makers</a>
+                                        <a href="#" class="popular-tag">Food Processors</a>
+                                        <a href="#" class="popular-tag">Bakeware</a>
+                                        <a href="#" class="popular-tag">Cutlery</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Mobiles</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Laptops</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Cameras</a></li>
-                                </ul>
+
+                            <!-- Sports & Outdoor Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Sports & Outdoor"
+                                            class="category-icon">
+                                        Sports & Outdoor
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Fitness">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Fitness</p>
+                                            <p class="subcategory-desc">Gym Equipment & Wear</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Camping">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Camping</p>
+                                            <p class="subcategory-desc">Tents & Outdoor Gear</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Adventure">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Adventure</p>
+                                            <p class="subcategory-desc">Hiking & Climbing</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Water Sports">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Water Sports</p>
+                                            <p class="subcategory-desc">Swimming & Diving</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Team Sports">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Team Sports</p>
+                                            <p class="subcategory-desc">Football & Basketball</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Winter Sports">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Winter Sports</p>
+                                            <p class="subcategory-desc">Skiing & Snowboarding</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Cycling">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Cycling</p>
+                                            <p class="subcategory-desc">Bikes & Accessories</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Yoga">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Yoga</p>
+                                            <p class="subcategory-desc">Mats & Equipment</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Popular in Sports</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Running</a>
+                                        <a href="#" class="popular-tag">Cycling</a>
+                                        <a href="#" class="popular-tag">Yoga</a>
+                                        <a href="#" class="popular-tag">Team Sports</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Men</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Women</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Kids</a></li>
-                                </ul>
+
+                            <!-- Beauty & Health Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/watch.png" alt="Beauty & Health"
+                                            class="category-icon">
+                                        Beauty & Health
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Cosmetics">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Cosmetics</p>
+                                            <p class="subcategory-desc">Makeup & Skincare</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Wellness">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Wellness</p>
+                                            <p class="subcategory-desc">Health & Nutrition</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Personal Care">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Personal Care</p>
+                                            <p class="subcategory-desc">Hair & Body Care</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Fragrances">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Fragrances</p>
+                                            <p class="subcategory-desc">Perfumes & Colognes</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Hair Care">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Hair Care</p>
+                                            <p class="subcategory-desc">Shampoo & Styling</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Skin Care">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Skin Care</p>
+                                            <p class="subcategory-desc">Moisturizers & Serums</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Men's Grooming">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Men's Grooming</p>
+                                            <p class="subcategory-desc">Shaving & Beard Care</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Supplements">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Supplements</p>
+                                            <p class="subcategory-desc">Vitamins & Minerals</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Trending in Beauty</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Organic Products</a>
+                                        <a href="#" class="popular-tag">Anti-Aging</a>
+                                        <a href="#" class="popular-tag">Hair Care</a>
+                                        <a href="#" class="popular-tag">Men's Grooming</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Furniture</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Decor</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Tools</a></li>
-                                </ul>
+
+                            <!-- Automotive Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Automotive"
+                                            class="category-icon">
+                                        Automotive
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Car Parts">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Car Parts</p>
+                                            <p class="subcategory-desc">Engine & Body Parts</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Accessories">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Accessories</p>
+                                            <p class="subcategory-desc">Interior & Exterior</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Tools">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Tools</p>
+                                            <p class="subcategory-desc">Repair & Maintenance</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Electronics">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Electronics</p>
+                                            <p class="subcategory-desc">GPS & Audio Systems</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Performance">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Performance</p>
+                                            <p class="subcategory-desc">Tuning & Upgrades</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Safety">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Safety</p>
+                                            <p class="subcategory-desc">Seat Covers & Mats</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Comfort">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Comfort</p>
+                                            <p class="subcategory-desc">Cushions & Supports</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Styling">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Styling</p>
+                                            <p class="subcategory-desc">Body Kits & Decals</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Popular in Automotive</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Performance</a>
+                                        <a href="#" class="popular-tag">Safety</a>
+                                        <a href="#" class="popular-tag">Comfort</a>
+                                        <a href="#" class="popular-tag">Styling</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Appliances</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Utensils</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Storage</a></li>
-                                </ul>
+
+                            <!-- Toys & Games Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Toys & Games"
+                                            class="category-icon">
+                                        Toys & Games
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Children's Toys">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Children's Toys</p>
+                                            <p class="subcategory-desc">Educational & Fun</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Board Games">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Board Games</p>
+                                            <p class="subcategory-desc">Family & Strategy</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Video Games">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Video Games</p>
+                                            <p class="subcategory-desc">Consoles & Games</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Collectibles">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Collectibles</p>
+                                            <p class="subcategory-desc">Action Figures & Models</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Educational">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Educational</p>
+                                            <p class="subcategory-desc">Learning Toys</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Arts & Crafts">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Arts & Crafts</p>
+                                            <p class="subcategory-desc">Creative Supplies</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Remote Control">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Remote Control</p>
+                                            <p class="subcategory-desc">RC Cars & Drones</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Puzzles">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Puzzles</p>
+                                            <p class="subcategory-desc">Jigsaw & Brain Teasers</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Popular in Toys</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">LEGO Sets</a>
+                                        <a href="#" class="popular-tag">Puzzles</a>
+                                        <a href="#" class="popular-tag">Remote Control</a>
+                                        <a href="#" class="popular-tag">Arts & Crafts</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lg:col-span-7 bg-white opacity-100 visible !hidden transition-all duration-200 subcategory-panel">
-                                <ul class="p-3 space-y-2">
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Furniture</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Decor</a></li>
-                                    <li><a href="#" class="block text-xs text-gray-700 hover:underline">Tools</a></li>
-                                </ul>
+
+                            <!-- Books & Media Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Books & Media"
+                                            class="category-icon">
+                                        Books & Media
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Books">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Books</p>
+                                            <p class="subcategory-desc">Fiction & Non-Fiction</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Movies">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Movies</p>
+                                            <p class="subcategory-desc">DVDs & Blu-rays</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Music">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Music</p>
+                                            <p class="subcategory-desc">CDs & Vinyl Records</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Magazines">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Magazines</p>
+                                            <p class="subcategory-desc">Print & Digital</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="E-books">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">E-books</p>
+                                            <p class="subcategory-desc">Digital Reading</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Audio Books">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Audio Books</p>
+                                            <p class="subcategory-desc">Spoken Word</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Comics">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Comics</p>
+                                            <p class="subcategory-desc">Graphic Novels</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Educational">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Educational</p>
+                                            <p class="subcategory-desc">Textbooks & Courses</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Popular in Media</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Bestsellers</a>
+                                        <a href="#" class="popular-tag">New Releases</a>
+                                        <a href="#" class="popular-tag">Classics</a>
+                                        <a href="#" class="popular-tag">Educational</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Fullscreen Subcategory Panel (hidden by default, shown on hover) -->
-                        <div class="fixed top-0 left-0 w-full h-full bg-white bg-opacity-95 z-50 hidden category-fullscreen-panel">
-                            <div class="max-w-5xl mx-auto p-8">
-                                <h2 class="text-2xl font-bold mb-4">Subcategories</h2>
-                                <div class="grid grid-cols-3 gap-6 subcategory-details">
-                                    <!-- Subcategory details will be dynamically shown here -->
+
+                            <!-- Office & Business Subcategory Panel -->
+                            <div class="lg:col-span-7 subcategory-panel">
+                                <div class="subcategory-header">
+                                    <h3>
+                                        <img src="assets/images/products-images/watch.png" alt="Office & Business"
+                                            class="category-icon">
+                                        Office & Business
+                                    </h3>
+                                </div>
+                                <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Office Supplies">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Office Supplies</p>
+                                            <p class="subcategory-desc">Paper & Stationery</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Equipment">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Equipment</p>
+                                            <p class="subcategory-desc">Printers & Scanners</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Furniture">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Furniture</p>
+                                            <p class="subcategory-desc">Desks & Chairs</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Technology">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Technology</p>
+                                            <p class="subcategory-desc">Computers & Accessories</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/t-shirt.png" alt="Presentation">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Presentation</p>
+                                            <p class="subcategory-desc">Projectors & Screens</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/watch.png" alt="Communication">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Communication</p>
+                                            <p class="subcategory-desc">Phones & Headsets</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                            alt="Organization">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Organization</p>
+                                            <p class="subcategory-desc">Filing & Storage</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="subcategory-item">
+                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Security">
+                                        <div class="subcategory-info">
+                                            <p class="subcategory-name">Security</p>
+                                            <p class="subcategory-desc">Locks & Safes</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-subcategories">
+                                    <h4>Business Essentials</h4>
+                                    <div class="popular-list">
+                                        <a href="#" class="popular-tag">Presentation</a>
+                                        <a href="#" class="popular-tag">Organization</a>
+                                        <a href="#" class="popular-tag">Communication</a>
+                                        <a href="#" class="popular-tag">Security</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- Navigation Links -->
@@ -480,7 +1218,7 @@
                 </div>
             </div>
         </section>
-        <!-- Hero Section -->
+        <!-- Hero Section start-->
         <section class="hero-section bg-white pt-6">
             <div class="hero-slider-container md:container md:mx-auto md:px-5">
                 <div class="hero-slider">
@@ -506,61 +1244,7 @@
                 </div>
             </div>
         </section>
-        <!-- Masonry Product Section -->
-        <section class="creative-masonry-section hidden">
-            <div class="container mx-auto px-5 py-6 ;g:py-12">
-                <div class="creative-masonry-grid">
-                    <!-- Large Card -->
-                    <a href="#" class="creative-card card-large bg-gradient-to-br from-[#f7e8c3] to-[#fff]">
-                        <img src="assets/images/banners/banner-1.jpg" alt="Wireless Earbuds" class="creative-card-img">
-                        <div class="creative-card-content overlay">
-                            <h3 class="creative-card-title">Wireless Earbuds</h3>
-                            <p class="creative-card-category">Audio & Gadgets</p>
-                        </div>
-                    </a>
-                    <!-- Tall Card -->
-                    <a href="#" class="creative-card card-tall bg-gradient-to-br from-[#e0f2fe] to-[#fff]">
-                        <img src="assets/images/banners/banner-5.jpg" alt="Fresh Produce" class="creative-card-img">
-                        <div class="creative-card-content overlay">
-                            <h3 class="creative-card-title">Fresh Produce</h3>
-                            <p class="creative-card-category">Groceries</p>
-                        </div>
-                    </a>
-                    <!-- Medium Card -->
-                    <a href="#" class="creative-card card-medium bg-gradient-to-br from-[#fce7f3] to-[#fff]">
-                        <img src="assets/images/banners/banner-3.jpg" alt="Premium Tees" class="creative-card-img">
-                        <div class="creative-card-content overlay">
-                            <h3 class="creative-card-title">Premium Tees</h3>
-                            <p class="creative-card-category">Apparel</p>
-                        </div>
-                    </a>
-                    <!-- Small Card -->
-                    <a href="#" class="creative-card card-small bg-gradient-to-br from-[#e0ffe8] to-[#fff]">
-                        <img src="assets/images/banners/banner-4.jpg" alt="Home Vases" class="creative-card-img">
-                        <div class="creative-card-content overlay">
-                            <h3 class="creative-card-title">Home Vases</h3>
-                            <p class="creative-card-category">Decor</p>
-                        </div>
-                    </a>
-                    <!-- Wide Card -->
-                    <a href="#" class="creative-card card-wide bg-gradient-to-br from-[#e0e7ff] to-[#fff]">
-                        <img src="assets/images/banners/banner-2.jpg" alt="Kitchen Staples" class="creative-card-img">
-                        <div class="creative-card-content overlay">
-                            <h3 class="creative-card-title">Kitchen Staples</h3>
-                            <p class="creative-card-category">Essentials</p>
-                        </div>
-                    </a>
-                    <!-- Square Card -->
-                    <a href="#" class="creative-card card-square bg-gradient-to-br from-[#fffde7] to-[#fff]">
-                        <img src="assets/images/banners/banner-6.jpg" alt="Eco Tableware" class="creative-card-img">
-                        <div class="creative-card-content overlay">
-                            <h3 class="creative-card-title">Eco Tableware</h3>
-                            <p class="creative-card-category">Kitchenware</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+        <!-- Hero Section end-->
 
         <!-- Featured Products Section -->
         <section id="featured-products" class="py-16">
@@ -570,8 +1254,6 @@
                     <div>
                         <h2 class="text-2xl md:text-4xl font-[500] text-gray-900 inline-block relative">
                             Our Featured Products
-                            <span
-                                class="hidden absolute -bottom-3 left-1/2 -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
                         </h2>
                     </div>
                     <p class="hidden mt-8 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -580,7 +1262,7 @@
                 </div>
 
                 <div class="flex gap-10 flex-col">
-                    <div class="bg-white shadow-sm px-4 py-7 sm:p-7 relative">
+                    <div class="relative">
                         <h2 class="md:text-2xl mb-4 font-[500] text-gray-900 inline-block relative">
                             Electronics Items
                         </h2>
@@ -597,9 +1279,7 @@
                                                     class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -636,9 +1316,7 @@
                                                     class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -675,9 +1353,7 @@
                                                     alt="Product Name" class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -714,9 +1390,7 @@
                                                     class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -753,9 +1427,7 @@
                                                     class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -792,9 +1464,7 @@
                                                     alt="Product Name" class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -831,9 +1501,7 @@
                                                     class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -870,9 +1538,7 @@
                                                     class="product-image">
                                             </a>
                                             <div class="product-actions hidden md:flex">
-                                                <a href="#" title="Quick View"><i class="ri-eye-line"></i></a>
                                                 <a href="#" title="Add to Wishlist"><i class="ri-heart-line"></i></a>
-                                                <a href="#" title="Compare"><i class="ri-git-commit-line"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -902,7 +1568,7 @@
                             </div>
                         </div>
                         <!-- navigation buttons -->
-                        <div class="flex gap-1 sm:gap-3 absolute top-5 right-8">
+                        <div class="flex gap-1 sm:gap-3 absolute -top-2 right-8">
                             <!-- Navigation Arrows -->
                             <div class="swiper-button-prev-custom"><i class="ri-arrow-left-s-line"></i></div>
                             <div class="swiper-button-next-custom"><i class="ri-arrow-right-s-line"></i></div>
@@ -920,193 +1586,314 @@
             </div>
         </section>
 
-        <!-- Features/Benefits Section -->
-        <section id="features" class="bg-gray-50 py-16 hidden">
-            <div class="container mx-auto px-5 md:px-10">
-                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-10 gap-x-8 text-center">
-                    <!-- Feature 1 -->
-                    <div>
-                        <div class="flex justify-center mb-3">
-                            <i class="ri-award-line text-4xl text-amber-500"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Best Quality Product</h3>
-                        <p class="text-gray-500 text-sm">Top quality products, all in one place.</p>
+        <!-- How It Works Section Start -->
+        <section class="how-it-works-section py-24 bg-white">
+            <div class="container mx-auto px-5">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 text-[#092a54]">How It Works</h2>
+                <p class="how-it-works-desc text-center text-gray-500 mb-10 max-w-2xl mx-auto">Our process is simple and
+                    transparent. Here's how you can easily get your products delivered from trusted suppliers worldwide
+                    in just a few steps:</p>
+                <div class="how-steps-row grid sm:grid-cols-2 gap-10 xl:gap-0 xl:flex">
+                    <div class="how-step-block">
+                        <div class="how-step-circle">1</div>
+                        <div class="how-step-title">Search Product</div>
+                        <div class="how-step-text">Browse thousands of products and find exactly what you need for your
+                            business or personal use.</div>
                     </div>
-                    <!-- Feature 2 -->
-                    <div>
-                        <div class="flex justify-center mb-3">
-                            <i class="ri-global-line text-4xl text-cyan-500"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Buy Global Products</h3>
-                        <p class="text-gray-500 text-sm">All your global business needs, one platform.</p>
+                    <div class="how-step-curve hidden xl:block">
+                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 35 Q60 0 115 35" stroke="#4f6888" stroke-width="2" stroke-dasharray="6,6"
+                                fill="none" />
+                        </svg>
                     </div>
-                    <!-- Feature 3 -->
-                    <div>
-                        <div class="flex justify-center mb-3">
-                            <i class="ri-ship-line text-4xl text-blue-500"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sell Internationally</h3>
-                        <p class="text-gray-500 text-sm">Expand your reach and grow globally.</p>
+                    <div class="how-step-block">
+                        <div class="how-step-circle">2</div>
+                        <div class="how-step-title">Get Quotation</div>
+                        <div class="how-step-text">Send your requirements and receive competitive quotations from
+                            verified suppliers quickly.</div>
                     </div>
-                    <!-- Feature 4 -->
-                    <div>
-                        <div class="flex justify-center mb-3">
-                            <i class="ri-bar-chart-grouped-line text-4xl text-green-500"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Grow Your Business</h3>
-                        <p class="text-gray-500 text-sm">Succeed in multiple countries with ease.</p>
+                    <div class="how-step-curve hidden xl:block">
+                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 35 Q60 0 115 35" stroke="#4f6888" stroke-width="2" stroke-dasharray="6,6"
+                                fill="none" />
+                        </svg>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Engaging About/Showcase Section (Revised) -->
-        <section id="trade-blueprint" class="hidden relative bg-white py-16 md:py-24 overflow-hidden">
-            <!-- Decorative Background Objects -->
-            <div
-                class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-blue-100 via-cyan-100 to-transparent rounded-full opacity-60 z-0">
-            </div>
-            <div
-                class="absolute top-1/2 right-0 w-72 h-72 bg-gradient-to-tr from-amber-100 via-yellow-100 to-transparent rounded-full opacity-50 z-0">
-            </div>
-            <div
-                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-gradient-to-r from-cyan-100 via-blue-100 to-transparent rounded-3xl opacity-40 z-0">
-            </div>
-            <div class="container mx-auto px-5 md:px-10 relative z-10">
-                <!-- Section Header -->
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-2xl md:text-4xl font-[700] text-gray-900 inline-block relative mb-4">Your Global
-                        Ambition, <br>Our Blueprint</h2>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
-                        We simplify international trade with smart solutions and proven expertise.
-                    </p>
-                </div>
-
-                <!-- Staggered Row 1 -->
-                <div class="grid lg:grid-cols-2 gap-12 mb-16">
-                    <!-- Image Banner -->
-                    <div class="overflow-hidden rounded-2xl shadow-md">
-                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Strategic Sourcing"
-                            class="h-full w-full object-cover">
+                    <div class="how-step-block">
+                        <div class="how-step-circle">3</div>
+                        <div class="how-step-title">Place Order</div>
+                        <div class="how-step-text">Choose the best offer, confirm your order, and make secure payment
+                            with confidence.</div>
                     </div>
-                    <!-- Content -->
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Strategic Sourcing</h3>
-                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We don't just find suppliers; we forge
-                            partnerships. Our process is a deep, investigative journey to find partners who share our
-                            commitment to excellence.</p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
-                                    <i class="ri-flask-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Tangible Quality Assurance</h4>
-                                    <p class="text-gray-600 text-sm">Hands-on inspections and sample testing to
-                                        guarantee the product you specified is the product you receive.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
-                                    <i class="ri-shake-hands-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Long-term Partnership Building</h4>
-                                    <p class="text-gray-600 text-sm">We focus on creating sustainable relationships that
-                                        grow stronger over time, ensuring consistent quality and reliability.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
-                                    <i class="ri-price-tag-3-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Competitive Pricing Analysis</h4>
-                                    <p class="text-gray-600 text-sm">Thorough market research and cost analysis to
-                                        ensure you get the best value for your investment.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
-                                    <i class="ri-shield-check-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Deep-Dive Vetting</h4>
-                                    <p class="text-gray-600 text-sm">Comprehensive audits of financial health, ethical
-                                        practices, and performance history.</p>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="how-step-curve hidden xl:block">
+                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 35 Q60 0 115 35" stroke="#4f6888" stroke-width="2" stroke-dasharray="6,6"
+                                fill="none" />
+                        </svg>
                     </div>
-                </div>
-
-                <!-- Staggered Row 2 -->
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Content -->
-                    <div class="order-2 sm:order-1">
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Smart Logistics</h3>
-                        <p class="text-gray-600 mb-6 text-sm sm:text-base">We view logistics not as a cost, but as a
-                            critical advantage. Our mission is to eliminate friction from your supply chain through a
-                            resilient, intelligent network.</p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-xl mr-4">
-                                    <i class="ri-global-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Integrated Global Network</h4>
-                                    <p class="text-gray-600 text-sm">From factory dock to final destination, your
-                                        shipment is managed in one unified system for unparalleled control.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-xl mr-4">
-                                    <i class="ri-radar-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Proactive Risk Management</h4>
-                                    <p class="text-gray-600 text-sm">Our specialists use predictive data to anticipate
-                                        and resolve potential hurdles before they cause delays.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-cyan-100 text-cyan-600 rounded-xl mr-4">
-                                    <i class="ri-eye-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Real-time Visibility</h4>
-                                    <p class="text-gray-600 text-sm">Track your shipments with complete transparency
-                                        through our advanced monitoring and reporting systems.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-amber-100 text-amber-600 rounded-xl mr-4">
-                                    <i class="ri-truck-line text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Multi-modal Transportation</h4>
-                                    <p class="text-gray-600 text-sm">Optimized shipping solutions combining air, sea,
-                                        and land transport for maximum efficiency.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Image Banner -->
-                    <div class="overflow-hidden rounded-2xl shadow-md order-1 sm:order-2">
-                        <img src="assets/images/banners/landing-page-banner.jpg" alt="Intelligent Logistics"
-                            class="h-full w-full object-cover">
+                    <div class="how-step-block">
+                        <div class="how-step-circle">4</div>
+                        <div class="how-step-title">We Deliver</div>
+                        <div class="how-step-text">Sit back and relax while we handle shipping and deliver your products
+                            safely to your doorstep.</div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- How It Works Section End -->
+
+        <!-- About Us Section Start -->
+        <section class="about-us-section py-20 bg-[#f7f7f7]">
+            <div class="container mx-auto px-5">
+                <div class="about-us-grid grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left: Text Content -->
+                    <div class="about-us-content order-2 lg:order-1">
+                        <span class="about-us-badge">TRUSTED GLOBAL TRADE</span>
+                        <h2 class="about-us-title text-2xl sm:text-3xl xl:text-5xl font-bold text-[#092a54] mb-5 mt-2">
+                            Connecting Buyers & Suppliers Worldwide with Trust</h2>
+                        <p class="about-us-desc text-gray-600 mb-7 text-sm sm:text-lg">We empower businesses to source
+                            and sell globally with confidence. Our platform brings together verified suppliers, seamless
+                            logistics, and dedicated support to make international trade simple and secure for everyone.
+                        </p>
+                        <div class="about-us-btn-row flex gap-4 mb-2">
+                            <a href="#contact" class="about-us-btn-main">Contact Us</a>
+                            <a href="#products" class="about-us-btn-secondary">Explore Products</a>
+                        </div>
+                        <div class="about-us-trusted-by mt-10">
+                            <div
+                                class="about-us-trusted-label text-xs tracking-widest text-[#4f6888] font-semibold mb-3">
+                                TRUSTED BY MAJOR COMPANIES WORLDWIDE</div>
+                            <div class="about-us-logos flex gap-8 flex-wrap items-center">
+                                <img src="assets/images/logo/logo.webp" alt="Logo 1" class="about-us-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Logo 2"
+                                    class="about-us-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                    alt="Logo 3" class="about-us-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg"
+                                    alt="Logo 4" class="about-us-logo">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Image & Overlapping Stats Card -->
+                    <div class="about-us-visual w-full relative order-1 lg:order-2">
+                        <div class="about-us-img-wrap">
+                            <img src="assets/images/banners/landing-page-banner.jpg" alt="Our Factory"
+                                class="about-us-img">
+                            <div class="about-us-stats-card">
+                                <div class="about-us-stats-row">
+                                    <div class="about-us-stat">
+                                        <div class="about-us-stat-value">50+</div>
+                                        <div class="about-us-stat-label">Countries Served</div>
+                                    </div>
+                                    <div class="about-us-stat">
+                                        <div class="about-us-stat-value">1000+</div>
+                                        <div class="about-us-stat-label">Products</div>
+                                    </div>
+                                    <div class="about-us-stat">
+                                        <div class="about-us-stat-value">10+</div>
+                                        <div class="about-us-stat-label">Years Experience</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Us Section End -->
+
+        <!-- Why Choose Us Section Start -->
+        <section class="why-choose-section py-16 relative overflow-hidden">
+            <div class="container mx-auto md:px-5">
+                <div class="why-choose-grid md:rounded-2xl overflow-hidden">
+                    <div class="w-full h-full absolute top-0 left-0"></div>
+                    <div
+                        class="grid grid-cols-1 bg-black/70 xl:grid-cols-2 gap-10 items-center px-5 py-14 md:p-10 shadow-md relative z-10">
+                        <!-- Left: Text & CTA -->
+                        <div class="why-choose-left flex flex-col justify-center h-full">
+                            <div
+                                class="why-choose-intro text-[#ff3b3b] font-semibold uppercase tracking-widest mb-2 text-sm">
+                                Our Advantages</div>
+                            <h2 class="why-choose-title text-3xl md:text-4xl font-bold text-[#ffffff] mb-4">Why Choose
+                                Us</h2>
+                            <p class="why-choose-desc text-gray-200 mb-6">Experience seamless global trade with us. We
+                                offer competitive pricing, verified quality, and a global network to ensure your
+                                business grows with confidence. From sourcing to delivery, our team supports you at
+                                every step for a hassle-free experience.</p>
+                            <!-- Simple, unique, text-only list -->
+                            <ul class="why-choose-simple-list grid grid-cols-1 gap-3 mt-2 mb-5 pl-5 text-gray-100">
+                                <li>Transparent pricing with no hidden fees</li>
+                                <li>Dedicated account managers for every client</li>
+                                <li>Flexible order quantities to suit all business sizes</li>
+                                <li>Real-time order tracking and updates</li>
+                            </ul>
+                            <a href="#contact" class="why-choose-btn-main inline-flex items-center gap-2 mb-4"><i
+                                    class="ri-customer-service-2-line text-xl"></i> Get a Quote</a>
+                        </div>
+                        <!-- Right: USP Grid -->
+                        <div class="why-choose-usps grid grid-cols-1 sm:grid-cols-2 gap-7">
+                            <div class="why-usp-item">
+                                <div class="why-usp-icon"><i class="ri-money-dollar-circle-line"></i></div>
+                                <div class="why-usp-title">Competitive Pricing</div>
+                                <div class="why-usp-support">Best rates for bulk & custom orders</div>
+                                <div class="why-usp-desc">Get the best rates for bulk and custom orders, tailored to
+                                    your business needs.</div>
+                            </div>
+                            <div class="why-usp-item">
+                                <div class="why-usp-icon"><i class="ri-award-line"></i></div>
+                                <div class="why-usp-title">Quality Products</div>
+                                <div class="why-usp-support">Verified suppliers, strict checks</div>
+                                <div class="why-usp-desc">We partner only with verified suppliers to ensure high
+                                    standards and reliability.</div>
+                            </div>
+                            <div class="why-usp-item">
+                                <div class="why-usp-icon"><i class="ri-truck-line"></i></div>
+                                <div class="why-usp-title">On-Time Delivery</div>
+                                <div class="why-usp-support">Advanced logistics, real-time tracking</div>
+                                <div class="why-usp-desc">Our robust logistics network guarantees timely and safe
+                                    delivery worldwide.</div>
+                            </div>
+                            <div class="why-usp-item">
+                                <div class="why-usp-icon"><i class="ri-global-line"></i></div>
+                                <div class="why-usp-title">Global Network</div>
+                                <div class="why-usp-support">50+ countries, multilingual support</div>
+                                <div class="why-usp-desc">Access a trusted network of partners and buyers in 50+
+                                    countries.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us Section End -->
+
+        <!-- Newsletter Signup (Above Footer) -->
+        <section class="newsletter hidden">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <i class="ri-mail-open-line"></i>
+                        <span>Subscribe for updates, deals & trade tips</span>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="ri-send-plane-2-fill"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section Start -->
+        <footer class="footer">
+            <div class="footer-container container mx-auto px-5">
+                <div class="footer-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <!-- Brand & About -->
+                    <div class="footer-col sm:col-span-2 lg:col-span-3 xl:col-span-1 flex items-center text-center">
+                        <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" class="footer-logo">
+                        <p class="footer-about">Trade Overseas connects global buyers & suppliers with trust,
+                            transparency, and seamless trade solutions. Grow your business with us!</p>
+                        <div class="app-badges">
+                            <a href="#"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                    alt="Get it on Google Play"></a>
+                            <a href="#"><img
+                                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                    alt="Download on the App Store"></a>
+                        </div>
+                        <div class="trust-badges">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ISO_9001-2015.svg"
+                                alt="ISO 9001">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/D%26B_D-U-N-S_Registered_Logo.svg"
+                                alt="D&B Registered">
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="footer-col xl:pl-20">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <!-- Buyer & Supplier Links -->
+                    <div class="footer-col">
+                        <h4 class="footer-title">For Buyers</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Post Buy Requirement</a></li>
+                            <li><a href="#">Browse Suppliers</a></li>
+                            <li><a href="#">Get Quotations</a></li>
+                        </ul>
+                        <h4 class="footer-title" style="margin-top:1.5rem;">For Suppliers</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Become a Seller</a></li>
+                            <li><a href="#">Supplier Login</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact & Support -->
+                    <div class="footer-col">
+                        <h4 class="footer-title">Contact & Support</h4>
+                        <ul class="footer-contact">
+                            <li><i class="ri-map-pin-line"></i> Mumbai, India</li>
+                            <li><i class="ri-phone-line"></i> +91 12345 67890</li>
+                            <li><i class="ri-mail-line"></i> info@tradeoverseas.com</li>
+                            <li><i class="ri-whatsapp-line"></i> +91 98765 43210</li>
+                        </ul>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <!-- Payment Methods Row -->
+                    <div class="payment-methods">
+                        <span>We accept:</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa"
+                            height="28" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                            alt="Mastercard" height="28" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/UPI-Logo-vector.svg" alt="UPI"
+                            height="28" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"
+                            height="28" />
+                    </div>
+                    <!-- Shipping Partners Row -->
+                    <div class="shipping-partners">
+                        <span>Shipping with:</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/DHL_Logo.svg" alt="DHL"
+                            height="28" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/FedEx_Express.svg" alt="FedEx"
+                            height="28" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Blue_Dart_Express_logo.svg"
+                            alt="Blue Dart" height="28" />
+                    </div>
+                    <!-- Security/Trust Badge -->
+                    <div class="security-badge">
+                        <i class="ri-shield-check-line"></i> 100% Secure Payments & Buyer Protection
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>&copy; 2024 Trade Overseas. All rights reserved.</span>
+                    <span class="footer-policy-links">
+                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </span>
+                </div>
+
+            </div>
+            <!-- Back to Top Button -->
+            <button class="back-to-top" aria-label="Back to Top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+                style="display:none;"><i class="ri-arrow-up-line"></i></button>
+        </footer>
+        <!-- Footer Section End -->
 
     </main>
 
@@ -1152,6 +1939,8 @@
             });
         });
     </script>
+
+
 </body>
 
 </html>
