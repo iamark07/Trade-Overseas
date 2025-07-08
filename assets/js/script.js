@@ -66,3 +66,37 @@
   startAutoSlide();
 })();
 
+
+// category card slider
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.category-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 8,
+      breakpoints: {
+          415: { slidesPerView: 4, spaceBetween: 8 },
+          768: { slidesPerView: 5, spaceBetween: 8 },
+          1024: { slidesPerView: 6, spaceBetween: 8 },
+          1280: { slidesPerView: 8, spaceBetween: 8 },
+          1440: { slidesPerView: 10, spaceBetween: 8 }
+      }
+  });
+
+  // Products Swiper slider
+  new Swiper('.products-swiper', {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      navigation: {
+          nextEl: '.product-swiper-button-next-custom',
+          prevEl: '.product-swiper-button-prev-custom',
+      },
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+      breakpoints: {
+          340: { slidesPerView: 2, spaceBetween: 10 },
+          640: { slidesPerView: 3, spaceBetween: 20 },
+          1024: { slidesPerView: 4, spaceBetween: 20 }
+      }
+  });
+});
