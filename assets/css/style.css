@@ -379,9 +379,6 @@
 .product-action-row .action-btn i {
   font-size: 1rem;
 }
-.product-action-row .action-btn:hover {
-  color: #4f46e5;
-}
 
 /* Action buttons on hover */
 .product-actions {
@@ -804,11 +801,13 @@
 .why-choose-section {
   position: relative;
   overflow: hidden;
+  background-image: url(../images/section-bg-image/bg-3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .why-choose-grid{
-  background-image: url(../images/section-bg-image/bg-3.jpg);
-  background-size: cover;
+  
   width: 100%;
 }
 
@@ -1072,5 +1071,54 @@
   .factory-card-desc {
     font-size: 0.85rem;
   }
+}
+
+/* Trust Section Styles (Partners Only) */
+.trust-section {
+  background-image: url(../images/section-bg-image/partner-bg.webp);
+  background-size: cover;
+  /* border-top: 1px solid #6f7a8f; */
+}
+.trust-container {
+  text-align: center;
+}
+
+/* Partners Section Flex Row Styles */
+.partners-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+.partner-logo-img {
+  width: 150px;
+  transition: box-shadow 0.2s;
+}
+@media (max-width: 600px) {
+  .partner-logo-img {
+    width: 70px;
+  }
+}
+
+/* Discover Section Custom Styles */
+.discover-card {
+  transition: box-shadow 0.18s, transform 0.18s;
+  position: relative;
+}
+.discover-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(9,42,84,0.13);
+  transform: translateY(-2px) scale(1.025);
+  z-index: 2;
+}
+.discover-badge {
+  display: inline-block;
+  background: #f3f4f6;
+  color: #ff3b3b;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.18rem 0.9rem;
+  box-shadow: 0 1px 4px 0 rgba(9,42,84,0.06);
 }
 
