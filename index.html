@@ -1726,104 +1726,132 @@
 
         <!-- Discover Opportunities Section Start -->
         <section class="discover-section bg-[#f7f8fa] py-16 md:py-24">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Discover new opportunities</h2>
-                <p class="text-gray-500 mb-10 max-w-2xl">Explore trending picks, fresh arrivals, and unbeatable value
-                    from trusted suppliers worldwide.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="container mx-auto px-5">
+                <h2 class="discover-title">Discover new opportunities</h2>
+                <p class="discover-subtitle">Explore trending picks, fresh arrivals, and
+                    unbeatable value from trusted suppliers worldwide.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Top Picks -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-3">
                         <div class="flex items-center justify-between mb-2">
                             <span class="font-semibold text-lg text-gray-800">Top Picks</span>
                             <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
                         </div>
                         <div
-                            class="discover-card group relative bg-white rounded-2xl shadow-sm p-5 flex flex-col gap-3 transition">
-                            <span class="discover-badge absolute top-4 left-4">⭐ Editor's Choice</span>
-                            <img src="assets/images/products-images/watch.png" alt="Top Pick"
-                                class="rounded-xl w-full aspect-[4/2] object-cover" />
+                            class="discover-card-main group relative">
                             <div>
-                                <div class="text-gray-800 font-semibold mb-1">Smartwatch Pro</div>
-                                <div class="text-gray-500 text-sm">Best in electronics</div>
+                                <div class="discover-card-title">Smartwatch Pro</div>
+                                <div class="discover-card-desc">Best in electronics</div>
+                            </div>
+                            <div class="p-5 border border-[#f1f1f1] rounded-2xl">
+                                <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                    class="discover-card-img" />
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="discover-card-grid">
+                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                        class="discover-card-grid-img" />
+                                </div>
+                                <div class="discover-card-grid">
+                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                        class="discover-card-grid-img" />
+                                </div>
+                                <div class="discover-card-grid">
+                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                        class="discover-card-grid-img" />
+                                </div>
                             </div>
                         </div>
                         <div
-                            class="discover-card group bg-white rounded-2xl shadow-sm p-5 flex flex-col gap-3 transition">
+                            class="discover-card-small group">
                             <img src="assets/images/products-images/t-shirt.png" alt="Classic Tee"
-                                class="rounded-xl w-full aspect-[4/2] object-cover" />
+                                class="discover-product-img" />
                             <div>
-                                <div class="text-gray-800 font-semibold mb-1">Classic Tee</div>
-                                <div class="text-gray-500 text-sm">Top in fashion</div>
+                                <div class="discover-card-title">Classic Tee</div>
+                                <div class="discover-card-desc">Top in fashion</div>
                             </div>
                         </div>
                     </div>
                     <!-- Fresh Finds -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-3">
                         <div class="flex items-center justify-between mb-2">
                             <span class="font-semibold text-lg text-gray-800">Fresh Finds</span>
                             <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div
-                                class="discover-card group bg-white rounded-2xl shadow-sm p-3 flex flex-col items-center transition">
-                                <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
-                                    class="rounded-lg w-full aspect-square object-cover mb-2" />
-                                <div class="text-gray-700 text-sm font-medium">Ergo Chair</div>
+                        <div class="grid grid-cols-2 gap-3 bg-white shadow-sm p-5 rounded-2xl">
+                            <div>
+                                <div class="text-gray-700 text-sm font-medium mb-2">Ergo Chair</div>
+                                <div
+                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
+                                    <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
+                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
+                                </div>
                             </div>
-                            <div
-                                class="discover-card group bg-white rounded-2xl shadow-sm p-3 flex flex-col items-center transition">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
-                                    class="rounded-lg w-full aspect-square object-cover mb-2" />
-                                <div class="text-gray-700 text-sm font-medium">Modern Chair</div>
+                            <div>
+                                <div class="text-gray-700 text-sm font-medium mb-2">Modern Chair</div>
+                                <div
+                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
+                                    <img src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
+                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
+                                </div>
                             </div>
-                            <div
-                                class="discover-card group bg-white rounded-2xl shadow-sm p-3 flex flex-col items-center transition">
-                                <img src="assets/images/products-images/watch.png" alt="Fitness Watch"
-                                    class="rounded-lg w-full aspect-square object-cover mb-2" />
-                                <div class="text-gray-700 text-sm font-medium">Fitness Watch</div>
+                            <div>
+                                <div class="text-gray-700 text-sm font-medium mb-2">Fitness Watch</div>
+                                <div
+                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
+                                    <img src="assets/images/products-images/watch.png" alt="Fitness Watch"
+                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
+                                </div>
                             </div>
-                            <div
-                                class="discover-card group bg-white rounded-2xl shadow-sm p-3 flex flex-col items-center transition">
-                                <img src="assets/images/products-images/t-shirt.png" alt="Summer Tee"
-                                    class="rounded-lg w-full aspect-square object-cover mb-2" />
-                                <div class="text-gray-700 text-sm font-medium">Summer Tee</div>
+                            <div>
+                                <div class="text-gray-700 text-sm font-medium mb-2">Summer Tee</div>
+                                <div
+                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
+                                    <img src="assets/images/products-images/t-shirt.png" alt="Summer Tee"
+                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
+                                </div>
                             </div>
                         </div>
                         <div
-                            class="discover-card group relative bg-white rounded-2xl shadow-sm p-5 flex flex-col items-center transition">
-                            <span class="discover-badge bg-blue-100 text-blue-700 absolute top-4 left-4">New</span>
+                            class="discover-card-small group">
                             <img src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
-                                class="rounded-xl w-full aspect-[4/2] object-cover mb-3" />
+                                class="discover-product-img" />
                             <div>
-                                <div class="text-gray-800 font-semibold mb-1">Modern Chair</div>
-                                <div class="text-gray-500 text-sm">Just arrived</div>
+                                <div class="discover-card-title">Modern Chair</div>
+                                <div class="discover-card-desc">Just arrived</div>
                             </div>
                         </div>
                     </div>
                     <!-- Best Value -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-3">
                         <div class="flex items-center justify-between mb-2">
                             <span class="font-semibold text-lg text-gray-800">Best Value</span>
                             <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
                         </div>
                         <div
-                            class="discover-card group relative bg-white rounded-2xl shadow-sm p-5 flex flex-col gap-3 items-center transition">
-                            <span class="discover-badge bg-green-100 text-green-700 absolute top-4 left-4">20%
-                                OFF</span>
-                            <img src="assets/images/products-images/watch.png" alt="Smartwatch Pro"
-                                class="rounded-xl w-full aspect-[4/2] object-cover mb-3" />
+                            class="discover-card-main group relative">
                             <div>
-                                <div class="text-gray-800 font-semibold mb-1">Smartwatch Pro</div>
-                                <div class="text-gray-500 text-sm">Limited time offer</div>
+                                <div class="mb-3">
+                                    <div class="discover-card-title">Smartwatch Pro</div>
+                                    <div class="discover-card-desc">Limited time offer</div>
+                                </div>
+                                <div class="p-5 border border-[#f1f1f1] rounded-2xl">
+                                    <img src="assets/images/products-images/watch.png" alt="Smartwatch Pro"
+                                        class="discover-card-img h-[151px]" />
+                                </div>
                             </div>
                         </div>
                         <div
-                            class="discover-card group bg-white rounded-2xl shadow-sm p-5 flex flex-col gap-3 items-center transition">
-                            <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
-                                class="rounded-xl w-full aspect-[4/2] object-cover mb-3" />
+                            class="discover-card-main group">
                             <div>
-                                <div class="text-gray-800 font-semibold mb-1">Ergo Chair</div>
-                                <div class="text-gray-500 text-sm">Special price</div>
+                                <div class="mb-3">
+                                    <div class="discover-card-title">Ergo Chair</div>
+                                    <div class="discover-card-desc">Special price</div>
+                                </div>
+                                <div class="p-5 border border-[#f1f1f1] rounded-2xl">
+                                    <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
+                                        class="discover-card-img h-[151px]" />
+                                </div>
                             </div>
                         </div>
                     </div>

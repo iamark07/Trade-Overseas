@@ -1102,23 +1102,86 @@
 }
 
 /* Discover Section Custom Styles */
-.discover-card {
-  transition: box-shadow 0.18s, transform 0.18s;
-  position: relative;
+.discover-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
-.discover-card:hover {
-  box-shadow: 0 8px 32px 0 rgba(9,42,84,0.13);
-  transform: translateY(-2px) scale(1.025);
-  z-index: 2;
+@media (min-width: 768px) {
+  .discover-title {
+    font-size: 1.875rem;
+  }
 }
-.discover-badge {
-  display: inline-block;
-  background: #f3f4f6;
-  color: #ff3b3b;
-  font-size: 0.92rem;
-  font-weight: 600;
-  border-radius: 999px;
-  padding: 0.18rem 0.9rem;
+.discover-subtitle {
+  color: #6b7280;
+  margin-bottom: 3rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.discover-card-main {
+  background: #fff;
+  border-radius: 1rem;
   box-shadow: 0 1px 4px 0 rgba(9,42,84,0.06);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s;
+}
+.discover-card-img {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+@media (max-width: 1023px) {
+  .discover-card-img {
+    height: 150px;
+  }
+}
+.discover-card-small {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px 0 rgba(9,42,84,0.06);
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.discover-product-img {
+  border-radius: 0.75rem;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 1px solid #f1f1f1;
+  padding: 0.5rem;
+}
+.discover-card-grid-img {
+  border-radius: 0.75rem;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+.discover-card-grid {
+  border: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: 1rem;
+}
+.discover-card-title {
+  color: #1f2937;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.discover-card-desc {
+  color: #6b7280;
+  font-size: 0.875rem;
 }
 
