@@ -15,7 +15,6 @@
     <link rel="icon" href="assets/img/fevicon.webp" type="image/png" />
 
     <!-- custom css link -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Google Fonts: Inter -->
@@ -24,6 +23,287 @@
         rel="stylesheet" />
 
     <title>Trade Overseas</title>
+
+    <style>
+        /* Custom CSS for additional styling */
+        .tab-content {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .color-option.active {
+            border-color: #3b82f6 !important;
+            background-color: #eff6ff !important;
+            color: #1d4ed8 !important;
+        }
+
+        .wishlist-active {
+            border-color: #ef4444 !important;
+            color: #ef4444 !important;
+            background-color: #fef2f2 !important;
+        }
+
+        .wishlist-active svg {
+            fill: currentColor;
+        }
+
+        /* Smooth transitions for all interactive elements */
+        button,
+        .color-option {
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Custom scrollbar for better UX */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Product image hover effects */
+        .product-image-container:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Enhanced button styles */
+        .premium-gradient-btn {
+            background: linear-gradient(135deg, #092a54 0%, #0a2e5a 100%);
+            transition: all 0.3s ease;
+        }
+
+        .premium-gradient-btn:hover {
+            background: linear-gradient(135deg, #0a2e5a 0%, #0c3461 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(9, 42, 84, 0.3);
+        }
+
+        /* Card hover effects */
+        .product-card {
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tab button active state */
+        .tab-btn.active {
+            border-bottom-color: #3b82f6;
+            color: #3b82f6;
+        }
+
+        /* Zoom modal styles */
+        #zoomModal {
+            backdrop-filter: blur(4px);
+        }
+
+        /* Price highlight animation */
+        @keyframes priceHighlight {
+            0% {
+                background-color: transparent;
+            }
+
+            50% {
+                background-color: rgba(59, 130, 246, 0.1);
+            }
+
+            100% {
+                background-color: transparent;
+            }
+        }
+
+        .price-updated {
+            animation: priceHighlight 0.6s ease-in-out;
+        }
+
+        /* Supplier badge styles */
+        .supplier-badge {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .supplier-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .supplier-badge:hover::before {
+            left: 100%;
+        }
+
+        /* Related products grid responsive */
+        @media (max-width: 640px) {
+            .related-products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Enhanced form inputs */
+        input[type="number"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        /* Loading states */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Notification styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #10b981;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.error {
+            background: #ef4444;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .supplier-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tab-navigation {
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .tab-navigation::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+
+            .print-only {
+                display: block !important;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .color-option {
+                border-width: 2px;
+            }
+
+            .tab-btn {
+                border-bottom-width: 3px;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles for accessibility */
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #3b82f6;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+    </style>
 
     <!-- Remix Icon CDN for footer icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -61,7 +341,7 @@
     </div>
 
     <!-- main header section -->
-    <header class="sticky top-0 z-50 duration-200 shadow-md">
+    <header class="sticky top-0 z-50 duration-200">
         <div class="flex justify-center main-header transition-all w-full">
             <!-- inner Header -->
             <div class="inner-header max-w-[1600px] w-full">
@@ -1127,1016 +1407,691 @@
         </nav>
     </header>
 
-
     <main>
-        <!-- Swiper Category Slider Section -->
-        <section class="hidden category-swiper-section bg-[#f7f7f7] relative z-10 ">
+        <!-- Breadcrumb Section -->
+        <div class="bg-white border-b border-gray-200 lg:block hidden">
             <div class="container mx-auto px-5 py-3">
-                <div class="swiper category-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- Furniture -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Furniture"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Furniture</h3>
-                        </div>
-                        <!-- Electronics -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/t-shirt.png" alt="Electronics"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Electronics</h3>
-                        </div>
-                        <!-- Apparel -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/watch.png" alt="Apparel"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Apparel</h3>
-                        </div>
-                        <!-- Kitchenware -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Kitchenware"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Kitchenware</h3>
-                        </div>
-                        <!-- Decor -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/t-shirt.png" alt="Decor"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Decor</h3>
-                        </div>
-                        <!-- Decor -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/watch.png" alt="Decor"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Decor</h3>
-                        </div>
-                        <!-- Decor -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Decor"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Decor</h3>
-                        </div>
-                        <!-- Decor -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/watch.png" alt="Decor"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Decor</h3>
-                        </div>
-                        <!-- Decor -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/t-shirt.png" alt="Decor"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Decor</h3>
-                        </div>
-                        <!-- Decor -->
-                        <div class="swiper-slide category-slide-minimal">
-                            <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Decor"
-                                    class="category-img-rounded">
-                            </div>
-                            <h3 class="category-slide-title">Decor</h3>
-                        </div>
-                    </div>
-                </div>
+                <nav class="flex text-sm text-gray-600">
+                    <a href="#" class="hover:text-[#092a54] transition-colors">Home</a>
+                    <span class="mx-2">/</span>
+                    <a href="#" class="hover:text-[#092a54] transition-colors">Electronics</a>
+                    <span class="mx-2">/</span>
+                    <a href="#" class="hover:text-[#092a54] transition-colors">Consumer Electronics</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-gray-900">Wireless Bluetooth Headphones</span>
+                </nav>
             </div>
-        </section>
+        </div>
 
-        <!-- Hero Section start-->
-        <section class="hero-section bg-white pt-6">
-            <div class="hero-slider-container md:container md:mx-auto md:px-5">
-                <div class="hero-slider">
-                    <div class="hero-slide active">
-                        <img src="assets/images/banners/banner-1.jpg" alt="Global Trade Solutions"
-                            class="hero-slide-image">
-                    </div>
-                    <div class="hero-slide">
-                        <img src="assets/images/banners/banner-2.jpg" alt="Premium Products" class="hero-slide-image">
-                    </div>
-                    <div class="hero-slide">
-                        <img src="assets/images/banners/banner-3.jpg" alt="B2B Excellence" class="hero-slide-image">
-                    </div>
-                </div>
-                <!-- Navigation Arrows -->
-                <button class="hero-nav-btn hero-prev-btn"><i class="ri-arrow-left-s-line"></i></button>
-                <button class="hero-nav-btn hero-next-btn"><i class="ri-arrow-right-s-line"></i></button>
-                <!-- Pagination Dots -->
-                <div class="hero-pagination">
-                    <span class="hero-dot active" data-slide="0"></span>
-                    <span class="hero-dot" data-slide="1"></span>
-                    <span class="hero-dot" data-slide="2"></span>
-                </div>
-            </div>
-        </section>
-        <!-- Hero Section end-->
-
-        <!-- How It Works Section Start -->
-        <section class="how-it-works-section py-24 bg-white">
+        <!-- Main Product Section -->
+        <div class="bg-gray-50 py-8">
             <div class="container mx-auto px-5">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 text-[#092a54]">How It Works</h2>
-                <p class="how-it-works-desc text-center text-gray-500 mb-10 max-w-2xl mx-auto">Our process is simple and
-                    transparent. Here's how you can easily get your products delivered from trusted suppliers worldwide
-                    in just a few steps:</p>
-                <div class="how-steps-row grid sm:grid-cols-2 gap-10 xl:gap-0 xl:flex">
-                    <div class="how-step-block">
-                        <div class="how-step-circle">1</div>
-                        <div class="how-step-title">Search Product</div>
-                        <div class="how-step-text">Browse thousands of products and find exactly what you need for your
-                            business or personal use.</div>
-                    </div>
-                    <div class="how-step-curve hidden xl:block">
-                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 35 Q60 0 115 35" stroke="#4f6888" stroke-width="2" stroke-dasharray="6,6"
-                                fill="none" />
-                        </svg>
-                    </div>
-                    <div class="how-step-block">
-                        <div class="how-step-circle">2</div>
-                        <div class="how-step-title">Get Quotation</div>
-                        <div class="how-step-text">Send your requirements and receive competitive quotations from
-                            verified suppliers quickly.</div>
-                    </div>
-                    <div class="how-step-curve hidden xl:block">
-                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 35 Q60 0 115 35" stroke="#4f6888" stroke-width="2" stroke-dasharray="6,6"
-                                fill="none" />
-                        </svg>
-                    </div>
-                    <div class="how-step-block">
-                        <div class="how-step-circle">3</div>
-                        <div class="how-step-title">Place Order</div>
-                        <div class="how-step-text">Choose the best offer, confirm your order, and make secure payment
-                            with confidence.</div>
-                    </div>
-                    <div class="how-step-curve hidden xl:block">
-                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 35 Q60 0 115 35" stroke="#4f6888" stroke-width="2" stroke-dasharray="6,6"
-                                fill="none" />
-                        </svg>
-                    </div>
-                    <div class="how-step-block">
-                        <div class="how-step-circle">4</div>
-                        <div class="how-step-title">We Deliver</div>
-                        <div class="how-step-text">Sit back and relax while we handle shipping and deliver your products
-                            safely to your doorstep.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- How It Works Section End -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Product Images -->
+                    <div class="lg:col-span-1 lg:sticky lg:top-[180px] h-fit">
+                        <div class="bg-white rounded-lg shadow-sm p-6 grid lg:grid-cols-11 gap-6">
+                            <!-- Thumbnail Images -->
+                            <div id="thumbnailContainer"
+                                class="lg:col-span-2 flex lg:flex-col gap-2 order-2 lg:order-1">
+                                <!-- Thumbnails will be generated by JavaScript -->
+                            </div>
+                            <!-- Main Image -->
+                            <div class="relative mb-4 group lg:col-span-9  order-1 lg:order-2">
+                                <div
+                                    class="aspect-square w-full h-full bg-gray-100 rounded-lg overflow-hidden relative">
+                                    <img id="mainImage"
+                                        src="https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                        alt="Product"
+                                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
 
-        <!-- Featured Products Section -->
-        <section id="featured-products" class="py-16">
-            <div class="container mx-auto px-5">
-                <!-- Section Header -->
-                <div class="mb-20 lg:mb-12">
-                    <div class="text-center">
-                        <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 text-[#092a54] relative">
-                            Our Featured Products
-                        </h2>
-                    </div>
-                    <p class="hidden mt-8 text-lg text-gray-600 max-w-2xl mx-auto">
-                        Explore a curated selection of our top-quality products, sourced and delivered with excellence.
-                    </p>
-                </div>
+                                    <!-- Navigation Arrows -->
+                                    <button onclick="prevImage()"
+                                        class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                                        <i class="ri-arrow-left-line text-xl"></i>
+                                    </button>
+                                    <button onclick="nextImage()"
+                                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                                        <i class="ri-arrow-right-line text-xl"></i>
+                                    </button>
 
-                <div class="flex gap-10 flex-col">
-                    <div class="relative">
-                        <!-- Swiper Products Slider -->
-                        <div class="swiper products-swiper relative">
-                            <div class="swiper-wrapper">
-                                <!-- Product 1 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/watch.png"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <!-- Zoom Button -->
+                                    <button onclick="openZoom()"
+                                        class="absolute top-2 right-2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full  w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                                        <i class="ri-zoom-in-line text-xl"></i>
+                                    </button>
 
-                                <!-- Product 2 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/t-shirt.png"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Product 3 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Product 4 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/t-shirt.png"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Product 5 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/watch.png"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Product 6 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Product 7 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/t-shirt.png"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Product 8 -->
-                                <div class="swiper-slide">
-                                    <div class="product-card">
-                                        <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/watch.png"
-                                                    alt="Modern Smartwatch" class="product-image">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="product-title-text">Modern Smartwatch</h3>
-                                            <div class="product-price-row">
-                                                <span class="current-price">₹299</span>
-                                                <span class="old-price">₹499</span>
-                                            </div>
-                                            <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
-                                                    Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <!-- Image Counter -->
+                                    <div id="imageCounter"
+                                        class="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white px-2 py-1 rounded text-sm">
+                                        1 / 5
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- navigation buttons -->
-                        <div class="flex gap-1 sm:gap-3 absolute -top-16 right-0">
-                            <!-- Navigation Arrows -->
-                            <div class="product-swiper-button-prev-custom"><i class="ri-arrow-left-s-line"></i></div>
-                            <div class="product-swiper-button-next-custom"><i class="ri-arrow-right-s-line"></i></div>
+
+
                         </div>
                     </div>
-                </div>
 
-                <!-- View All Button -->
-                <div class="text-center mt-12 hidden">
-                    <a href="#"
-                        class="inline-block bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
-                        View All Products
-                    </a>
-                </div>
-            </div>
-        </section>
+                    <!-- Product Info -->
+                    <div class="lg:col-span-1">
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <!-- Product Title -->
+                            <div class="mb-4">
+                                <h1 class="text-2xl font-bold text-gray-900 mb-2">
+                                    Premium Wireless Bluetooth Headphones with Active Noise Cancellation
+                                </h1>
+                                <div class="flex items-center space-x-4 text-sm text-gray-600">
+                                    <span>Item #: WBH-2024-001</span>
+                                    <span>•</span>
+                                    <span>Brand: AudioTech Pro</span>
+                                    <span>•</span>
+                                    <div class="flex items-center">
+                                        <div class="flex text-yellow-400 mr-1">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <span>(4.8) 2,847 reviews</span>
+                                    </div>
+                                </div>
+                            </div>
 
-        <!-- About Us Section Start -->
-        <section class="about-us-section py-20 md:py-28 bg-[#f7f7f7]">
-            <div class="container mx-auto px-5">
-                <div class="about-us-grid grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Left: Text Content -->
-                    <div class="about-us-content order-2 lg:order-1">
-                        <span class="about-us-badge">TRUSTED GLOBAL TRADE</span>
-                        <h2 class="about-us-title text-2xl sm:text-3xl xl:text-5xl font-bold text-[#092a54] mb-5 mt-2">
-                            Connecting Buyers & Suppliers Worldwide with Trust</h2>
-                        <p class="about-us-desc text-gray-600 mb-7 text-sm sm:text-lg">We empower businesses to source
-                            and sell globally with confidence. Our platform brings together verified suppliers, seamless
-                            logistics, and dedicated support to make international trade simple and secure for everyone.
-                        </p>
-                        <div class="about-us-btn-row flex gap-4 mb-2">
-                            <a href="#contact" class="about-us-btn-main">Contact Us</a>
-                            <a href="#products" class="about-us-btn-secondary">Explore Products</a>
-                        </div>
-                        <div class="about-us-trusted-by mt-10">
+                            <!-- Price Section -->
                             <div
-                                class="about-us-trusted-label text-xs tracking-widest text-[#4f6888] font-semibold mb-3">
-                                TRUSTED BY MAJOR COMPANIES WORLDWIDE</div>
-                            <div class="about-us-logos flex gap-8 flex-wrap items-center">
-                                <img src="assets/images/logo/logo.webp" alt="Logo 1" class="about-us-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Logo 2"
-                                    class="about-us-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
-                                    alt="Logo 3" class="about-us-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg"
-                                    alt="Logo 4" class="about-us-logo">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Right: Image & Overlapping Stats Card -->
-                    <div class="about-us-visual w-full relative order-1 lg:order-2">
-                        <div class="about-us-img-wrap">
-                            <img src="assets/images/banners/landing-page-banner.jpg" alt="Our Factory"
-                                class="about-us-img">
-                            <div class="about-us-stats-card">
-                                <div class="about-us-stats-row">
-                                    <div class="about-us-stat">
-                                        <div class="about-us-stat-value">50+</div>
-                                        <div class="about-us-stat-label">Countries Served</div>
+                                class="mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+                                <div class="flex items-baseline space-x-2 mb-3">
+                                    <span id="currentPrice" class="text-3xl font-bold text-blue-600">$25.50</span>
+                                    <span class="text-lg text-gray-500 line-through">$32.00</span>
+                                    <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">-23%</span>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <h4 class="font-semibold text-gray-800">Bulk Pricing:</h4>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-600">1-99 pieces</span>
+                                        <span class="font-medium">$25.50 each</span>
                                     </div>
-                                    <div class="about-us-stat">
-                                        <div class="about-us-stat-value">1000+</div>
-                                        <div class="about-us-stat-label">Products</div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-600">100-499 pieces</span>
+                                        <span class="font-medium">$22.80 each</span>
                                     </div>
-                                    <div class="about-us-stat">
-                                        <div class="about-us-stat-value">10+</div>
-                                        <div class="about-us-stat-label">Years Experience</div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-600">500-999 pieces</span>
+                                        <span class="font-medium">$19.99 each</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-600">1000+ pieces</span>
+                                        <span class="font-medium">$17.50 each</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Us Section End -->
 
-        <!-- Discover Direct Factory Advantages Section -->
-        <section class="factory-discover-section py-32">
-            <div class="container mx-auto px-5">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-[#092a54]">
-                    Discover Direct Factory Advantages
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 justify-center">
-                    <!-- Card 1 -->
-                    <div class="factory-card group">
-                        <img src="assets/images/banners/banner-1.jpg" alt="Verified Factories"
-                            class="factory-card-img" />
-                        <div class="factory-card-overlay"></div>
-                        <div class="factory-card-top">
-                            <span class="factory-card-icon text-[#258feb]"><i class="ri-shield-check-line"></i></span>
-                            <span class="factory-card-title">Verified Factories</span>
-                        </div>
-                        <div class="factory-card-bottom">
-                            <p class="factory-card-desc">Source directly from audited, trusted manufacturers for peace
-                                of mind.</p>
-                            <a href="#" class="factory-card-cta">Explore Now</a>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="factory-card group">
-                        <img src="assets/images/banners/banner-2.jpg" alt="Request Samples" class="factory-card-img" />
-                        <div class="factory-card-overlay"></div>
-                        <div class="factory-card-top">
-                            <span class="factory-card-icon text-[#16a34a]"><i class="ri-flask-line"></i></span>
-                            <span class="factory-card-title">Request Samples</span>
-                        </div>
-                        <div class="factory-card-bottom">
-                            <p class="factory-card-desc">Touch and feel products before you buy. Fast, easy sample
-                                requests.</p>
-                            <a href="#" class="factory-card-cta">Get Samples</a>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="factory-card group">
-                        <img src="assets/images/banners/banner-3.jpg" alt="Live Factory Insights"
-                            class="factory-card-img" />
-                        <div class="factory-card-overlay"></div>
-                        <div class="factory-card-top">
-                            <span class="factory-card-icon text-[#ea580c]"><i class="ri-broadcast-line"></i></span>
-                            <span class="factory-card-title">Live Factory Insights</span>
-                        </div>
-                        <div class="factory-card-bottom">
-                            <p class="factory-card-desc">Join live video tours and Q&A with factory experts, anytime.
-                            </p>
-                            <a href="#" class="factory-card-cta">Join Live</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us Section Start -->
-        <section class="why-choose-section py-16 relative overflow-hidden">
-            <div class="w-full h-full absolute top-0 left-0 bg-black/60"></div>
-            <div class="container mx-auto px-5 py-14 md:py-10">
-                <div class="why-choose-grid overflow-hidden">
-                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-center shadow-md relative z-10">
-                        <!-- Left: Text & CTA -->
-                        <div class="why-choose-left flex flex-col justify-center h-full">
-                            <div
-                                class="why-choose-intro text-[#ff3b3b] font-semibold uppercase tracking-widest mb-2 text-sm">
-                                Our Advantages</div>
-                            <h2 class="why-choose-title text-3xl md:text-4xl font-bold text-[#ffffff] mb-4">Why Choose
-                                Us</h2>
-                            <p class="why-choose-desc text-gray-200 mb-6">Experience seamless global trade with us. We
-                                offer competitive pricing, verified quality, and a global network to ensure your
-                                business grows with confidence. From sourcing to delivery, our team supports you at
-                                every step for a hassle-free experience.</p>
-                            <!-- Simple, unique, text-only list -->
-                            <ul class="why-choose-simple-list grid grid-cols-1 gap-3 mt-2 mb-5 pl-5 text-gray-100">
-                                <li>Transparent pricing with no hidden fees</li>
-                                <li>Dedicated account managers for every client</li>
-                                <li>Flexible order quantities to suit all business sizes</li>
-                                <li>Real-time order tracking and updates</li>
-                            </ul>
-                            <a href="#contact" class="why-choose-btn-main inline-flex items-center gap-2 mb-4"><i
-                                    class="ri-customer-service-2-line text-xl"></i> Get a Quote</a>
-                        </div>
-                        <!-- Right: USP Grid -->
-                        <div class="why-choose-usps grid grid-cols-1 sm:grid-cols-2 gap-7">
-                            <div class="why-usp-item">
-                                <div class="why-usp-icon"><i class="ri-money-dollar-circle-line"></i></div>
-                                <div class="why-usp-title">Competitive Pricing</div>
-                                <div class="why-usp-support">Best rates for bulk & custom orders</div>
-                                <div class="why-usp-desc">Get the best rates for bulk and custom orders, tailored to
-                                    your business needs.</div>
-                            </div>
-                            <div class="why-usp-item">
-                                <div class="why-usp-icon"><i class="ri-award-line"></i></div>
-                                <div class="why-usp-title">Quality Products</div>
-                                <div class="why-usp-support">Verified suppliers, strict checks</div>
-                                <div class="why-usp-desc">We partner only with verified suppliers to ensure high
-                                    standards and reliability.</div>
-                            </div>
-                            <div class="why-usp-item">
-                                <div class="why-usp-icon"><i class="ri-truck-line"></i></div>
-                                <div class="why-usp-title">On-Time Delivery</div>
-                                <div class="why-usp-support">Advanced logistics, real-time tracking</div>
-                                <div class="why-usp-desc">Our robust logistics network guarantees timely and safe
-                                    delivery worldwide.</div>
-                            </div>
-                            <div class="why-usp-item">
-                                <div class="why-usp-icon"><i class="ri-global-line"></i></div>
-                                <div class="why-usp-title">Global Network</div>
-                                <div class="why-usp-support">50+ countries, multilingual support</div>
-                                <div class="why-usp-desc">Access a trusted network of partners and buyers in 50+
-                                    countries.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Why Choose Us Section End -->
-
-        <!-- Discover Opportunities Section Start -->
-        <section class="discover-section bg-[#f7f8fa] py-16 md:py-24">
-            <div class="container mx-auto px-5">
-                <h2 class="discover-title">Discover new opportunities</h2>
-                <p class="discover-subtitle">Explore trending picks, fresh arrivals, and
-                    unbeatable value from trusted suppliers worldwide.</p>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Top Picks -->
-                    <div class="flex flex-col gap-3">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="font-semibold text-lg text-gray-800">Top Picks</span>
-                            <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
-                        </div>
-                        <div
-                            class="discover-card-main group relative">
-                            <div>
-                                <div class="discover-card-title">Smartwatch Pro</div>
-                                <div class="discover-card-desc">Best in electronics</div>
-                            </div>
-                            <div class="p-5 border border-[#f1f1f1] rounded-2xl">
-                                <img src="assets/images/products-images/watch.png" alt="Top Pick"
-                                    class="discover-card-img" />
-                            </div>
-                            <div class="grid grid-cols-3 gap-3">
-                                <div class="discover-card-grid">
-                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
-                                        class="discover-card-grid-img" />
+                            <!-- Product Options -->
+                            <div class="mb-6 space-y-4">
+                                <!-- Color Selection -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Color: <span id="selectedColorText" class="font-normal">Black</span>
+                                    </label>
+                                    <div class="flex space-x-2">
+                                        <button data-color="Black"
+                                            class="color-option px-4 py-2 border-2 border-blue-500 bg-blue-50 text-blue-700 rounded-lg text-sm transition-all">
+                                            Black
+                                        </button>
+                                        <button data-color="White"
+                                            class="color-option px-4 py-2 border border-gray-300 hover:border-gray-400 rounded-lg text-sm transition-all">
+                                            White
+                                        </button>
+                                        <button data-color="Red"
+                                            class="color-option px-4 py-2 border border-gray-300 hover:border-gray-400 rounded-lg text-sm transition-all">
+                                            Red
+                                        </button>
+                                        <button data-color="Blue"
+                                            class="color-option px-4 py-2 border border-gray-300 hover:border-gray-400 rounded-lg text-sm transition-all">
+                                            Blue
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="discover-card-grid">
-                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
-                                        class="discover-card-grid-img" />
-                                </div>
-                                <div class="discover-card-grid">
-                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
-                                        class="discover-card-grid-img" />
+
+                                <!-- Quantity -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Quantity (Minimum Order: 100 pieces)
+                                    </label>
+                                    <div class="flex items-center space-x-3">
+                                        <button onclick="decreaseQuantity()"
+                                            class="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50">
+                                            <i class="ri-subtract-line"></i>
+                                        </button>
+                                        <input id="quantityInput" type="number" value="100" min="100"
+                                            class="w-20 px-3 py-2 border border-gray-300 rounded-lg text-center">
+                                        <button onclick="increaseQuantity()"
+                                            class="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50">
+                                            <i class="ri-add-line"></i>
+                                        </button>
+                                        <span class="text-sm text-gray-600">pieces</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div
-                            class="discover-card-small group">
-                            <img src="assets/images/products-images/t-shirt.png" alt="Classic Tee"
-                                class="discover-product-img" />
-                            <div>
-                                <div class="discover-card-title">Classic Tee</div>
-                                <div class="discover-card-desc">Top in fashion</div>
+
+                            <!-- Action Buttons -->
+                            <div class="space-y-3 mb-6">
+                                <button
+                                    class="w-full bg-[#092a54] text-white py-3 rounded-lg font-medium hover:bg-[#0a2e5a] transition-colors flex items-center justify-center space-x-2">
+                                    <i class="ri-message-3-line"></i>
+                                    <span>Contact Supplier</span>
+                                </button>
+                                <button
+                                    class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                                    Request Quote
+                                </button>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button id="wishlistBtn" onclick="toggleWishlist()"
+                                        class="flex items-center justify-center space-x-2 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors">
+                                        <i class="ri-heart-line"></i>
+                                        <span class="text-sm">Save</span>
+                                    </button>
+                                    <button
+                                        class="flex items-center justify-center space-x-2 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors">
+                                        <i class="ri-share-line"></i>
+                                        <span class="text-sm">Share</span>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Fresh Finds -->
-                    <div class="flex flex-col gap-3">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="font-semibold text-lg text-gray-800">Fresh Finds</span>
-                            <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
-                        </div>
-                        <div class="grid grid-cols-2 gap-3 bg-white shadow-sm p-5 rounded-2xl">
-                            <div>
-                                <div class="text-gray-700 text-sm font-medium mb-2">Ergo Chair</div>
+
+                            <!-- Key Features -->
+                            <div class="space-y-3">
+                                <h4 class="font-semibold text-gray-800">Key Features:</h4>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="ri-shield-check-line text-green-600"></i>
+                                        <span>✓ Active Noise Cancellation Technology</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="ri-award-line text-blue-600"></i>
+                                        <span>✓ 30-Hour Battery Life</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="ri-truck-line text-orange-600"></i>
+                                        <span>✓ Premium Leather Comfort Fit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Total Calculation -->
+                            <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                                <div class="flex justify-between items-center text-lg font-semibold">
+                                    <span>Total Cost:</span>
+                                    <span id="totalCost" class="text-blue-600">$2,550</span>
+                                </div>
+                                <div id="totalBreakdown" class="text-sm text-gray-600 mt-1">
+                                    100 pieces × $25.50 each
+                                </div>
+                            </div>
+                            <!-- Product Features -->
+                            <div class="mt-6 space-y-3">
                                 <div
-                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
-                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
+                                    class="flex items-center justify-between p-3 bg-green-50 border border-green-200 rounded-lg">
+                                    <span class="text-sm font-medium text-green-800">✓ Verified Supplier</span>
+                                    <span class="text-xs text-green-600">Gold Member</span>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="text-gray-700 text-sm font-medium mb-2">Modern Chair</div>
                                 <div
-                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
-                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
+                                    class="flex items-center justify-between p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                    <span class="text-sm font-medium text-blue-800">🚚 Fast Shipping</span>
+                                    <span class="text-xs text-blue-600">7-15 days</span>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="text-gray-700 text-sm font-medium mb-2">Fitness Watch</div>
                                 <div
-                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/watch.png" alt="Fitness Watch"
-                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-gray-700 text-sm font-medium mb-2">Summer Tee</div>
-                                <div
-                                    class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/t-shirt.png" alt="Summer Tee"
-                                        class="rounded-lg w-full h-[130px] object-contain mb-2" />
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="discover-card-small group">
-                            <img src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
-                                class="discover-product-img" />
-                            <div>
-                                <div class="discover-card-title">Modern Chair</div>
-                                <div class="discover-card-desc">Just arrived</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Best Value -->
-                    <div class="flex flex-col gap-3">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="font-semibold text-lg text-gray-800">Best Value</span>
-                            <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
-                        </div>
-                        <div
-                            class="discover-card-main group relative">
-                            <div>
-                                <div class="mb-3">
-                                    <div class="discover-card-title">Smartwatch Pro</div>
-                                    <div class="discover-card-desc">Limited time offer</div>
-                                </div>
-                                <div class="p-5 border border-[#f1f1f1] rounded-2xl">
-                                    <img src="assets/images/products-images/watch.png" alt="Smartwatch Pro"
-                                        class="discover-card-img h-[151px]" />
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="discover-card-main group">
-                            <div>
-                                <div class="mb-3">
-                                    <div class="discover-card-title">Ergo Chair</div>
-                                    <div class="discover-card-desc">Special price</div>
-                                </div>
-                                <div class="p-5 border border-[#f1f1f1] rounded-2xl">
-                                    <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
-                                        class="discover-card-img h-[151px]" />
+                                    class="flex items-center justify-between p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                                    <span class="text-sm font-medium text-orange-800">🛡️ Trade Assurance</span>
+                                    <span class="text-xs text-orange-600">Protected</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                </div>
+
+                <!-- Product Details Tabs -->
+                <div class="mt-12 bg-white rounded-lg shadow-sm hidden">
+                    <!-- Tab Navigation -->
+                    <div class="border-b border-gray-200">
+                        <nav class="flex space-x-8 px-6">
+                            <button onclick="switchTab('description')"
+                                class="tab-btn py-4 px-1 border-b-2 border-blue-500 text-blue-600 font-medium text-sm transition-colors">Product
+                                Description</button>
+                            <button onclick="switchTab('specifications')"
+                                class="tab-btn py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm transition-colors">Specifications</button>
+                            <button onclick="switchTab('reviews')"
+                                class="tab-btn py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm transition-colors">Reviews
+                                (2,847)</button>
+                            <button onclick="switchTab('shipping')"
+                                class="tab-btn py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm transition-colors">Shipping
+                                & Payment</button>
+                        </nav>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="p-6">
+                        <div id="description" class="tab-content">
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-3">Product Overview</h3>
+                                    <p class="text-gray-700 leading-relaxed mb-4">
+                                        Experience premium audio quality with our latest wireless Bluetooth headphones
+                                        featuring
+                                        advanced Active Noise Cancellation technology. Designed for professionals and
+                                        audiophiles
+                                        who demand exceptional sound quality and comfort during extended use.
+                                    </p>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        These headphones combine cutting-edge technology with premium materials,
+                                        delivering
+                                        crystal-clear audio, deep bass, and crisp highs. The adaptive noise cancellation
+                                        automatically adjusts to your environment, ensuring optimal listening
+                                        experience.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold mb-3">Key Benefits</h4>
+                                    <ul class="space-y-2 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="text-green-500 mr-2">•</span>
+                                            <span>Professional-grade audio drivers for superior sound quality</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-green-500 mr-2">•</span>
+                                            <span>Industry-leading 30-hour battery life with fast charging</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-green-500 mr-2">•</span>
+                                            <span>Adaptive Active Noise Cancellation with transparency mode</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-green-500 mr-2">•</span>
+                                            <span>Premium leather ear cushions for all-day comfort</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="specifications" class="tab-content hidden">
+                            <h3 class="text-lg font-semibold mb-4">Technical Specifications</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Brand:</span>
+                                    <span class="text-gray-900">AudioTech Pro</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Model:</span>
+                                    <span class="text-gray-900">AT-WBH-2024</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Type:</span>
+                                    <span class="text-gray-900">Over-ear Wireless</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Connectivity:</span>
+                                    <span class="text-gray-900">Bluetooth 5.3, USB-C</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Battery Life:</span>
+                                    <span class="text-gray-900">30 hours (ANC on)</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Charging Time:</span>
+                                    <span class="text-gray-900">2 hours (full)</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Driver Size:</span>
+                                    <span class="text-gray-900">40mm Dynamic</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Weight:</span>
+                                    <span class="text-gray-900">280g</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Warranty:</span>
+                                    <span class="text-gray-900">2 Years International</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600 font-medium">Certifications:</span>
+                                    <span class="text-gray-900">CE, FCC, RoHS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="reviews" class="tab-content hidden">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold">Customer Reviews</h3>
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="flex text-yellow-400">
+                                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <span class="font-semibold">4.8 / 5</span>
+                                    </div>
+                                    <span class="text-gray-600">Based on 2,847 reviews</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-100 pb-6">
+                                    <div class="flex items-start justify-between mb-3">
+                                        <div class="flex items-center space-x-3">
+                                            <div
+                                                class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                                                <span class="text-white font-medium text-sm">JM</span>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center space-x-2">
+                                                    <span class="font-medium">James Miller</span>
+                                                    <span
+                                                        class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs">Verified
+                                                        Purchase</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                                    <span>USA</span>
+                                                    <span>•</span>
+                                                    <span>2024-01-15</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex text-yellow-400">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-3">Excellent quality headphones. The noise cancellation
+                                        is superb and battery life exceeds expectations. Great supplier to work with.
+                                    </p>
+                                    <div class="flex items-center space-x-4 text-sm">
+                                        <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5">
+                                                </path>
+                                            </svg>
+                                            <span>Helpful (24)</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-100 pb-6">
+                                    <div class="flex items-start justify-between mb-3">
+                                        <div class="flex items-center space-x-3">
+                                            <div
+                                                class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                                                <span class="text-white font-medium text-sm">SC</span>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center space-x-2">
+                                                    <span class="font-medium">Sarah Chen</span>
+                                                    <span
+                                                        class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs">Verified
+                                                        Purchase</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                                    <span>Canada</span>
+                                                    <span>•</span>
+                                                    <span>2024-01-10</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex text-yellow-400">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-3">Outstanding product quality and fast shipping. The
+                                        supplier was very responsive and professional throughout the entire process.</p>
+                                    <div class="flex items-center space-x-4 text-sm">
+                                        <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5">
+                                                </path>
+                                            </svg>
+                                            <span>Helpful (18)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="shipping" class="tab-content hidden">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-4">Shipping Information</h3>
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                                            <h4 class="font-semibold text-blue-800 mb-2">🚚 Standard Shipping</h4>
+                                            <p class="text-sm text-blue-700">7-15 business days</p>
+                                            <p class="text-sm text-blue-600">Free for orders over $500</p>
+                                        </div>
+                                        <div class="p-4 bg-green-50 border border-green-200 rounded-lg">
+                                            <h4 class="font-semibold text-green-800 mb-2">⚡ Express Shipping</h4>
+                                            <p class="text-sm text-green-700">3-7 business days</p>
+                                            <p class="text-sm text-green-600">Additional $50 per order</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-4">Payment Methods</h3>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg">
+                                            <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
+                                                <span class="text-white text-xs font-bold">TT</span>
+                                            </div>
+                                            <span class="font-medium">Bank Transfer (T/T)</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg">
+                                            <div class="w-8 h-8 bg-green-600 rounded flex items-center justify-center">
+                                                <span class="text-white text-xs font-bold">LC</span>
+                                            </div>
+                                            <span class="font-medium">Letter of Credit (L/C)</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg">
+                                            <div class="w-8 h-8 bg-purple-600 rounded flex items-center justify-center">
+                                                <span class="text-white text-xs font-bold">PP</span>
+                                            </div>
+                                            <span class="font-medium">PayPal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Products -->
+                <div class="mt-12">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Products</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Related Product 1 -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                            <div class="aspect-square bg-gray-100">
+                                <img src="https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                    alt="Related Product" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2">Wireless Earbuds Pro</h3>
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.2)</span>
+                                </div>
+                                <div class="flex items-baseline space-x-2">
+                                    <span class="text-lg font-bold text-blue-600">$18.99</span>
+                                    <span class="text-sm text-gray-500 line-through">$24.99</span>
+                                </div>
+                                <div class="text-sm text-gray-600 mt-1">MOQ: 50 pieces</div>
+                            </div>
+                        </div>
+
+                        <!-- Related Product 2 -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                            <div class="aspect-square bg-gray-100">
+                                <img src="https://images.pexels.com/photos/4629633/pexels-photo-4629633.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                    alt="Related Product" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2">Gaming Headset RGB</h3>
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.7)</span>
+                                </div>
+                                <div class="flex items-baseline space-x-2">
+                                    <span class="text-lg font-bold text-blue-600">$32.50</span>
+                                    <span class="text-sm text-gray-500 line-through">$45.00</span>
+                                </div>
+                                <div class="text-sm text-gray-600 mt-1">MOQ: 25 pieces</div>
+                            </div>
+                        </div>
+
+                        <!-- Related Product 3 -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                            <div class="aspect-square bg-gray-100">
+                                <img src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                    alt="Related Product" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2">Bluetooth Speaker</h3>
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.3)</span>
+                                </div>
+                                <div class="flex items-baseline space-x-2">
+                                    <span class="text-lg font-bold text-blue-600">$15.75</span>
+                                    <span class="text-sm text-gray-500 line-through">$22.00</span>
+                                </div>
+                                <div class="text-sm text-gray-600 mt-1">MOQ: 100 pieces</div>
+                            </div>
+                        </div>
+
+                        <!-- Related Product 4 -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                            <div class="aspect-square bg-gray-100">
+                                <img src="https://images.pexels.com/photos/8534088/pexels-photo-8534088.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                    alt="Related Product" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2">USB-C Headphones</h3>
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-line"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.5)</span>
+                                </div>
+                                <div class="flex items-baseline space-x-2">
+                                    <span class="text-lg font-bold text-blue-600">$12.99</span>
+                                    <span class="text-sm text-gray-500 line-through">$18.99</span>
+                                </div>
+                                <div class="text-sm text-gray-600 mt-1">MOQ: 200 pieces</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Discover Opportunities Section End -->
-
-        <!-- Partners Section Start -->
-        <section class="trust-section py-28">
-            <div class="trust-container container mx-auto px-5">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 text-[#092a54]">Our Trusted Partners</h2>
-                <p class="text-gray-600 text-base md:text-lg mb-10 text-center max-w-5xl mx-auto">
-                    We collaborate with leading brands and organizations worldwide. Our trusted partners help us deliver
-                    quality and value to our customers.
-                </p>
-                <div class="partners-flex-row flex justify-center items-center flex-wrap gap-x-16 gap-y-10">
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 1" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 2" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 3" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 1" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 2" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 3" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <!-- Add more partner logo images as needed -->
-                </div>
-            </div>
-        </section>
-        <!-- Partners Section End -->
-
-        <!-- Trust & Protection Section Start -->
-        <section class="trust-protection-section py-28 bg-[#101828] relative overflow-hidden">
-            <!-- Background Image with Dark Overlay -->
-            <img src="assets/images/banners/banner-4.jpg" alt="Premium Background" class="absolute inset-0 w-full h-full object-cover object-center z-0" style="min-height:100%; min-width:100%;" />
-            <div class="absolute inset-0 bg-[#101828]/90 z-0"></div>
-            <div class="container mx-auto px-5 relative z-10">
-                <h2 class="trust-section-title">Your Trade, Fully Protected</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-                    <!-- Verified Supplier Card -->
-                    <div class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
-                        <div class="trust-card-content">
-                            <span class="trust-card-icon bg-[#258feb] text-white border-white/20">
-                                <i class="ri-shield-check-line"></i>
-                            </span>
-                            <h3 class="trust-card-heading">Verified Supplier</h3>
-                            <p class="trust-card-desc">Suppliers are verified through strict audits, so you always connect with genuine and reliable partners.<br>We ensure every supplier meets our high standards for quality and business ethics.</p>
-                        </div>
-                        <div class="trust-card-actions">
-                            <a href="#" class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i class="ri-play-circle-line"></i> Watch Video</a>
-                            <a href="#" class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i class="ri-information-line"></i> Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Trade Assurance Card -->
-                    <div class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
-                        <div class="trust-card-content">
-                            <span class="trust-card-icon bg-[#ffb800] text-[#1a2233] border-white/20">
-                                <i class="ri-shield-star-line"></i>
-                            </span>
-                            <h3 class="trust-card-heading">Trade Assurance</h3>
-                            <p class="trust-card-desc">Your payments are protected with secure escrow and dispute resolution for worry-free transactions.<br>Shop confidently knowing your funds are safe until you confirm satisfaction.</p>
-                        </div>
-                        <div class="trust-card-actions">
-                            <a href="#" class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i class="ri-play-circle-line"></i> Watch Video</a>
-                            <a href="#" class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i class="ri-information-line"></i> Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Buyer Protection Plus Card -->
-                    <div class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
-                        <div class="trust-card-content">
-                            <span class="trust-card-icon bg-[#16a34a] text-white border-white/20">
-                                <i class="ri-shield-user-line"></i>
-                            </span>
-                            <h3 class="trust-card-heading">Buyer Protection Plus</h3>
-                            <p class="trust-card-desc">Get priority support, easy returns, and shipment tracking for a smooth and safe buying experience.<br>Our team is always ready to help you at every step of your order.</p>
-                        </div>
-                        <div class="trust-card-actions">
-                            <a href="#" class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i class="ri-play-circle-line"></i> Watch Video</a>
-                            <a href="#" class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i class="ri-information-line"></i> Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="trust-badge-row">
-                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#258feb] text-[#258feb] text-xs font-[500]"><i class="ri-shield-check-line mr-1"></i> Verified Process</span>
-                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#ffb800] text-[#ffb800] text-xs font-[500]"><i class="ri-shield-star-line mr-1"></i> Payment Guarantee</span>
-                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#16a34a] text-[#16a34a] text-xs font-[500]"><i class="ri-shield-user-line mr-1"></i> Buyer Support</span>
-                </div>
-            </div>
-        </section>
-        <!-- Trust & Protection Section End -->
-
-        <!-- Global Business Empowerment Section (above footer) -->
-        <section class="global-empower-section py-24 bg-white">
-            <div class="container mx-auto px-5">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 text-[#092a54]">
-                    Grow Your Business, Connect Worldwide
-                </h2>
-                <p class="text-gray-600 text-base md:text-lg mb-10 text-center max-w-5xl mx-auto">
-                    Unlock new opportunities and reach trusted partners across the globe. We help you source,
-                    collaborate, and expand with confidence—wherever you are.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                    <!-- Main Image Card -->
-                    <div
-                        class="empower-card empower-card-image p-6 relative rounded-xl overflow-hidden bg-gray-100 flex flex-col">
-                        <div class="relative">
-                            <div class="text-xs font-semibold text-gray-500 uppercase mb-2">Our Vision</div>
-                            <div class="text-gray-900 font-bold text-lg mb-2">Empowering you to trade
-                                and grow, anywhere in the world.</div>
-                        </div>
-                        <div class="relative rounded-md overflow-hidden">
-                            <img src="assets/images/banners/banner-4.jpg" alt="Business Team"
-                                class="w-full max-h-[270px] min-h-[250px] rounded-md object-cover" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        </div>
-
-                    </div>
-                    <!-- Locations Card -->
-                    <div class="empower-card bg-[#f7f7f9] rounded-xl p-6 flex flex-col">
-                        <div>
-                            <div class="text-xs font-semibold text-gray-500 uppercase mb-2">Global Presence</div>
-                            <div class="text-gray-900 font-bold text-lg mb-2">Offices & partners in 15+ countries</div>
-                        </div>
-                        <div class="text-xs text-gray-500">
-                            <img src="assets/images/banners/landing-page-banner.jpg" alt="World Map"
-                                class="w-full max-h-[270px] min-h-[250px] object-cover rounded-md" />
-                        </div>
-                    </div>
-                    <!-- Sustainability/Tech Card -->
-                    <div
-                        class="empower-card bg-[#f7f7f9] sm:col-span-2 rounded-xl p-6 flex flex-col items-center text-center justify-between min-h-[120px]">
-                        <div>
-                            <div class="text-xs font-semibold text-gray-500 uppercase mb-2">Our Commitment</div>
-                            <div class="text-gray-900 font-bold text-lg mb-2">Smart, responsible, and sustainable
-                                sourcing for the future.</div>
-                        </div>
-                        <div class="text-xs text-gray-500 mt-2">We support ethical business, green supply chains, and
-                            digital innovation for all partners.</div>
-                    </div>
-                </div>
-                <!-- Country/Region Suppliers Row -->
-                <div class="mb-2">
-                    <div class="text-base font-semibold text-gray-800 mb-4">Find suppliers by country or region</div>
-                    <div class="flex flex-wrap gap-5 md:gap-8 items-center">
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/in.png" alt="India" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">India</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/de.png" alt="Germany" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Germany</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/gb.png" alt="UK" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">UK</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/us.png" alt="USA" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">USA</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/cn.png" alt="China" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">China</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/ae.png" alt="UAE" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">UAE</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/ru.png" alt="Russia" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Russia</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">France</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/tr.png" alt="Turkey" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Turkey</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/vn.png" alt="Vietnam" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Vietnam</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/kr.png" alt="South Korea"
-                                class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">South Korea</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/th.png" alt="Thailand" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Thailand</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/my.png" alt="Malaysia" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Malaysia</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/jp.png" alt="Japan" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Japan</span>
-                        </div>
-                        <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/it.png" alt="Italy" class="w-10 h-7 rounded mb-1" />
-                            <span class="text-xs text-gray-700">Italy</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Signup (Above Footer) -->
-        <section class="newsletter hidden">
-            <div class="newsletter-container">
-                <div class="newsletter-content">
-                    <div class="newsletter-text">
-                        <i class="ri-mail-open-line"></i>
-                        <span>Subscribe for updates, deals & trade tips</span>
-                    </div>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit"><i class="ri-send-plane-2-fill"></i></button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications / Partners / Achievements Section Start -->
-        <section class="trust-section hidden">
-            <div class="trust-container">
-                <h2 class="trust-heading">Our Certifications, Partners & Achievements</h2>
-                <p class="trust-subheading">
-                    Recognized by leading organizations and trusted by global partners. Our credentials and
-                    collaborations reflect our commitment to quality, security, and excellence.
-                </p>
-                <div class="trust-logos-grid">
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">ISO 9001:2015</div>
-                    </div>
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">Verified Supplier</div>
-                    </div>
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">Award Winner</div>
-                    </div>
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">Global Trade Partner</div>
-                    </div>
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">Trusted Brand</div>
-                    </div>
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">Top Exporter</div>
-                    </div>
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">Industry Leader</div>
-                    </div>
-                    <div class="trust-logo-card">
-                        <div class="trust-logo-placeholder">Logo</div>
-                        <div class="trust-logo-label">Partner Network</div>
-                    </div>
-                </div>
-                <div class="trust-extra-row">
-                    <span class="trust-badge">ISO Certified</span>
-                    <span class="trust-badge">Awarded for Excellence</span>
-                    <span class="trust-badge">Secure & Verified</span>
-                    <span class="trust-badge">Global Partnerships</span>
-                </div>
-            </div>
-        </section>
-        <!-- Certifications / Partners / Achievements Section End -->
-
-        
-
-        
+        </div>
     </main>
+
     <!-- Footer Section Start -->
     <footer class="footer">
         <div class="footer-container container mx-auto px-5">
@@ -2155,8 +2110,7 @@
                                 alt="Download on the App Store"></a>
                     </div>
                     <div class="trust-badges">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ISO_9001-2015.svg"
-                            alt="ISO 9001">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ISO_9001-2015.svg" alt="ISO 9001">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/D%26B_D-U-N-S_Registered_Logo.svg"
                             alt="D&B Registered">
                     </div>
@@ -2212,8 +2166,8 @@
                     <span>We accept:</span>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa"
                         height="28" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
-                        alt="Mastercard" height="28" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard"
+                        height="28" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/UPI-Logo-vector.svg" alt="UPI"
                         height="28" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"
@@ -2222,8 +2176,7 @@
                 <!-- Shipping Partners Row -->
                 <div class="shipping-partners">
                     <span>Shipping with:</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/DHL_Logo.svg" alt="DHL"
-                        height="28" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/DHL_Logo.svg" alt="DHL" height="28" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/FedEx_Express.svg" alt="FedEx"
                         height="28" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Blue_Dart_Express_logo.svg"
@@ -2248,13 +2201,307 @@
     </footer>
     <!-- Footer Section End -->
 
+    <!-- Zoom Modal -->
+    <div id="zoomModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl ">
+            <img id="zoomImage" src="" alt="Product Zoom" class="max-w-full max-h-screen object-contain">
+            <button onclick="closeZoom()"
+                class="absolute top-4 right-4 text-white text-xl hover:text-gray-300">✕</button>
+        </div>
+    </div>
+
+
     <!-- custom script link -->
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script>
+        // Product Image Gallery
+        const images = [
+            'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=800',
+            'https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&w=800',
+            'https://images.pexels.com/photos/4629633/pexels-photo-4629633.jpeg?auto=compress&cs=tinysrgb&w=800',
+            'https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800',
+            'https://images.pexels.com/photos/8534088/pexels-photo-8534088.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ];
 
-    <!-- Swiper JS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        let currentImageIndex = 0;
+        let selectedColor = 'Black';
+        let isWishlisted = false;
+
+        // Price breaks for bulk pricing
+        const priceBreaks = [
+            { min: 1, max: 99, price: 25.50 },
+            { min: 100, max: 499, price: 22.80 },
+            { min: 500, max: 999, price: 19.99 },
+            { min: 1000, max: null, price: 17.50 }
+        ];
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function () {
+            initImageGallery();
+            initColorOptions();
+            updatePricing();
+        });
+
+        // Image Gallery Functions
+        function initImageGallery() {
+            const thumbnailContainer = document.getElementById('thumbnailContainer');
+
+            images.forEach((image, index) => {
+                const thumbnail = document.createElement('button');
+                thumbnail.className = `aspect-square rounded-lg overflow-hidden border-2 transition-all ${index === 0 ? 'border-blue-500' : 'border-gray-200 hover:border-gray-300'
+                    }`;
+                thumbnail.onclick = () => selectImage(index);
+
+                const img = document.createElement('img');
+                img.src = image;
+                img.alt = `Product ${index + 1}`;
+                img.className = 'w-full h-full object-cover';
+
+                thumbnail.appendChild(img);
+                thumbnailContainer.appendChild(thumbnail);
+            });
+
+            updateImageCounter();
+        }
+
+        function selectImage(index) {
+            currentImageIndex = index;
+            document.getElementById('mainImage').src = images[index];
+            updateImageCounter();
+            updateThumbnailSelection();
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            selectImage(currentImageIndex);
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            selectImage(currentImageIndex);
+        }
+
+        function updateImageCounter() {
+            document.getElementById('imageCounter').textContent = `${currentImageIndex + 1} / ${images.length}`;
+        }
+
+        function updateThumbnailSelection() {
+            const thumbnails = document.querySelectorAll('#thumbnailContainer button');
+            thumbnails.forEach((thumbnail, index) => {
+                if (index === currentImageIndex) {
+                    thumbnail.className = 'aspect-square rounded-lg overflow-hidden border-2 border-blue-500 transition-all';
+                } else {
+                    thumbnail.className = 'aspect-square rounded-lg overflow-hidden border-2 border-gray-200 hover:border-gray-300 transition-all';
+                }
+            });
+        }
+
+        // Zoom Modal Functions
+        function openZoom() {
+            const modal = document.getElementById('zoomModal');
+            const zoomImage = document.getElementById('zoomImage');
+            zoomImage.src = images[currentImageIndex];
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeZoom() {
+            const modal = document.getElementById('zoomModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Color Selection Functions
+        function initColorOptions() {
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    selectColor(this.dataset.color);
+                });
+            });
+        }
+
+        function selectColor(color) {
+            selectedColor = color;
+            document.getElementById('selectedColorText').textContent = color;
+
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => {
+                if (option.dataset.color === color) {
+                    option.className = 'color-option px-4 py-2 border-2 border-blue-500 bg-blue-50 text-blue-700 rounded-lg text-sm transition-all';
+                } else {
+                    option.className = 'color-option px-4 py-2 border border-gray-300 hover:border-gray-400 rounded-lg text-sm transition-all';
+                }
+            });
+        }
+
+        // Quantity Functions
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantityInput');
+            let currentQuantity = parseInt(quantityInput.value) || 100;
+            quantityInput.value = currentQuantity + 50;
+            updatePricing();
+        }
+
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantityInput');
+            let currentQuantity = parseInt(quantityInput.value) || 100;
+            if (currentQuantity > 100) {
+                quantityInput.value = Math.max(100, currentQuantity - 50);
+                updatePricing();
+            }
+        }
+
+        // Listen for quantity input changes
+        document.addEventListener('DOMContentLoaded', function () {
+            const quantityInput = document.getElementById('quantityInput');
+            if (quantityInput) {
+                quantityInput.addEventListener('input', function () {
+                    const value = parseInt(this.value) || 100;
+                    if (value < 100) {
+                        this.value = 100;
+                    }
+                    updatePricing();
+                });
+            }
+        });
+
+        // Pricing Functions
+        function getCurrentPrice() {
+            const quantityInput = document.getElementById('quantityInput');
+            const quantity = parseInt(quantityInput?.value) || 100;
+            const priceBreak = priceBreaks.find(pb =>
+                quantity >= pb.min && (pb.max === null || quantity <= pb.max)
+            );
+            return priceBreak?.price || priceBreaks[0].price;
+        }
+
+        function updatePricing() {
+            const quantityInput = document.getElementById('quantityInput');
+            const quantity = parseInt(quantityInput?.value) || 100;
+            const currentPrice = getCurrentPrice();
+            const totalCost = currentPrice * quantity;
+
+            const currentPriceElement = document.getElementById('currentPrice');
+            const totalCostElement = document.getElementById('totalCost');
+            const totalBreakdownElement = document.getElementById('totalBreakdown');
+
+            if (currentPriceElement) {
+                currentPriceElement.textContent = `$${currentPrice.toFixed(2)}`;
+            }
+            if (totalCostElement) {
+                totalCostElement.textContent = `$${totalCost.toLocaleString()}`;
+            }
+            if (totalBreakdownElement) {
+                totalBreakdownElement.textContent = `${quantity} pieces × $${currentPrice.toFixed(2)} each`;
+            }
+        }
+
+        // Wishlist Function
+        function toggleWishlist() {
+            isWishlisted = !isWishlisted;
+            const wishlistBtn = document.getElementById('wishlistBtn');
+
+            if (wishlistBtn) {
+                if (isWishlisted) {
+                    wishlistBtn.className = 'wishlist-active flex items-center justify-center space-x-2 py-2 px-4 border border-red-500 text-red-500 bg-red-50 rounded-lg transition-colors';
+                    wishlistBtn.innerHTML = '<i class="ri-heart-fill"></i><span class="text-sm">Saved</span>';
+                } else {
+                    wishlistBtn.className = 'flex items-center justify-center space-x-2 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors';
+                    wishlistBtn.innerHTML = '<i class="ri-heart-line"></i><span class="text-sm">Save</span>';
+                }
+            }
+        }
+
+        // Tab Functions
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Show selected tab content
+            const selectedTab = document.getElementById(tabName);
+            if (selectedTab) {
+                selectedTab.classList.remove('hidden');
+            }
+
+            // Update tab button styles
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(btn => {
+                btn.className = 'tab-btn py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm transition-colors';
+            });
+
+            // Set active tab button style
+            event.target.className = 'tab-btn py-4 px-1 border-b-2 border-blue-500 text-blue-600 font-medium text-sm transition-colors';
+        }
+
+        // Close zoom modal when clicking outside the image
+        document.addEventListener('DOMContentLoaded', function () {
+            const zoomModal = document.getElementById('zoomModal');
+            if (zoomModal) {
+                zoomModal.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        closeZoom();
+                    }
+                });
+            }
+        });
+
+        // Keyboard navigation for zoom modal
+        document.addEventListener('keydown', function (e) {
+            const modal = document.getElementById('zoomModal');
+            if (modal && !modal.classList.contains('hidden')) {
+                if (e.key === 'Escape') {
+                    closeZoom();
+                } else if (e.key === 'ArrowRight') {
+                    nextImage();
+                    const zoomImage = document.getElementById('zoomImage');
+                    if (zoomImage) {
+                        zoomImage.src = images[currentImageIndex];
+                    }
+                } else if (e.key === 'ArrowLeft') {
+                    prevImage();
+                    const zoomImage = document.getElementById('zoomImage');
+                    if (zoomImage) {
+                        zoomImage.src = images[currentImageIndex];
+                    }
+                }
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Back to top button functionality
+        window.addEventListener('scroll', function () {
+            const backToTopBtn = document.querySelector('.back-to-top');
+            if (backToTopBtn) {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.style.display = 'block';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
 
 </body>
 
