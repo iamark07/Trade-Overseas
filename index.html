@@ -61,7 +61,7 @@
     </div>
 
     <!-- main header section -->
-    <header class="sticky top-0 z-50 duration-200 shadow-md">
+    <header class="sticky top-0 z-[999] duration-200 main-header">
         <div class="flex justify-center main-header transition-all w-full">
             <!-- inner Header -->
             <div class="inner-header max-w-[1600px] w-full">
@@ -70,7 +70,7 @@
                         <!-- Logo -->
                         <div class="flex-shrink-0">
                             <a href="index.html" class="flex items-center">
-                                <img class="h-8 md:h-12" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
+                                <img loading="lazy"  loading="lazy" class="h-8 md:h-12" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo">
                                 <div class="hidden">
                                     <h1 class="text-xl lg:text-2xl font-bold text-[#092a54] premium-logo-text">
                                         Trade Overseas
@@ -110,7 +110,7 @@
                         <div class="flex items-center gap-4 lg:gap-5 premium-header-actions">
                             <!-- Mobile Search -->
                             <button
-                                class="lg:hidden min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] group-hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
+                                class="mob-search-btn lg:hidden min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] group-hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
                                 <i class="ri-search-line text-xl text-gray-600 group-hover:text-[#092a54] "></i>
                             </button>
 
@@ -125,7 +125,7 @@
                             </a>
 
                             <!-- Cart -->
-                            <a href="#" class="relative group hidden lg:block">
+                            <a href="cart.html" class="relative group hidden lg:block">
                                 <div
                                     class="min-w-10 min-h-10 border border-gray-200 flex justify-center items-center rounded-full bg-[#f8f8f8] hover:bg-purple-50 transition-colors duration-300 premium-icon-btn">
                                     <i
@@ -156,7 +156,7 @@
                             </a>
 
                             <!-- Mobile Menu -->
-                            <button class="lg:hidden p-2 text-gray-600 hover:text-[#092a54] transition-colors">
+                            <button class="menu-btn lg:hidden p-2 text-gray-600 hover:text-[#092a54] transition-colors">
                                 <i class="ri-menu-line text-xl"></i>
                             </button>
                         </div>
@@ -166,30 +166,29 @@
         </div>
         <!-- Navigation Bar section-->
         <nav
-            class="navigaiton-bar-section bg-[#f8fbff] border-y border-gray-200 shadow-sm text-gray-700 premium-nav-bar hidden lg:block">
+            class="navigaiton-bar-section bg-[#f8fbff] border-y border-gray-200 text-gray-700 premium-nav-bar hidden lg:block">
             <div class="container mx-auto px-5 premium-header-container">
                 <div class="flex items-center justify-between relative">
                     <!-- Categories Dropdown -->
                     <div class="group category-dropdown">
                         <button
-                            class="flex items-center space-x-2 py-3 px-4 md:py-3 md:px-6 transition-colors duration-300 ">
+                            class="flex items-center space-x-2 py-3  md:py-3 transition-colors duration-300 ">
                             <i class="ri-apps-2-line md:text-xl"></i>
                             <span class="font-[400] text-[10px] md:text-sm">All Categories</span>
                             <i class="ri-arrow-down-s-line text-sm md:text-base"></i>
                         </button>
 
                         <!-- Mega Menu -->
-                        <div
-                            class="absolute top-full left-0 w-full grid lg:grid-cols-9 opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                        <div class="absolute top-full left-0 w-full lg:grid-cols-9 hidden group-hover:grid">
                             <div
                                 class="lg:col-span-2 bg-white shadow-2xl  transition-all duration-300 z-50 premium-mega-menu h-fit">
                                 <div class="header-category-scroll">
-                                    <div class="space-y-2 p-4">
+                                    <div class="p-4">
                                         <!-- Category Item Example -->
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/hero-section-chair.png"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                                     alt="Electronics" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Electronics</p>
@@ -199,8 +198,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/t-shirt.png" alt="Fashion"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Fashion"
                                                     class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Fashion</p>
@@ -210,8 +209,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg"
                                                     alt="Home & Garden" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Home & Garden</p>
@@ -221,8 +220,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/watch.png" alt="Kitchen"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/watch.png" alt="Kitchen"
                                                     class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Kitchen</p>
@@ -233,8 +232,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/t-shirt.png"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/t-shirt.png"
                                                     alt="Sports & Outdoor" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Sports & Outdoor</p>
@@ -244,8 +243,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/watch.png" alt="Beauty & Health"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/watch.png" alt="Beauty & Health"
                                                     class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Beauty & Health</p>
@@ -256,8 +255,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/hero-section-chair.png"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                                     alt="Automotive" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Automotive</p>
@@ -268,8 +267,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg"
                                                     alt="Toys & Games" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Toys & Games</p>
@@ -280,8 +279,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/t-shirt.png" alt="Books & Media"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Books & Media"
                                                     class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Books & Media</p>
@@ -291,8 +290,8 @@
                                         </div>
                                         <div class="relative group/category">
                                             <a href="#"
-                                                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors category-item">
-                                                <img src="assets/images/products-images/watch.png"
+                                                class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition-colors category-item">
+                                                <img loading="lazy" src="assets/images/products-images/watch.png"
                                                     alt="Office & Business" class="w-8 h-8 object-cover rounded" />
                                                 <div>
                                                     <p class="font-semibold text-gray-800 text-xs">Office & Business</p>
@@ -309,63 +308,63 @@
                                 style="left: calc(100% + 16px); top: calc(0px - 16px)">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Electronics" class="category-icon">
                                         Electronics
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Mobiles">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Mobiles">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Mobiles</p>
                                             <p class="subcategory-desc">Smartphones & Accessories</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Laptops">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Laptops">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Laptops</p>
                                             <p class="subcategory-desc">Computers & Tablets</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Cameras">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Cameras">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Cameras</p>
                                             <p class="subcategory-desc">DSLR & Digital Cameras</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Audio">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Audio">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Audio</p>
                                             <p class="subcategory-desc">Speakers & Headphones</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Smartphones">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Smartphones">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Smartphones</p>
                                             <p class="subcategory-desc">Latest Mobile Phones</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Tablets">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Tablets">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Tablets</p>
                                             <p class="subcategory-desc">iPads & Android Tablets</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Gaming">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Gaming">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Gaming</p>
                                             <p class="subcategory-desc">Consoles & Accessories</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Smart Home">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Smart Home">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Smart Home</p>
                                             <p class="subcategory-desc">IoT & Automation</p>
@@ -387,28 +386,28 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Fashion"
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Fashion"
                                             class="category-icon">
                                         Fashion
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Men's Fashion">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Men's Fashion">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Men's Fashion</p>
                                             <p class="subcategory-desc">Clothing & Accessories</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Women's Fashion">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Women's Fashion">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Women's Fashion</p>
                                             <p class="subcategory-desc">Apparel & Jewelry</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Kids Fashion">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Kids Fashion</p>
@@ -416,35 +415,35 @@
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Footwear">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Footwear">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Footwear</p>
                                             <p class="subcategory-desc">Shoes & Sneakers</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Accessories">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Accessories">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Accessories</p>
                                             <p class="subcategory-desc">Watches & Belts</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Jewelry">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Jewelry">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Jewelry</p>
                                             <p class="subcategory-desc">Necklaces & Rings</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Bags">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Bags">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Bags</p>
                                             <p class="subcategory-desc">Handbags & Backpacks</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Sportswear">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Sportswear">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Sportswear</p>
                                             <p class="subcategory-desc">Athletic Clothing</p>
@@ -466,63 +465,63 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden"
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden"
                                             class="category-icon">
                                         Home & Garden
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Furniture">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Furniture">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Furniture</p>
                                             <p class="subcategory-desc">Home & Office Furniture</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Decor">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Decor">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Decor</p>
                                             <p class="subcategory-desc">Home Decoration</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Garden">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Garden">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Garden</p>
                                             <p class="subcategory-desc">Plants & Tools</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Tools">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Tools">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Tools</p>
                                             <p class="subcategory-desc">DIY & Hand Tools</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Lighting">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Lighting">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Lighting</p>
                                             <p class="subcategory-desc">Lamps & Fixtures</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Storage">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Storage">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Storage</p>
                                             <p class="subcategory-desc">Organizers & Shelves</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Outdoor">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Outdoor">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Outdoor</p>
                                             <p class="subcategory-desc">Patio & BBQ</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Kitchen">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Kitchen">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Kitchen</p>
                                             <p class="subcategory-desc">Kitchen & Dining</p>
@@ -544,14 +543,14 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/watch.png" alt="Kitchen"
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Kitchen"
                                             class="category-icon">
                                         Kitchen
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Appliances">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Appliances</p>
@@ -559,49 +558,49 @@
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Utensils">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Utensils">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Utensils</p>
                                             <p class="subcategory-desc">Cooking Tools</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Storage">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Storage">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Storage</p>
                                             <p class="subcategory-desc">Containers & Organizers</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Dining">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Dining">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Dining</p>
                                             <p class="subcategory-desc">Tableware & Serveware</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Small Appliances">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Small Appliances">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Small Appliances</p>
                                             <p class="subcategory-desc">Blenders & Mixers</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Cookware">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Cookware">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Cookware</p>
                                             <p class="subcategory-desc">Pots & Pans</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Bakeware">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Bakeware">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Bakeware</p>
                                             <p class="subcategory-desc">Baking Tools</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Cutlery">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Cutlery">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Cutlery</p>
                                             <p class="subcategory-desc">Knives & Forks</p>
@@ -623,63 +622,63 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Sports & Outdoor"
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Sports & Outdoor"
                                             class="category-icon">
                                         Sports & Outdoor
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Fitness">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Fitness">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Fitness</p>
                                             <p class="subcategory-desc">Gym Equipment & Wear</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Camping">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Camping">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Camping</p>
                                             <p class="subcategory-desc">Tents & Outdoor Gear</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Adventure">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Adventure">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Adventure</p>
                                             <p class="subcategory-desc">Hiking & Climbing</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Water Sports">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Water Sports">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Water Sports</p>
                                             <p class="subcategory-desc">Swimming & Diving</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Team Sports">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Team Sports">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Team Sports</p>
                                             <p class="subcategory-desc">Football & Basketball</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Winter Sports">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Winter Sports">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Winter Sports</p>
                                             <p class="subcategory-desc">Skiing & Snowboarding</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Cycling">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Cycling">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Cycling</p>
                                             <p class="subcategory-desc">Bikes & Accessories</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Yoga">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Yoga">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Yoga</p>
                                             <p class="subcategory-desc">Mats & Equipment</p>
@@ -701,56 +700,56 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/watch.png" alt="Beauty & Health"
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Beauty & Health"
                                             class="category-icon">
                                         Beauty & Health
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Cosmetics">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Cosmetics">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Cosmetics</p>
                                             <p class="subcategory-desc">Makeup & Skincare</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Wellness">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Wellness">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Wellness</p>
                                             <p class="subcategory-desc">Health & Nutrition</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Personal Care">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Personal Care">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Personal Care</p>
                                             <p class="subcategory-desc">Hair & Body Care</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Fragrances">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Fragrances">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Fragrances</p>
                                             <p class="subcategory-desc">Perfumes & Colognes</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Hair Care">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Hair Care">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Hair Care</p>
                                             <p class="subcategory-desc">Shampoo & Styling</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Skin Care">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Skin Care">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Skin Care</p>
                                             <p class="subcategory-desc">Moisturizers & Serums</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Men's Grooming">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Men's Grooming</p>
@@ -758,7 +757,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Supplements">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Supplements">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Supplements</p>
                                             <p class="subcategory-desc">Vitamins & Minerals</p>
@@ -780,63 +779,63 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Automotive"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Automotive"
                                             class="category-icon">
                                         Automotive
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Car Parts">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Car Parts">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Car Parts</p>
                                             <p class="subcategory-desc">Engine & Body Parts</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Accessories">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Accessories">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Accessories</p>
                                             <p class="subcategory-desc">Interior & Exterior</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Tools">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Tools">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Tools</p>
                                             <p class="subcategory-desc">Repair & Maintenance</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Electronics">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Electronics">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Electronics</p>
                                             <p class="subcategory-desc">GPS & Audio Systems</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Performance">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Performance">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Performance</p>
                                             <p class="subcategory-desc">Tuning & Upgrades</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Safety">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Safety">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Safety</p>
                                             <p class="subcategory-desc">Seat Covers & Mats</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Comfort">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Comfort">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Comfort</p>
                                             <p class="subcategory-desc">Cushions & Supports</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Styling">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Styling">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Styling</p>
                                             <p class="subcategory-desc">Body Kits & Decals</p>
@@ -858,28 +857,28 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Toys & Games"
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Toys & Games"
                                             class="category-icon">
                                         Toys & Games
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Children's Toys">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Children's Toys">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Children's Toys</p>
                                             <p class="subcategory-desc">Educational & Fun</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Board Games">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Board Games">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Board Games</p>
                                             <p class="subcategory-desc">Family & Strategy</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Video Games">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Video Games</p>
@@ -887,28 +886,28 @@
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Collectibles">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Collectibles">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Collectibles</p>
                                             <p class="subcategory-desc">Action Figures & Models</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Educational">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Educational">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Educational</p>
                                             <p class="subcategory-desc">Learning Toys</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Arts & Crafts">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Arts & Crafts">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Arts & Crafts</p>
                                             <p class="subcategory-desc">Creative Supplies</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Remote Control">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Remote Control</p>
@@ -916,7 +915,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Puzzles">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Puzzles">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Puzzles</p>
                                             <p class="subcategory-desc">Jigsaw & Brain Teasers</p>
@@ -938,63 +937,63 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Books & Media"
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Books & Media"
                                             class="category-icon">
                                         Books & Media
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Books">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Books">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Books</p>
                                             <p class="subcategory-desc">Fiction & Non-Fiction</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Movies">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Movies">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Movies</p>
                                             <p class="subcategory-desc">DVDs & Blu-rays</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Music">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Music">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Music</p>
                                             <p class="subcategory-desc">CDs & Vinyl Records</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Magazines">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Magazines">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Magazines</p>
                                             <p class="subcategory-desc">Print & Digital</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="E-books">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="E-books">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">E-books</p>
                                             <p class="subcategory-desc">Digital Reading</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Audio Books">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Audio Books">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Audio Books</p>
                                             <p class="subcategory-desc">Spoken Word</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png" alt="Comics">
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Comics">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Comics</p>
                                             <p class="subcategory-desc">Graphic Novels</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Educational">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Educational">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Educational</p>
                                             <p class="subcategory-desc">Textbooks & Courses</p>
@@ -1016,14 +1015,14 @@
                             <div class="lg:col-span-7 subcategory-panel">
                                 <div class="subcategory-header">
                                     <h3>
-                                        <img src="assets/images/products-images/watch.png" alt="Office & Business"
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Office & Business"
                                             class="category-icon">
                                         Office & Business
                                     </h3>
                                 </div>
                                 <div class="subcategory-grid grid grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Office Supplies">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Office Supplies</p>
@@ -1031,42 +1030,42 @@
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Equipment">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Equipment">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Equipment</p>
                                             <p class="subcategory-desc">Printers & Scanners</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Furniture">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Furniture">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Furniture</p>
                                             <p class="subcategory-desc">Desks & Chairs</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Technology">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Technology">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Technology</p>
                                             <p class="subcategory-desc">Computers & Accessories</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/t-shirt.png" alt="Presentation">
+                                        <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Presentation">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Presentation</p>
                                             <p class="subcategory-desc">Projectors & Screens</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/watch.png" alt="Communication">
+                                        <img loading="lazy" src="assets/images/products-images/watch.png" alt="Communication">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Communication</p>
                                             <p class="subcategory-desc">Phones & Headsets</p>
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/hero-section-chair.png"
+                                        <img loading="lazy" src="assets/images/products-images/hero-section-chair.png"
                                             alt="Organization">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Organization</p>
@@ -1074,7 +1073,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="subcategory-item">
-                                        <img src="assets/images/products-images/fix-chairs.jpeg" alt="Security">
+                                        <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Security">
                                         <div class="subcategory-info">
                                             <p class="subcategory-name">Security</p>
                                             <p class="subcategory-desc">Locks & Safes</p>
@@ -1125,8 +1124,175 @@
                 </div>
             </div>
         </nav>
+        <!-- Responsive Slider Menu (Mobile) -->
+        <div
+            class="slider-menu lg:hidden fixed top-0 -left-full z-[9999] transition-all duration-300 w-[80vw] max-w-[370px] h-[100dvh] bg-gradient-to-b from-[#f8fbff] to-white shadow-2xl flex flex-col">
+            <!-- Top Bar: User, Cart, Sign In -->
+            <div class="flex items-center justify-between px-4 py-4 border-b border-gray-100 bg-[#092a54] relative">
+                <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-2 text-white">
+                        <span
+                            class="text-sm font-medium w-10 h-10 rounded-full flex justify-center items-center bg-white text-black">AK</span>
+                        <span class="text-sm font-medium">Hi, Arbaz</span>
+                    </div>
+                    <a href="#" class="flex items-center gap-1 text-white hover:text-amber-400 transition hidden">
+                        <i class="ri-login-box-line text-xl"></i>
+                        <span class="text-xs font-medium">Sign In</span>
+                    </a>
+                </div>
+                <a href="cart.html" class="relative flex items-center text-white hover:text-amber-400 transition">
+                    <i class="ri-shopping-cart-line text-2xl"></i>
+                    <span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                </a>
+                <button class="slider-close text-2xl !text-white ml-2">&times;</button>
+            </div>
+            <div class="slider-content flex-1 overflow-y-auto px-4 py-3">
+                <!-- E-commerce Features & Navigation Links -->
+                <div class="flex flex-col gap-1 mb-4">
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-user-3-line text-lg"></i> Profile</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-file-list-3-line text-lg"></i> Orders</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-heart-line text-lg"></i> Wishlist</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-settings-3-line text-lg"></i> Settings</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-customer-service-2-line text-lg"></i> Help Center</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-logout-box-r-line text-lg"></i> Logout</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-shield-check-line text-lg"></i> Verified Suppliers</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-global-line text-lg"></i> Global Shipping</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-briefcase-4-line text-lg"></i> B2B Solutions</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-[#092a54] text-[13px] font-[400] py-2 border-b border-gray-100 hover:text-amber-500 transition"><i
+                            class="ri-store-2-line text-lg"></i> Sell With Us</a>
+                </div>
+                <!-- Categories -->
+                <div class="mb-2 mt-2">
+                    <div class="font-semibold text-xs text-gray-500 mb-2">All Categories</div>
+                    <div class="grid gap-2">
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Electronics"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Electronics</div>
+                                <div class="text-[10px] text-gray-500">Mobiles, Laptops</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Fashion"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Fashion</div>
+                                <div class="text-[10px] text-gray-500">Men, Women, Kids</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Home & Garden"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Home & Garden</div>
+                                <div class="text-[10px] text-gray-500">Furniture, Decor</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/watch.png" alt="Kitchen"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Kitchen</div>
+                                <div class="text-[10px] text-gray-500">Appliances, Utensils</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Sports & Outdoor"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Sports & Outdoor</div>
+                                <div class="text-[10px] text-gray-500">Fitness, Camping</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/watch.png" alt="Beauty & Health"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Beauty & Health</div>
+                                <div class="text-[10px] text-gray-500">Cosmetics, Wellness</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Automotive"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Automotive</div>
+                                <div class="text-[10px] text-gray-500">Car Parts, Tools</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Toys & Games"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Toys & Games</div>
+                                <div class="text-[10px] text-gray-500">Children, Board Games</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Books & Media"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Books & Media</div>
+                                <div class="text-[10px] text-gray-500">Books, Movies</div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 p-2 rounded-lg hover:bg-[#e6f0fa] transition-colors bg-white shadow-sm border border-gray-100">
+                            <img loading="lazy" src="assets/images/products-images/watch.png" alt="Office & Business"
+                                class="w-7 h-7 object-cover rounded" />
+                            <div>
+                                <div class="text-xs font-semibold text-gray-800">Office & Business</div>
+                                <div class="text-[10px] text-gray-500">Supplies, Equipment</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Overlay for slider menu -->
+        <div class="slider-overlay lg:hidden"></div>
     </header>
 
+    <!-- Search Overlay -->
+    <div class="mob-search-overlay lg:hidden">
+        <div class="container mx-auto py-2 px-5">
+            <div class="search-box">
+                <input type="text" placeholder="Search for products, suppliers, or categories...">
+                <button type="submit" class="search-close" aria-label="Close Search"><i
+                        class="ri-search-line"></i></button>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- Swiper Category Slider Section -->
@@ -1137,7 +1303,7 @@
                         <!-- Furniture -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Furniture"
+                                <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Furniture"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Furniture</h3>
@@ -1145,7 +1311,7 @@
                         <!-- Electronics -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/t-shirt.png" alt="Electronics"
+                                <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Electronics"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Electronics</h3>
@@ -1153,7 +1319,7 @@
                         <!-- Apparel -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/watch.png" alt="Apparel"
+                                <img loading="lazy" src="assets/images/products-images/watch.png" alt="Apparel"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Apparel</h3>
@@ -1161,7 +1327,7 @@
                         <!-- Kitchenware -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Kitchenware"
+                                <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Kitchenware"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Kitchenware</h3>
@@ -1169,7 +1335,7 @@
                         <!-- Decor -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/t-shirt.png" alt="Decor"
+                                <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Decor"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Decor</h3>
@@ -1177,7 +1343,7 @@
                         <!-- Decor -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/watch.png" alt="Decor"
+                                <img loading="lazy" src="assets/images/products-images/watch.png" alt="Decor"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Decor</h3>
@@ -1185,7 +1351,7 @@
                         <!-- Decor -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Decor"
+                                <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Decor"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Decor</h3>
@@ -1193,7 +1359,7 @@
                         <!-- Decor -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/watch.png" alt="Decor"
+                                <img loading="lazy" src="assets/images/products-images/watch.png" alt="Decor"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Decor</h3>
@@ -1201,7 +1367,7 @@
                         <!-- Decor -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/t-shirt.png" alt="Decor"
+                                <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Decor"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Decor</h3>
@@ -1209,7 +1375,7 @@
                         <!-- Decor -->
                         <div class="swiper-slide category-slide-minimal">
                             <div class="category-img-wrap">
-                                <img src="assets/images/products-images/hero-section-chair.png" alt="Decor"
+                                <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Decor"
                                     class="category-img-rounded">
                             </div>
                             <h3 class="category-slide-title">Decor</h3>
@@ -1220,18 +1386,18 @@
         </section>
 
         <!-- Hero Section start-->
-        <section class="hero-section bg-white pt-6">
+        <section class="hero-section bg-white md:pt-6">
             <div class="hero-slider-container md:container md:mx-auto md:px-5">
                 <div class="hero-slider">
                     <div class="hero-slide active">
-                        <img src="assets/images/banners/banner-1.jpg" alt="Global Trade Solutions"
+                        <img loading="lazy" src="assets/images/banners/banner-1.jpg" alt="Global Trade Solutions"
                             class="hero-slide-image">
                     </div>
                     <div class="hero-slide">
-                        <img src="assets/images/banners/banner-2.jpg" alt="Premium Products" class="hero-slide-image">
+                        <img loading="lazy" src="assets/images/banners/banner-2.jpg" alt="Premium Products" class="hero-slide-image">
                     </div>
                     <div class="hero-slide">
-                        <img src="assets/images/banners/banner-3.jpg" alt="B2B Excellence" class="hero-slide-image">
+                        <img loading="lazy" src="assets/images/banners/banner-3.jpg" alt="B2B Excellence" class="hero-slide-image">
                     </div>
                 </div>
                 <!-- Navigation Arrows -->
@@ -1251,14 +1417,17 @@
         <section class="how-it-works-section py-24 bg-white">
             <div class="container mx-auto px-5">
                 <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 text-[#092a54]">How It Works</h2>
-                <p class="how-it-works-desc text-center text-gray-500 mb-10 max-w-2xl mx-auto">Our process is simple and
-                    transparent. Here's how you can easily get your products delivered from trusted suppliers worldwide
+                <p class="how-it-works-desc text-center text-gray-500 mb-10 max-w-2xl mx-auto">Our process is simple
+                    and
+                    transparent. Here's how you can easily get your products delivered from trusted suppliers
+                    worldwide
                     in just a few steps:</p>
                 <div class="how-steps-row grid sm:grid-cols-2 gap-10 xl:gap-0 xl:flex">
                     <div class="how-step-block">
                         <div class="how-step-circle">1</div>
                         <div class="how-step-title">Search Product</div>
-                        <div class="how-step-text">Browse thousands of products and find exactly what you need for your
+                        <div class="how-step-text">Browse thousands of products and find exactly what you need for
+                            your
                             business or personal use.</div>
                     </div>
                     <div class="how-step-curve hidden xl:block">
@@ -1284,7 +1453,8 @@
                     <div class="how-step-block">
                         <div class="how-step-circle">3</div>
                         <div class="how-step-title">Place Order</div>
-                        <div class="how-step-text">Choose the best offer, confirm your order, and make secure payment
+                        <div class="how-step-text">Choose the best offer, confirm your order, and make secure
+                            payment
                             with confidence.</div>
                     </div>
                     <div class="how-step-curve hidden xl:block">
@@ -1297,7 +1467,8 @@
                     <div class="how-step-block">
                         <div class="how-step-circle">4</div>
                         <div class="how-step-title">We Deliver</div>
-                        <div class="how-step-text">Sit back and relax while we handle shipping and deliver your products
+                        <div class="how-step-text">Sit back and relax while we handle shipping and deliver your
+                            products
                             safely to your doorstep.</div>
                     </div>
                 </div>
@@ -1316,7 +1487,8 @@
                         </h2>
                     </div>
                     <p class="hidden mt-8 text-lg text-gray-600 max-w-2xl mx-auto">
-                        Explore a curated selection of our top-quality products, sourced and delivered with excellence.
+                        Explore a curated selection of our top-quality products, sourced and delivered with
+                        excellence.
                     </p>
                 </div>
 
@@ -1329,8 +1501,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/watch.png"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/watch.png"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1341,9 +1513,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1354,8 +1528,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/t-shirt.png"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/t-shirt.png"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1366,9 +1540,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1379,8 +1555,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1391,9 +1567,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1404,8 +1582,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/t-shirt.png"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/t-shirt.png"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1416,9 +1594,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1429,8 +1609,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/watch.png"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/watch.png"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1441,9 +1621,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1454,8 +1636,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/fix-chairs.jpeg"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1466,9 +1648,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1479,8 +1663,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/t-shirt.png"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/t-shirt.png"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1491,9 +1675,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1504,8 +1690,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-card">
                                         <div class="product-image-container">
-                                            <a href="#">
-                                                <img src="assets/images/products-images/watch.png"
+                                            <a href="product.html">
+                                                <img loading="lazy" src="assets/images/products-images/watch.png"
                                                     alt="Modern Smartwatch" class="product-image">
                                             </a>
                                         </div>
@@ -1516,9 +1702,11 @@
                                                 <span class="old-price">₹499</span>
                                             </div>
                                             <div class="product-action-row">
-                                                <div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
+                                                <a href="product.html"><div class="action-btn !hidden md:!flex"><i class="ri-eye-line"></i>View
                                                     Detail</div>
-                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To Cart
+                                                </a>
+                                                <div class="action-btn"><i class="ri-shopping-cart-line"></i>Add To
+                                                    Cart
                                                 </div>
                                             </div>
                                         </div>
@@ -1529,8 +1717,10 @@
                         <!-- navigation buttons -->
                         <div class="flex gap-1 sm:gap-3 absolute -top-16 right-0">
                             <!-- Navigation Arrows -->
-                            <div class="product-swiper-button-prev-custom"><i class="ri-arrow-left-s-line"></i></div>
-                            <div class="product-swiper-button-next-custom"><i class="ri-arrow-right-s-line"></i></div>
+                            <div class="product-swiper-button-prev-custom"><i class="ri-arrow-left-s-line"></i>
+                            </div>
+                            <div class="product-swiper-button-next-custom"><i class="ri-arrow-right-s-line"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1554,9 +1744,12 @@
                         <span class="about-us-badge">TRUSTED GLOBAL TRADE</span>
                         <h2 class="about-us-title text-2xl sm:text-3xl xl:text-5xl font-bold text-[#092a54] mb-5 mt-2">
                             Connecting Buyers & Suppliers Worldwide with Trust</h2>
-                        <p class="about-us-desc text-gray-600 mb-7 text-sm sm:text-lg">We empower businesses to source
-                            and sell globally with confidence. Our platform brings together verified suppliers, seamless
-                            logistics, and dedicated support to make international trade simple and secure for everyone.
+                        <p class="about-us-desc text-gray-600 mb-7 text-sm sm:text-lg">We empower businesses to
+                            source
+                            and sell globally with confidence. Our platform brings together verified suppliers,
+                            seamless
+                            logistics, and dedicated support to make international trade simple and secure for
+                            everyone.
                         </p>
                         <div class="about-us-btn-row flex gap-4 mb-2">
                             <a href="#contact" class="about-us-btn-main">Contact Us</a>
@@ -1567,12 +1760,12 @@
                                 class="about-us-trusted-label text-xs tracking-widest text-[#4f6888] font-semibold mb-3">
                                 TRUSTED BY MAJOR COMPANIES WORLDWIDE</div>
                             <div class="about-us-logos flex gap-8 flex-wrap items-center">
-                                <img src="assets/images/logo/logo.webp" alt="Logo 1" class="about-us-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Logo 2"
+                                <img loading="lazy" src="assets/images/logo/logo.webp" alt="Logo 1" class="about-us-logo">
+                                <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Logo 2"
                                     class="about-us-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
                                     alt="Logo 3" class="about-us-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg"
+                                <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg"
                                     alt="Logo 4" class="about-us-logo">
                             </div>
                         </div>
@@ -1580,7 +1773,7 @@
                     <!-- Right: Image & Overlapping Stats Card -->
                     <div class="about-us-visual w-full relative order-1 lg:order-2">
                         <div class="about-us-img-wrap">
-                            <img src="assets/images/banners/landing-page-banner.jpg" alt="Our Factory"
+                            <img loading="lazy" src="assets/images/banners/landing-page-banner.jpg" alt="Our Factory"
                                 class="about-us-img">
                             <div class="about-us-stats-card">
                                 <div class="about-us-stats-row">
@@ -1614,7 +1807,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 justify-center">
                     <!-- Card 1 -->
                     <div class="factory-card group">
-                        <img src="assets/images/banners/banner-1.jpg" alt="Verified Factories"
+                        <img loading="lazy" src="assets/images/banners/banner-1.jpg" alt="Verified Factories"
                             class="factory-card-img" />
                         <div class="factory-card-overlay"></div>
                         <div class="factory-card-top">
@@ -1622,14 +1815,15 @@
                             <span class="factory-card-title">Verified Factories</span>
                         </div>
                         <div class="factory-card-bottom">
-                            <p class="factory-card-desc">Source directly from audited, trusted manufacturers for peace
+                            <p class="factory-card-desc">Source directly from audited, trusted manufacturers for
+                                peace
                                 of mind.</p>
                             <a href="#" class="factory-card-cta">Explore Now</a>
                         </div>
                     </div>
                     <!-- Card 2 -->
                     <div class="factory-card group">
-                        <img src="assets/images/banners/banner-2.jpg" alt="Request Samples" class="factory-card-img" />
+                        <img loading="lazy" src="assets/images/banners/banner-2.jpg" alt="Request Samples" class="factory-card-img" />
                         <div class="factory-card-overlay"></div>
                         <div class="factory-card-top">
                             <span class="factory-card-icon text-[#16a34a]"><i class="ri-flask-line"></i></span>
@@ -1643,7 +1837,7 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="factory-card group">
-                        <img src="assets/images/banners/banner-3.jpg" alt="Live Factory Insights"
+                        <img loading="lazy" src="assets/images/banners/banner-3.jpg" alt="Live Factory Insights"
                             class="factory-card-img" />
                         <div class="factory-card-overlay"></div>
                         <div class="factory-card-top">
@@ -1651,7 +1845,8 @@
                             <span class="factory-card-title">Live Factory Insights</span>
                         </div>
                         <div class="factory-card-bottom">
-                            <p class="factory-card-desc">Join live video tours and Q&A with factory experts, anytime.
+                            <p class="factory-card-desc">Join live video tours and Q&A with factory experts,
+                                anytime.
                             </p>
                             <a href="#" class="factory-card-cta">Join Live</a>
                         </div>
@@ -1671,9 +1866,11 @@
                             <div
                                 class="why-choose-intro text-[#ff3b3b] font-semibold uppercase tracking-widest mb-2 text-sm">
                                 Our Advantages</div>
-                            <h2 class="why-choose-title text-3xl md:text-4xl font-bold text-[#ffffff] mb-4">Why Choose
+                            <h2 class="why-choose-title text-3xl md:text-4xl font-bold text-[#ffffff] mb-4">Why
+                                Choose
                                 Us</h2>
-                            <p class="why-choose-desc text-gray-200 mb-6">Experience seamless global trade with us. We
+                            <p class="why-choose-desc text-gray-200 mb-6">Experience seamless global trade with us.
+                                We
                                 offer competitive pricing, verified quality, and a global network to ensure your
                                 business grows with confidence. From sourcing to delivery, our team supports you at
                                 every step for a hassle-free experience.</p>
@@ -1737,34 +1934,32 @@
                             <span class="font-semibold text-lg text-gray-800">Top Picks</span>
                             <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
                         </div>
-                        <div
-                            class="discover-card-main group relative">
+                        <div class="discover-card-main group relative">
                             <div>
                                 <div class="discover-card-title">Smartwatch Pro</div>
                                 <div class="discover-card-desc">Best in electronics</div>
                             </div>
                             <div class="p-5 border border-[#f1f1f1] rounded-2xl">
-                                <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                <img loading="lazy" src="assets/images/products-images/watch.png" alt="Top Pick"
                                     class="discover-card-img" />
                             </div>
                             <div class="grid grid-cols-3 gap-3">
                                 <div class="discover-card-grid">
-                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                    <img loading="lazy" src="assets/images/products-images/watch.png" alt="Top Pick"
                                         class="discover-card-grid-img" />
                                 </div>
                                 <div class="discover-card-grid">
-                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                    <img loading="lazy" src="assets/images/products-images/watch.png" alt="Top Pick"
                                         class="discover-card-grid-img" />
                                 </div>
                                 <div class="discover-card-grid">
-                                    <img src="assets/images/products-images/watch.png" alt="Top Pick"
+                                    <img loading="lazy" src="assets/images/products-images/watch.png" alt="Top Pick"
                                         class="discover-card-grid-img" />
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="discover-card-small group">
-                            <img src="assets/images/products-images/t-shirt.png" alt="Classic Tee"
+                        <div class="discover-card-small group">
+                            <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Classic Tee"
                                 class="discover-product-img" />
                             <div>
                                 <div class="discover-card-title">Classic Tee</div>
@@ -1783,7 +1978,7 @@
                                 <div class="text-gray-700 text-sm font-medium mb-2">Ergo Chair</div>
                                 <div
                                     class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
+                                    <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
                                         class="rounded-lg w-full h-[130px] object-contain mb-2" />
                                 </div>
                             </div>
@@ -1791,7 +1986,7 @@
                                 <div class="text-gray-700 text-sm font-medium mb-2">Modern Chair</div>
                                 <div
                                     class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
+                                    <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
                                         class="rounded-lg w-full h-[130px] object-contain mb-2" />
                                 </div>
                             </div>
@@ -1799,7 +1994,7 @@
                                 <div class="text-gray-700 text-sm font-medium mb-2">Fitness Watch</div>
                                 <div
                                     class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/watch.png" alt="Fitness Watch"
+                                    <img loading="lazy" src="assets/images/products-images/watch.png" alt="Fitness Watch"
                                         class="rounded-lg w-full h-[130px] object-contain mb-2" />
                                 </div>
                             </div>
@@ -1807,14 +2002,13 @@
                                 <div class="text-gray-700 text-sm font-medium mb-2">Summer Tee</div>
                                 <div
                                     class="discover-card-main group rounded-2xl border border-[#f1f1f1] shadow-sm p-5 flex flex-col items-center transition">
-                                    <img src="assets/images/products-images/t-shirt.png" alt="Summer Tee"
+                                    <img loading="lazy" src="assets/images/products-images/t-shirt.png" alt="Summer Tee"
                                         class="rounded-lg w-full h-[130px] object-contain mb-2" />
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="discover-card-small group">
-                            <img src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
+                        <div class="discover-card-small group">
+                            <img loading="lazy" src="assets/images/products-images/hero-section-chair.png" alt="Modern Chair"
                                 class="discover-product-img" />
                             <div>
                                 <div class="discover-card-title">Modern Chair</div>
@@ -1828,28 +2022,26 @@
                             <span class="font-semibold text-lg text-gray-800">Best Value</span>
                             <a href="#" class="text-sm text-blue-600 hover:underline">View more</a>
                         </div>
-                        <div
-                            class="discover-card-main group relative">
+                        <div class="discover-card-main group relative">
                             <div>
                                 <div class="mb-3">
                                     <div class="discover-card-title">Smartwatch Pro</div>
                                     <div class="discover-card-desc">Limited time offer</div>
                                 </div>
                                 <div class="p-5 border border-[#f1f1f1] rounded-2xl">
-                                    <img src="assets/images/products-images/watch.png" alt="Smartwatch Pro"
+                                    <img loading="lazy" src="assets/images/products-images/watch.png" alt="Smartwatch Pro"
                                         class="discover-card-img h-[151px]" />
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="discover-card-main group">
+                        <div class="discover-card-main group">
                             <div>
                                 <div class="mb-3">
                                     <div class="discover-card-title">Ergo Chair</div>
                                     <div class="discover-card-desc">Special price</div>
                                 </div>
                                 <div class="p-5 border border-[#f1f1f1] rounded-2xl">
-                                    <img src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
+                                    <img loading="lazy" src="assets/images/products-images/fix-chairs.jpeg" alt="Ergo Chair"
                                         class="discover-card-img h-[151px]" />
                                 </div>
                             </div>
@@ -1865,21 +2057,22 @@
             <div class="trust-container container mx-auto px-5">
                 <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 text-[#092a54]">Our Trusted Partners</h2>
                 <p class="text-gray-600 text-base md:text-lg mb-10 text-center max-w-5xl mx-auto">
-                    We collaborate with leading brands and organizations worldwide. Our trusted partners help us deliver
+                    We collaborate with leading brands and organizations worldwide. Our trusted partners help us
+                    deliver
                     quality and value to our customers.
                 </p>
                 <div class="partners-flex-row flex justify-center items-center flex-wrap gap-x-16 gap-y-10">
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 1" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 2" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 3" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 1" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 2" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 3" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
-                    <img src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 1" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 2" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 3" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 1" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 2" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 3" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
+                    <img loading="lazy" src="assets/images/partner-logo/Walmart.webp" alt="Partner 4" class="partner-logo-img" />
                     <!-- Add more partner logo images as needed -->
                 </div>
             </div>
@@ -1889,58 +2082,91 @@
         <!-- Trust & Protection Section Start -->
         <section class="trust-protection-section py-28 bg-[#101828] relative overflow-hidden">
             <!-- Background Image with Dark Overlay -->
-            <img src="assets/images/banners/banner-4.jpg" alt="Premium Background" class="absolute inset-0 w-full h-full object-cover object-center z-0" style="min-height:100%; min-width:100%;" />
+            <img loading="lazy" src="assets/images/banners/banner-4.jpg" alt="Premium Background"
+                class="absolute inset-0 w-full h-full object-cover object-center z-0"
+                style="min-height:100%; min-width:100%;" />
             <div class="absolute inset-0 bg-[#101828]/90 z-0"></div>
             <div class="container mx-auto px-5 relative z-10">
                 <h2 class="trust-section-title">Your Trade, Fully Protected</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                     <!-- Verified Supplier Card -->
-                    <div class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
+                    <div
+                        class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
                         <div class="trust-card-content">
                             <span class="trust-card-icon bg-[#258feb] text-white border-white/20">
                                 <i class="ri-shield-check-line"></i>
                             </span>
                             <h3 class="trust-card-heading">Verified Supplier</h3>
-                            <p class="trust-card-desc">Suppliers are verified through strict audits, so you always connect with genuine and reliable partners.<br>We ensure every supplier meets our high standards for quality and business ethics.</p>
+                            <p class="trust-card-desc">Suppliers are verified through strict audits, so you always
+                                connect with genuine and reliable partners.<br>We ensure every supplier meets our
+                                high
+                                standards for quality and business ethics.</p>
                         </div>
                         <div class="trust-card-actions">
-                            <a href="#" class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i class="ri-play-circle-line"></i> Watch Video</a>
-                            <a href="#" class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i class="ri-information-line"></i> Learn More</a>
+                            <a href="#"
+                                class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i
+                                    class="ri-play-circle-line"></i> Watch Video</a>
+                            <a href="#"
+                                class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i
+                                    class="ri-information-line"></i> Learn More</a>
                         </div>
                     </div>
                     <!-- Trade Assurance Card -->
-                    <div class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
+                    <div
+                        class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
                         <div class="trust-card-content">
                             <span class="trust-card-icon bg-[#ffb800] text-[#1a2233] border-white/20">
                                 <i class="ri-shield-star-line"></i>
                             </span>
                             <h3 class="trust-card-heading">Trade Assurance</h3>
-                            <p class="trust-card-desc">Your payments are protected with secure escrow and dispute resolution for worry-free transactions.<br>Shop confidently knowing your funds are safe until you confirm satisfaction.</p>
+                            <p class="trust-card-desc">Your payments are protected with secure escrow and dispute
+                                resolution for worry-free transactions.<br>Shop confidently knowing your funds are
+                                safe
+                                until you confirm satisfaction.</p>
                         </div>
                         <div class="trust-card-actions">
-                            <a href="#" class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i class="ri-play-circle-line"></i> Watch Video</a>
-                            <a href="#" class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i class="ri-information-line"></i> Learn More</a>
+                            <a href="#"
+                                class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i
+                                    class="ri-play-circle-line"></i> Watch Video</a>
+                            <a href="#"
+                                class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i
+                                    class="ri-information-line"></i> Learn More</a>
                         </div>
                     </div>
                     <!-- Buyer Protection Plus Card -->
-                    <div class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
+                    <div
+                        class="trust-card glass-card bg-white/10 rounded-2xl shadow-xl p-6 flex flex-col gap-4 items-start relative overflow-hidden min-h-[320px] justify-between">
                         <div class="trust-card-content">
                             <span class="trust-card-icon bg-[#16a34a] text-white border-white/20">
                                 <i class="ri-shield-user-line"></i>
                             </span>
                             <h3 class="trust-card-heading">Buyer Protection Plus</h3>
-                            <p class="trust-card-desc">Get priority support, easy returns, and shipment tracking for a smooth and safe buying experience.<br>Our team is always ready to help you at every step of your order.</p>
+                            <p class="trust-card-desc">Get priority support, easy returns, and shipment tracking for
+                                a
+                                smooth and safe buying experience.<br>Our team is always ready to help you at every
+                                step
+                                of your order.</p>
                         </div>
                         <div class="trust-card-actions">
-                            <a href="#" class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i class="ri-play-circle-line"></i> Watch Video</a>
-                            <a href="#" class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i class="ri-information-line"></i> Learn More</a>
+                            <a href="#"
+                                class="trust-btn watch-btn flex items-center gap-2 px-4 py-[14px] rounded-full bg-[#ffffff]/10 text-white text-xs font-[500]"><i
+                                    class="ri-play-circle-line"></i> Watch Video</a>
+                            <a href="#"
+                                class="trust-btn learn-btn flex items-center gap-2 px-4 py-[14px] rounded-full text-[#ffffff] text-xs font-[500]"><i
+                                    class="ri-information-line"></i> Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="trust-badge-row">
-                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#258feb] text-[#258feb] text-xs font-[500]"><i class="ri-shield-check-line mr-1"></i> Verified Process</span>
-                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#ffb800] text-[#ffb800] text-xs font-[500]"><i class="ri-shield-star-line mr-1"></i> Payment Guarantee</span>
-                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#16a34a] text-[#16a34a] text-xs font-[500]"><i class="ri-shield-user-line mr-1"></i> Buyer Support</span>
+                    <span
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#258feb] text-[#258feb] text-xs font-[500]"><i
+                            class="ri-shield-check-line mr-1"></i> Verified Process</span>
+                    <span
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#ffb800] text-[#ffb800] text-xs font-[500]"><i
+                            class="ri-shield-star-line mr-1"></i> Payment Guarantee</span>
+                    <span
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-[#1a2233]/80 border-[1.5px] border-[#16a34a] text-[#16a34a] text-xs font-[500]"><i
+                            class="ri-shield-user-line mr-1"></i> Buyer Support</span>
                 </div>
             </div>
         </section>
@@ -1966,7 +2192,7 @@
                                 and grow, anywhere in the world.</div>
                         </div>
                         <div class="relative rounded-md overflow-hidden">
-                            <img src="assets/images/banners/banner-4.jpg" alt="Business Team"
+                            <img loading="lazy" src="assets/images/banners/banner-4.jpg" alt="Business Team"
                                 class="w-full max-h-[270px] min-h-[250px] rounded-md object-cover" />
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
@@ -1976,10 +2202,11 @@
                     <div class="empower-card bg-[#f7f7f9] rounded-xl p-6 flex flex-col">
                         <div>
                             <div class="text-xs font-semibold text-gray-500 uppercase mb-2">Global Presence</div>
-                            <div class="text-gray-900 font-bold text-lg mb-2">Offices & partners in 15+ countries</div>
+                            <div class="text-gray-900 font-bold text-lg mb-2">Offices & partners in 15+ countries
+                            </div>
                         </div>
                         <div class="text-xs text-gray-500">
-                            <img src="assets/images/banners/landing-page-banner.jpg" alt="World Map"
+                            <img loading="lazy" src="assets/images/banners/landing-page-banner.jpg" alt="World Map"
                                 class="w-full max-h-[270px] min-h-[250px] object-cover rounded-md" />
                         </div>
                     </div>
@@ -1991,73 +2218,75 @@
                             <div class="text-gray-900 font-bold text-lg mb-2">Smart, responsible, and sustainable
                                 sourcing for the future.</div>
                         </div>
-                        <div class="text-xs text-gray-500 mt-2">We support ethical business, green supply chains, and
+                        <div class="text-xs text-gray-500 mt-2">We support ethical business, green supply chains,
+                            and
                             digital innovation for all partners.</div>
                     </div>
                 </div>
                 <!-- Country/Region Suppliers Row -->
                 <div class="mb-2">
-                    <div class="text-base font-semibold text-gray-800 mb-4">Find suppliers by country or region</div>
+                    <div class="text-base font-semibold text-gray-800 mb-4">Find suppliers by country or region
+                    </div>
                     <div class="flex flex-wrap gap-5 md:gap-8 items-center">
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/in.png" alt="India" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/in.png" alt="India" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">India</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/de.png" alt="Germany" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/de.png" alt="Germany" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Germany</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/gb.png" alt="UK" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/gb.png" alt="UK" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">UK</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/us.png" alt="USA" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/us.png" alt="USA" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">USA</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/cn.png" alt="China" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/cn.png" alt="China" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">China</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/ae.png" alt="UAE" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/ae.png" alt="UAE" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">UAE</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/ru.png" alt="Russia" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/ru.png" alt="Russia" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Russia</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/fr.png" alt="France" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">France</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/tr.png" alt="Turkey" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/tr.png" alt="Turkey" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Turkey</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/vn.png" alt="Vietnam" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/vn.png" alt="Vietnam" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Vietnam</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/kr.png" alt="South Korea"
+                            <img loading="lazy" src="https://flagcdn.com/24x18/kr.png" alt="South Korea"
                                 class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">South Korea</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/th.png" alt="Thailand" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/th.png" alt="Thailand" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Thailand</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/my.png" alt="Malaysia" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/my.png" alt="Malaysia" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Malaysia</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/jp.png" alt="Japan" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/jp.png" alt="Japan" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Japan</span>
                         </div>
                         <div class="empower-country flex flex-col items-center">
-                            <img src="https://flagcdn.com/24x18/it.png" alt="Italy" class="w-10 h-7 rounded mb-1" />
+                            <img loading="lazy" src="https://flagcdn.com/24x18/it.png" alt="Italy" class="w-10 h-7 rounded mb-1" />
                             <span class="text-xs text-gray-700">Italy</span>
                         </div>
                     </div>
@@ -2133,9 +2362,9 @@
         </section>
         <!-- Certifications / Partners / Achievements Section End -->
 
-        
 
-        
+
+
     </main>
     <!-- Footer Section Start -->
     <footer class="footer">
@@ -2143,7 +2372,7 @@
             <div class="footer-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 <!-- Brand & About -->
                 <div class="footer-col sm:col-span-2 lg:col-span-3 xl:col-span-1 flex items-center text-center">
-                    <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" class="footer-logo">
+                    <img loading="lazy" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" class="footer-logo">
                     <p class="footer-about">Trade Overseas connects global buyers & suppliers with trust,
                         transparency, and seamless trade solutions. Grow your business with us!</p>
                     <div class="app-badges">
@@ -2155,9 +2384,8 @@
                                 alt="Download on the App Store"></a>
                     </div>
                     <div class="trust-badges">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ISO_9001-2015.svg"
-                            alt="ISO 9001">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/D%26B_D-U-N-S_Registered_Logo.svg"
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ISO_9001-2015.svg" alt="ISO 9001">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/D%26B_D-U-N-S_Registered_Logo.svg"
                             alt="D&B Registered">
                     </div>
                 </div>
@@ -2210,23 +2438,22 @@
                 <!-- Payment Methods Row -->
                 <div class="payment-methods">
                     <span>We accept:</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa"
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa"
                         height="28" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
-                        alt="Mastercard" height="28" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/UPI-Logo-vector.svg" alt="UPI"
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard"
                         height="28" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/UPI-Logo-vector.svg" alt="UPI"
+                        height="28" />
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"
                         height="28" />
                 </div>
                 <!-- Shipping Partners Row -->
                 <div class="shipping-partners">
                     <span>Shipping with:</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/DHL_Logo.svg" alt="DHL"
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/DHL_Logo.svg" alt="DHL" height="28" />
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/FedEx_Express.svg" alt="FedEx"
                         height="28" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/FedEx_Express.svg" alt="FedEx"
-                        height="28" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Blue_Dart_Express_logo.svg"
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Blue_Dart_Express_logo.svg"
                         alt="Blue Dart" height="28" />
                 </div>
                 <!-- Security/Trust Badge -->
@@ -2255,6 +2482,8 @@
     <!-- Swiper JS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
 
 </body>
 
