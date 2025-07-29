@@ -1,0 +1,78 @@
+/* General styles for form labels */
+.form-label {
+    display: block;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+    font-weight: 500;
+    color: rgb(75 85 99);
+    margin-bottom: 0.375rem; /* 6px */
+}
+
+/* General styles for form inputs, textareas, and selects */
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 1rem; /* 10px 16px */
+    background-color: rgb(249 250 251);
+    border: 1px solid rgb(229 231 235);
+    border-radius: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+    color: rgb(31 41 55);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-input::placeholder {
+    color: rgb(156 163 175);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: rgb(59 130 246);
+    box-shadow: 0 0 0 2px rgb(59 130 246 / 0.5);
+}
+
+/* Custom arrow for select dropdowns */
+select.form-input {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.7rem center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+/* Styles for selectable cards (like shipping/payment options) */
+.checkout-option-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem; /* 16px */
+    border: 2px solid rgb(229 231 235); /* border-gray-200 */
+    border-radius: 0.75rem; /* 12px */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    flex-wrap: wrap; /* For payment section content */
+}
+
+.checkout-option-card:hover {
+    border-color: rgb(156 163 175); /* border-gray-400 */
+    background-color: rgb(249 250 251); /* bg-gray-50 */
+}
+
+.checkout-option-card.selected {
+    border-color: rgb(59 130 246); /* border-blue-500 */
+    background-color: rgb(239 246 255); /* bg-blue-50 */
+    box-shadow: 0 0 0 1px rgb(59 130 246); /* ring-1 ring-blue-500 */
+}
+
+/* Custom radio button appearance for shipping options */
+.checkout-option-card .form-radio-custom {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem; /* 20px */
+    border: 2px solid rgb(209 213 219); /* border-gray-300 */
+    border-radius: 9999px; /* rounded-full */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease
+}
