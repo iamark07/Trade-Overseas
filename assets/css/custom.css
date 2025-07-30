@@ -667,11 +667,8 @@ body {
   margin-top: 0.5rem;
 }
 .trust-badges img {
-  height: 32px;
-  background: #fff;
-  border-radius: 0.4em;
+  height: 64px;
   padding: 2px 8px;
-  box-shadow: 0 1px 6px #0001;
 }
 .footer-bottom {
   display: flex;
@@ -741,6 +738,10 @@ body {
   }
   .app-badges, .trust-badges {
     justify-content: flex-start;
+  }
+
+  .trust-badges img {
+    height: 48px;
   }
   .newsletter-container {
     padding: 1.2rem 0.3rem;
