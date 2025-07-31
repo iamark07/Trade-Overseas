@@ -104,16 +104,6 @@ body {
   position: relative;
 }
 
-/* .premium-nav-bar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.5), transparent);
-} */
-
 /* Mega Menu Enhancement */
 .premium-mega-menu {
   backdrop-filter: blur(10px);
@@ -133,8 +123,9 @@ body {
   top: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(90deg, rgba(147, 51, 234, 0.1), transparent);
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.1), #f3f4f6 );
+  transition: width 0.2s ease;
+  z-index: -1;
 }
 
 .premium-mega-menu a:hover::before {
@@ -250,7 +241,7 @@ body {
   background: #fff;
   /* border-radius: 0 0 12px 12px; */
   box-shadow: 0 8px 32px rgba(9, 42, 84, 0.08);
-  min-width: 320px;
+  /* min-width: 320px; */
   padding: 0;
 }
 .category-dropdown .category-item {
@@ -291,31 +282,7 @@ body {
   display: block;
 }
 
-.category-dropdown .subcategory-panel::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 20px;
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 8px solid #fff;
-  z-index: 1;
-}
 
-.category-dropdown .subcategory-panel::after {
-  content: '';
-  position: absolute;
-  left: -9px;
-  top: 20px;
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 8px solid #e5e7eb;
-  z-index: 0;
-}
 
 /* Subcategory Header */
 .subcategory-header {
@@ -969,4 +936,40 @@ body {
     width: 350px;
   }
 }
+
+
+/* product.css ya custom.css me add karo */
+.user-account-dropdown .account-dropdown-menu,
+.user-account-dropdown .language-dropdown-menu {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+.user-account-dropdown:hover .account-dropdown-menu,
+.user-account-dropdown:focus-within .account-dropdown-menu,
+.user-account-dropdown .account-dropdown-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.language-dropdown:hover .language-dropdown-menu,
+.language-dropdown:focus-within .language-dropdown-menu,
+.language-dropdown .language-dropdown-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.account-dropdown-menu a,
+.language-btn,
+.language-dropdown-menu button {
+  transition: background 0.2s;
+  border-radius: 10px;
+}
+
+.account-dropdown-menu a:hover,
+.language-btn:hover,
+.language-dropdown-menu button:hover {
+background: linear-gradient(90deg, rgba(147, 51, 234, 0.1), #f3f4f6 );
+}
+
+
+
 

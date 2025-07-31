@@ -1,12 +1,3 @@
-// Product Image Gallery
-const images = [
-  "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/4629633/pexels-photo-4629633.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/8534088/pexels-photo-8534088.jpeg?auto=compress&cs=tinysrgb&w=800",
-];
-
 let currentImageIndex = 0;
 let selectedColor = "Black";
 let isWishlisted = false;
@@ -28,68 +19,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Image Gallery Functions
 function initImageGallery() {
-  const thumbnailContainer = document.getElementById("thumbnailContainer");
-
-  images.forEach((image, index) => {
-    const thumbnail = document.createElement("button");
-    thumbnail.className = `aspect-square rounded-lg overflow-hidden border-2 transition-all ${
-      index === 0 ? "border-blue-500" : "border-gray-200 hover:border-gray-300"
-    }`;
-    thumbnail.onclick = () => selectImage(index);
-
-    const img = document.createElement("img");
-    img.src = image;
-    img.alt = `Product ${index + 1}`;
-    img.className = "w-full h-full object-cover";
-
-    thumbnail.appendChild(img);
-    thumbnailContainer.appendChild(thumbnail);
+  // No images array, thumbnails are in HTML
+  const thumbnailBtns = document.querySelectorAll("#thumbnailContainer .thumbnail-btn");
+  thumbnailBtns.forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+      selectImage(index);
+    });
   });
-
-  updateImageCounter();
+  // Set first image as active
+  selectImage(0);
 }
 
 function selectImage(index) {
+  const thumbnailBtns = document.querySelectorAll("#thumbnailContainer .thumbnail-btn");
+  const thumbnails = document.querySelectorAll("#thumbnailContainer img");
+  const selectedImgSrc = thumbnails[index].getAttribute("src");
+
   currentImageIndex = index;
-  document.getElementById("mainImage").src = images[index];
+  document.getElementById("mainImage").src = selectedImgSrc;
+
   updateImageCounter();
   updateThumbnailSelection();
 }
 
 function nextImage() {
-  currentImageIndex = (currentImageIndex + 1) % images.length;
+  const thumbnails = document.querySelectorAll("#thumbnailContainer img");
+  currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
   selectImage(currentImageIndex);
 }
 
 function prevImage() {
-  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  const thumbnails = document.querySelectorAll("#thumbnailContainer img");
+  currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
   selectImage(currentImageIndex);
 }
 
 function updateImageCounter() {
+  const thumbnails = document.querySelectorAll("#thumbnailContainer img");
   document.getElementById("imageCounter").textContent = `${
     currentImageIndex + 1
-  } / ${images.length}`;
+  } / ${thumbnails.length}`;
 }
 
 function updateThumbnailSelection() {
-  const thumbnails = document.querySelectorAll("#thumbnailContainer button");
-  thumbnails.forEach((thumbnail, index) => {
-    if (index === currentImageIndex) {
-      thumbnail.className =
-        "aspect-square rounded-lg overflow-hidden border-2 border-blue-500 transition-all";
+  const thumbnailBtns = document.querySelectorAll("#thumbnailContainer .thumbnail-btn");
+  thumbnailBtns.forEach((btn, idx) => {
+    if (idx === currentImageIndex) {
+      btn.classList.add("border-blue-500", "active");
     } else {
-      thumbnail.className =
-        "aspect-square rounded-lg overflow-hidden border-2 border-gray-200 hover:border-gray-300 transition-all";
+      btn.classList.remove("border-blue-500", "active");
     }
   });
 }
 
 // Zoom Modal Functions
 function openZoom() {
-  const modal = document.getElementById("zoomModal");
+  const thumbnails = document.querySelectorAll("#thumbnailContainer img");
   const zoomImage = document.getElementById("zoomImage");
-  zoomImage.src = images[currentImageIndex];
+  zoomImage.src = thumbnails[currentImageIndex].getAttribute("src");
+
+  const modal = document.getElementById("zoomModal");
   modal.classList.remove("hidden");
   modal.classList.add("flex");
   document.body.style.overflow = "hidden";
@@ -119,11 +108,9 @@ function selectColor(color) {
   const colorOptions = document.querySelectorAll(".color-option");
   colorOptions.forEach((option) => {
     if (option.dataset.color === color) {
-      option.className =
-        "color-option px-3 sm:px-4 py-2 border-2 border-blue-500 bg-blue-50 text-blue-700 rounded-lg text-xs sm:text-sm transition-all";
+      option.classList.add("selected");
     } else {
-      option.className =
-        "color-option px-3 sm:px-4 py-2 border border-gray-300 hover:border-gray-400 rounded-lg text-xs sm:text-sm transition-all";
+      option.classList.remove("selected");
     }
   });
 }
@@ -180,13 +167,13 @@ function updatePricing() {
   const totalBreakdownElement = document.getElementById("totalBreakdown");
 
   if (currentPriceElement) {
-    currentPriceElement.textContent = `$${currentPrice.toFixed(2)}`;
+    currentPriceElement.textContent = `₹${currentPrice.toFixed(2)}`;
   }
   if (totalCostElement) {
-    totalCostElement.textContent = `$${totalCost.toLocaleString()}`;
+    totalCostElement.textContent = `₹${totalCost.toLocaleString()}`;
   }
   if (totalBreakdownElement) {
-    totalBreakdownElement.textContent = `${quantity} pieces × $${currentPrice.toFixed(
+    totalBreakdownElement.textContent = `${quantity} pieces × ₹${currentPrice.toFixed(
       2
     )} each`;
   }
@@ -199,15 +186,11 @@ function toggleWishlist() {
 
   if (wishlistBtn) {
     if (isWishlisted) {
-      wishlistBtn.className =
-        "wishlist-active flex items-center justify-center space-x-2 py-2 px-4 border border-red-500 text-red-500 bg-red-50 rounded-lg transition-colors";
-      wishlistBtn.innerHTML =
-        '<i class="ri-heart-fill"></i><span class="text-sm">Saved</span>';
+      wishlistBtn.classList.add("wishlist-active");
+      wishlistBtn.innerHTML = '<i class="ri-heart-fill"></i><span class="text-sm">Saved</span>';
     } else {
-      wishlistBtn.className =
-        "flex items-center justify-center space-x-2 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors";
-      wishlistBtn.innerHTML =
-        '<i class="ri-heart-line"></i><span class="text-sm">Save</span>';
+      wishlistBtn.classList.remove("wishlist-active");
+      wishlistBtn.innerHTML = '<i class="ri-heart-line"></i><span class="text-sm">Save</span>';
     }
   }
 }
@@ -227,15 +210,13 @@ function switchTab(tabName) {
   }
 
   // Update tab button styles
-  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabButtons = document.querySelectorAll(".product-tab-btn");
   tabButtons.forEach((btn) => {
-    btn.className =
-      "tab-btn py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm transition-colors";
+    btn.classList.remove("active", "selected");
   });
 
   // Set active tab button style
-  event.target.className =
-    "tab-btn py-4 px-1 border-b-2 border-blue-500 text-blue-600 font-medium text-sm transition-colors";
+  event.target.classList.add("active");
 }
 
 // Close zoom modal when clicking outside the image

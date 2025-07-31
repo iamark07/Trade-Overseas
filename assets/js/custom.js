@@ -220,3 +220,44 @@
     }
   });
 })();
+
+
+
+
+// User Account Dropdown: Show on hover and click (for accessibility)
+document.addEventListener("DOMContentLoaded", function () {
+  const accountBtn = document.querySelector('.user-account-dropdown .account-btn');
+  const accountMenu = document.getElementById('accountDropdownMenu');
+  const languageBtn = document.querySelector('.language-btn');
+  const languageMenu = document.getElementById('languageDropdownMenu');
+
+  // Toggle account dropdown on click
+  if (accountBtn && accountMenu) {
+    accountBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      accountMenu.classList.toggle('show');
+    });
+  }
+
+  // Hide account dropdown on outside click
+  document.addEventListener('click', function (e) {
+    if (accountMenu && !accountMenu.contains(e.target) && !accountBtn.contains(e.target)) {
+      accountMenu.classList.remove('show');
+    }
+  });
+
+  // Toggle language dropdown on click
+  if (languageBtn && languageMenu) {
+    languageBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      languageMenu.classList.toggle('show');
+    });
+  }
+
+  // Hide language dropdown on outside click
+  document.addEventListener('click', function (e) {
+    if (languageMenu && !languageMenu.contains(e.target) && !languageBtn.contains(e.target)) {
+      languageMenu.classList.remove('show');
+    }
+  });
+});

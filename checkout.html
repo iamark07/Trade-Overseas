@@ -70,8 +70,8 @@
 
         <!-- Breadcrumb -->
         <section class="bg-white border-y">
-            <div class="container mx-auto px-5 py-3">
-                <nav class="flex text-sm text-gray-600">
+            <div class="container mx-auto px-5 py-4">
+                <nav class="flex text-xs sm:text-sm text-gray-600">
                     <a href="index.html" class="hover:text-blue-600">Home</a>
                     <span class="mx-2">/</span>
                     <a href="cart.html" class="hover:text-blue-600">Cart</a>
@@ -260,11 +260,11 @@
                                 </div>
                                 <!-- Action Button -->
                                 <div class="flex flex-col sm:flex-row gap-5 items-center justify-between mt-8">
-                                    <a href="cart.html" class="w-full sm:w-auto px-5 py-2.5 bg-[#092a54] text-white rounded-lg text-sm font-semibold shadow text-center">
+                                    <a href="cart.html" class="premium-gradient-btn w-full sm:w-auto px-5 py-2.5 bg-[#092a54] text-white rounded-lg text-sm font-semibold shadow text-center">
                                         <i class="ri-arrow-left-line mr-1"></i>
                                         Return to cart
                                     </a>
-                                    <button type="submit" class="checkout-btn w-full sm:w-auto px-5 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg text-sm font-semibold shadow hover:from-blue-600 hover:to-blue-700 transition">
+                                    <button type="submit" class="premium-gradient-btn checkout-btn w-full sm:w-auto px-5 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg text-sm font-semibold shadow hover:from-blue-600 hover:to-blue-700 transition">
                                         Pay Now
                                     </button>
                                 </div>
@@ -336,7 +336,7 @@
                                         <input type="text" placeholder="Gift card or discount code"
                                             class="form-input bg-white">
                                         <button
-                                            class="px-5 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg text-sm font-semibold shadow hover:from-blue-600 hover:to-blue-700 transition">
+                                            class="premium-gradient-btn px-5 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg text-sm font-semibold shadow hover:from-blue-600 hover:to-blue-700 transition">
                                             Apply
                                         </button>
                                     </div>
@@ -374,12 +374,13 @@
         <div class="footer-container container mx-auto px-5">
             <div class="footer-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 <!-- Brand & About -->
-                <div class="footer-col sm:col-span-2 lg:col-span-3 xl:col-span-1 flex items-center text-center">
+                <div
+                    class="footer-col sm:col-span-2 lg:col-span-3 xl:col-span-1 gap-5 flex items-center justify-center text-center">
                     <img loading="lazy" src="assets/images/logo/logo.webp" alt="Trade Overseas Logo"
                         class="footer-logo">
                     <p class="footer-about">Trade Overseas connects global buyers & suppliers with trust,
                         transparency, and seamless trade solutions. Grow your business with us!</p>
-                    <div class="app-badges">
+                    <div class="app-badges hidden">
                         <a href="#"><img
                                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                                 alt="Get it on Google Play"></a>
@@ -387,12 +388,9 @@
                                 src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                                 alt="Download on the App Store"></a>
                     </div>
-                    <div class="trust-badges">
-                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ISO_9001-2015.svg"
-                            alt="ISO 9001">
-                        <img loading="lazy"
-                            src="https://upload.wikimedia.org/wikipedia/commons/6/6a/D%26B_D-U-N-S_Registered_Logo.svg"
-                            alt="D&B Registered">
+                    <div class="trust-badges mb-10">
+                        <img loading="lazy" src="assets/images/other-logo/iso-9001.png" alt="ISO 9001">
+                        <img loading="lazy" src="assets/images/other-logo/d&b-registered.png" alt="D&B Registered">
                     </div>
                 </div>
                 <!-- Quick Links -->
@@ -440,32 +438,24 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col lg:flex-row justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between">
                 <!-- Payment Methods Row -->
-                <div class="payment-methods">
+                <div class="xl:col-span-1 payment-methods">
                     <span>We accept:</span>
-                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
-                        alt="Visa" height="28" />
-                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
-                        alt="Mastercard" height="28" />
-                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/UPI-Logo-vector.svg"
-                        alt="UPI" height="28" />
-                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                        alt="PayPal" height="28" />
+                    <img loading="lazy" src="assets/images/other-logo/visa.png" alt="Visa" class="h-20" />
+                    <img loading="lazy" src="assets/images/other-logo/mastercard.png" alt="Mastercard" class="h-20" />
+                    <img loading="lazy" src="assets/images/other-logo/upi.png" alt="UPI" class="h-20" />
+                    <img loading="lazy" src="assets/images/other-logo/paypal.png" alt="PayPal" class="h-20" />
                 </div>
                 <!-- Shipping Partners Row -->
-                <div class="shipping-partners">
+                <div class="xl:col-span-1 shipping-partners">
                     <span>Shipping with:</span>
-                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/DHL_Logo.svg" alt="DHL"
-                        height="28" />
-                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/FedEx_Express.svg"
-                        alt="FedEx" height="28" />
-                    <img loading="lazy"
-                        src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Blue_Dart_Express_logo.svg"
-                        alt="Blue Dart" height="28" />
+                    <img loading="lazy" src="assets/images/other-logo/dhl.png" alt="DHL" />
+                    <img loading="lazy" src="assets/images/other-logo/fedex.png" alt="FedEx" height="28" />
+                    <img loading="lazy" src="assets/images/other-logo/blue-dart.png" alt="Blue Dart" />
                 </div>
                 <!-- Security/Trust Badge -->
-                <div class="security-badge">
+                <div class="md:col-span-2 xl:col-span-1 security-badge">
                     <i class="ri-shield-check-line"></i> 100% Secure Payments & Buyer Protection
                 </div>
             </div>

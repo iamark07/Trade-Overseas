@@ -23,9 +23,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
 
-    <!-- Remix Icon CDN for footer icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Log In | Trade Overseas</title>
+    <title>Register | Trade Overseas</title>
 </head>
 
 <body>
@@ -34,65 +32,74 @@
             <!-- Left: Image/Brand Side -->
             <div
                 class="col-span-5 xl:col-span-6 hidden lg:flex flex-col justify-center items-center bg-blue-900 relative p-8">
-                <img src="assets//images/banners/banner-1.jpg" alt="Login Visual"
+                <img src="assets/images/banners/banner-1.jpg" alt="Register Visual"
                     class="shadow-lg w-full object-cover h-full absolute bottom-0 left-0 right-0">
                 <div class="absolute top-0 bottom-0 left-0 right-0 bg-black/30"></div>
                 <div class="relative z-10 text-center flex flex-col items-center hidden">
                     <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" class="h-14 mb-6 drop-shadow-lg">
-                    <h2 class="text-white text-2xl lg:text-4xl font-bold mb-2 text-center">Welcome Back!</h2>
-                    <p class="text-blue-100 text-base text-center mb-8">Connect to global trade with confidence and
-                        security.</p>
+                    <h2 class="text-white text-2xl lg:text-4xl font-bold mb-2 text-center">Join Trade Overseas</h2>
+                    <p class="text-blue-100 text-base text-center mb-8">Create your account and start global trading with confidence.</p>
                 </div>
             </div>
-            <!-- Right: Login Form -->
+            <!-- Right: Register Form -->
             <div
                 class="col-span-4 xl:col-span-3 w-full sm:max-w-2xl mx-auto lg:w-full flex flex-col overflow-auto p-8 sm:px-10 sm:py-10 bg-white/80 backdrop-blur-lg relative">
                 <!-- Overlay -->
-                <div id="loginOverlay"
+                <div id="registerOverlay"
                     class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white transition-opacity duration-300">
                     <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" class="h-14 mb-8 drop-shadow-lg">
-                    <h2 class="text-2xl font-bold text-[#092a54] mb-2">Welcome Back!</h2>
-                    <p class="text-gray-600 mb-8 text-center">Sign in to access your Trade Overseas account.</p>
+                    <h2 class="text-2xl font-bold text-[#092a54] mb-2">Create Your Account</h2>
+                    <p class="text-gray-600 mb-8 text-center">Register to access Trade Overseas platform.</p>
                     <button
-                        class="login-overlay-btn px-10 py-3.5 mb-10 bg-[#092a54] text-white font-semibold rounded-md shadow hover:bg-[#0a2e5a] transition-colors text-base">
-                        Log in
+                        class="register-overlay-btn px-10 py-3.5 mb-10 bg-[#092a54] text-white font-semibold rounded-md shadow hover:bg-[#0a2e5a] transition-colors text-base">
+                        Get Started
                     </button>
                 </div>
                 <div>
                     <div class="flex flex-col items-center mb-8">
                         <img src="assets/images/logo/logo.webp" alt="Trade Overseas Logo" class="h-10 mb-2 hidden">
-                        <h1 class="text-2xl md:text-3xl font-bold text-[#092a54]">Sign in</h1>
+                        <h1 class="text-2xl md:text-3xl font-bold text-[#092a54]">Create Account</h1>
                     </div>
                     <form class="space-y-5">
                         <div>
-                            <label class="block text-sm font-medium text-gray-900 mb-1" for="email">Email or
-                                Phone</label>
+                            <label class="block text-sm font-medium text-gray-900 mb-1" for="fullname">Full Name</label>
+                            <input id="fullname" type="text" required
+                                class="w-full px-4 py-4 border border-gray-200 rounded-lg bg-white focus:ring-2 focus:ring-blue-100 transition text-gray-900 placeholder-gray-400 text-sm"
+                                placeholder="Your full name" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-1" for="email">Email Address</label>
                             <input id="email" type="email" required
                                 class="w-full px-4 py-4 border border-gray-200 rounded-lg bg-white focus:ring-2 focus:ring-blue-100 transition text-gray-900 placeholder-gray-400 text-sm"
-                                placeholder="you@gmail.com or +91123456789" />
+                                placeholder="you@email.com" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-1" for="phone">Phone Number</label>
+                            <input id="phone" type="tel" required
+                                class="w-full px-4 py-4 border border-gray-200 rounded-lg bg-white focus:ring-2 focus:ring-blue-100 transition text-gray-900 placeholder-gray-400 text-sm"
+                                placeholder="Your phone number" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-900 mb-1" for="password">Password</label>
-                            <div class="relative">
-                                <input id="password" type="password" required
-                                    class="w-full pl-4 pr-11 py-4 border border-gray-200 rounded-lg bg-white focus:ring-2 focus:ring-blue-100 transition text-gray-900 placeholder-gray-400 text-sm"
-                                    placeholder="Your password" />
-                                <button type="button" id="togglePassword"
-                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-800 focus:outline-none text-xl">
-                                    <i class="ri-eye-off-line" id="eyeIcon"></i>
-                                </button>
-                            </div>
+                            <input id="password" type="password" required
+                                class="w-full px-4 py-4 border border-gray-200 rounded-lg bg-white focus:ring-2 focus:ring-blue-100 transition text-gray-900 placeholder-gray-400 text-sm"
+                                placeholder="Create a password" />
                         </div>
-                        <div class="flex items-center justify-between">
-                            <label class="flex items-center text-[13px] text-gray-600 cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded border-gray-300 text-blue-600 mr-2">
-                                Remember me
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-1" for="confirm-password">Confirm Password</label>
+                            <input id="confirm-password" type="password" required
+                                class="w-full px-4 py-4 border border-gray-200 rounded-lg bg-white focus:ring-2 focus:ring-blue-100 transition text-gray-900 placeholder-gray-400 text-sm"
+                                placeholder="Re-enter your password" />
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="terms" required class="form-checkbox rounded border-gray-300 text-blue-600 mr-2">
+                            <label for="terms" class="text-[13px] text-gray-600 cursor-pointer">
+                                I agree to the <a href="#" class="text-blue-600 hover:underline">Terms & Conditions</a>
                             </label>
-                            <a href="#" class="text-[13px] text-blue-600 hover:underline">Forgot password?</a>
                         </div>
                         <button type="submit"
                             class="w-full py-3 bg-[#092a54] text-white font-semibold rounded-lg shadow hover:bg-[#0a2e5a] transition-colors text-base">
-                            Sign In
+                            Register
                         </button>
                     </form>
                     <div class="flex items-center my-6">
@@ -104,50 +111,36 @@
                         <button
                             class="flex items-center justify-center gap-2 w-full py-2.5 border border-gray-200 rounded-lg bg-white hover:bg-gray-50 transition">
                             <img src="assets/images/social-media/google.png" class="w-6" alt="google">
-                            <span class="text-sm font-medium text-gray-700">Sign in with Google</span>
+                            <span class="text-sm font-medium text-gray-700">Sign up with Google</span>
                         </button>
                         <button
                             class="flex items-center justify-center gap-2 w-full py-2 border border-gray-200 rounded-lg bg-white hover:bg-gray-50 transition">
                             <img src="assets/images/social-media/facebook.png" class="w-6" alt="facebook">
-                            <span class="text-sm font-medium text-gray-700">Sign in with Facebook</span>
+                            <span class="text-sm font-medium text-gray-700">Sign up with Facebook</span>
                         </button>
                     </div>
                     <p class="text-center text-sm text-gray-600 mt-6">
-                        New to Trade Overseas?
-                        <a href="register.html" class="text-blue-600 font-medium hover:underline ml-1">Create an
-                            account</a>
+                        Already have an account?
+                        <a href="login.html" class="text-blue-600 font-medium hover:underline ml-1">Sign in</a>
                     </p>
                     <div class="flex items-center justify-center mt-6 text-xs text-gray-400 gap-2">
                         <i class="ri-shield-check-line text-blue-500"></i>
-                        100% Secure & Private Login
+                        100% Secure & Private Registration
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-
-    <!-- custom script link -->
     <script>
-        //login overlay hide on Login button click
+        //register overlay hide on Get Started button click
         document.addEventListener('DOMContentLoaded', function () {
-            const login_overlay = document.getElementById('loginOverlay');
-            const login_overlay_btn = login_overlay.querySelector('.login-overlay-btn');
-            login_overlay_btn.addEventListener('click', function () {
-                login_overlay.classList.add('hidden');
-            });
-
-            // Password show/hide
-            const passwordInput = document.getElementById('password');
-            const togglePassword = document.getElementById('togglePassword');
-            const eyeIcon = document.getElementById('eyeIcon');
-            togglePassword.addEventListener('click', function () {
-                const type = passwordInput.type === 'password' ? 'text' : 'password';
-                passwordInput.type = type;
-                eyeIcon.className = type === 'password' ? 'ri-eye-off-line' : 'ri-eye-line';
+            const register_overlay = document.getElementById('registerOverlay');
+            const register_overlay_btn = register_overlay.querySelector('.register-overlay-btn');
+            register_overlay_btn.addEventListener('click', function () {
+                register_overlay.classList.add('hidden');
             });
         });
     </script>
 </body>
-
 </html>
