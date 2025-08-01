@@ -219,10 +219,43 @@
       closeSearch();
     }
   });
+
+  // === Mobile Language Modal Feature ===
+  function openMobileLanguageModal() {
+    closeMenu();
+    const modal = document.getElementById('mobileLanguageModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeMobileLanguageModal() {
+    const modal = document.getElementById('mobileLanguageModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const langBtn = document.getElementById('mobileLanguageBtn');
+    const closeBtn = document.getElementById('closeMobileLanguageModal');
+    const modal = document.getElementById('mobileLanguageModal');
+
+    if (langBtn) {
+      langBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openMobileLanguageModal();
+      });
+    }
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        closeMobileLanguageModal();
+      });
+    }
+    if (modal) {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeMobileLanguageModal();
+      });
+    }
+  });
+
 })();
-
-
-
 
 // User Account Dropdown: Show on hover and click (for accessibility)
 document.addEventListener("DOMContentLoaded", function () {
