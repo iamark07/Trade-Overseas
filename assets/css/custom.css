@@ -959,27 +959,25 @@ body {
   transition: all 0.2s;
 }
 .user-account-dropdown:hover .account-dropdown-menu,
-.user-account-dropdown:focus-within .account-dropdown-menu,
 .user-account-dropdown .account-dropdown-menu.show {
   opacity: 1;
   pointer-events: auto;
 }
 .language-dropdown:hover .language-dropdown-menu,
-.language-dropdown:focus-within .language-dropdown-menu,
 .language-dropdown .language-dropdown-menu.show {
   opacity: 1;
   pointer-events: auto;
 }
-.account-dropdown-menu a,
+.account-dropdown-menu .account-dropdown-link,
 .language-btn,
 .language-dropdown-menu button {
   transition: background 0.2s;
   border-radius: 10px;
 }
 
-.account-dropdown-menu a:hover,
+.account-dropdown-menu .account-dropdown-link:hover,
 .language-btn:hover,
-.language-dropdown-menu button:hover {
+.language-dropdown-menu .language-dropdown-link-button:hover {
   background: linear-gradient(90deg, rgba(147, 51, 234, 0.1), #f3f4f6);
 }
 

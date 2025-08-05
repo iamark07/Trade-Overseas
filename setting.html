@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/fevicon.webp" type="image/png" />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Google Fonts: Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- Remix Icon CDN for footer icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>User Setting - Trade Overseas</title>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="flex relative w-full">
+        <!-- Sidebar -->
+        <aside id="sidebar"
+            class="absolute xl:sticky !-left-full left-0 top-0 flex w-[75%] xl:min-[28%] xl:w-[28%] h-[100dvh] bg-gradient-to-tr from-blue-100 to-blue-200 border-b border-blue-200 backdrop-blur-lg shadow-lg flex-col justify-between z-50 transition-all duration-300 ease-in-out">
+            <div>
+                <div class="p-6 border-b border-[#3c465816] flex justify-between">
+                    <div class="flex items-center gap-4">
+                        <img src="assets/images/logo/logo.webp" alt="logo" class="h-10 hidden">
+                        <div class="">
+                            <h2 class="text-lg md:text-xl font-semibold">Trade Overseas</h2>
+                            <p class="text-gray-700 font-medium text-[11px] md:text-xs">Global Trade Solutions</p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-[#092a54] text-white rounded-md shadow-md cursor-pointer transition-colors">
+                            <i class="ri-shut-down-line"></i>
+                        </div>
+
+                        <!-- Tooltip text -->
+                        <span class="logout-tooltip">
+                            Logout
+                        </span>
+                    </div>
+
+                </div>
+                <nav class="mt-4 px-4 space-y-3">
+                    <!-- Dashboard Sidebar Menu -->
+                    <ul class="">
+                        <!-- Personal Info -->
+                        <li>
+                            <a href="#" class="nav-link"><i class="ri-user-line"></i>Personal Information</a>
+                        </li>
+
+                        <!-- Orders -->
+                        <li>
+                            <a href="#" class="nav-link"><i class="ri-shopping-bag-3-line"></i>Orders</a>
+                        </li>
+
+                        <!-- Wishlist -->
+                        <li>
+                            <a href="#" class="nav-link"><i class="ri-heart-line"></i>Wishlist</a>
+                        </li>
+
+                        <!-- Information -->
+                        <li>
+                            <a href="#" class="nav-link"><i class="ri-information-line"></i>Information</a>
+                        </li>
+
+                        <!-- Support -->
+                        <li>
+                            <a href="#" class="nav-link"><i class="ri-customer-service-2-line"></i>Support</a>
+                        </li>
+
+                        <!-- Home Button -->
+                        <li>
+                            <a href="index.html" class="nav-link"><i class="ri-home-4-line"></i>Home</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="py-5 px-6 border-t border-[#3c465816] flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <img src="https://i.pravatar.cc/150" alt="Profile"
+                        class="w-12 h-12 rounded-full shadow-md object-cover">
+                    <div>
+                        <h2 class="text-base font-semibold">Welcome back,</h2>
+                        <p class="text-gray-700 font-medium text-sm">Arbaz Karimi</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </aside>
+        <!-- Overlay -->
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-40"></div>
+
+        <main class="bg-gray-50 py-5 md:py-8 px-5 md:px-8 w-full">
+
+            <!-- Top Header -->
+            <div class="flex-1">
+                <div class="xl:flex items-center justify-between gap-4 pb-4 border-b hidden">
+                    <div>
+                        <h2 class="text-lg xl:text-xl font-bold text-slate-800">Welcome back, <span
+                                class="text-blue-500 font-bold">Arbaz</span>
+                        </h2>
+                        <p class="text-xs xl:text-sm text-slate-500">Manage your account and marketplace activity</p>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <!-- Search -->
+                        <div class="relative">
+                            <input type="text" placeholder="Search products, orders, suppliers..."
+                                class="w-72 pl-4 pr-10 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200 text-sm bg-white">
+                            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+
+                        <!-- Notifications -->
+                        <button class="relative p-2 rounded-lg hover:bg-gray-100">
+                            <i class="ri-notification-3-line text-2xl text-slate-600"></i>
+                            <span
+                                class="absolute -top-1 -right-0.5 w-4 h-4 rounded-full bg-red-500 text-xs text-white flex items-center justify-center">3</span>
+                        </button>
+
+                        <!-- Quick Profile -->
+                        <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100">
+                            <img src="https://i.pravatar.cc/150" class="w-8 h-8 rounded-full shadow-md" alt="avatar">
+                            <div class="text-left">
+                                <div class="text-sm font-medium text-slate-700">Arbaz Karimi</div>
+                                <div class="text-xs text-slate-400">Buyer • India</div>
+                            </div>
+                        </button>
+
+
+                    </div>
+                </div>
+                <div class="w-full flex justify-between border-b pb-4 xl:hidden">
+                    <div class="flex items-center gap-4">
+                        <img src="assets/images/logo/logo.webp" alt="logo" class="h-10 hidden">
+                        <div class="">
+                            <h2 class="text-lg md:text-xl font-semibold">Trade Overseas</h2>
+                            <p class="text-gray-700 font-medium text-[11px] md:text-xs">Global Trade Solutions</p>
+                        </div>
+                    </div>
+                    <button id="menuToggle" class="p-2 rounded-lg hover:bg-gray-100 xl:hidden">
+                        <i class="ri-menu-2-line text-lg md:text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Header -->
+            <div class="mb-12 mt-5">
+                <h1 class="text-lg sm:text-xl font-bold text-slate-800">Personal Information</h1>
+            </div>
+
+            <!-- Content -->
+            <div class="gap-8 flex flex-col items-center">
+                <!-- Profile Summary Card -->
+                <div class="w-full flex justify-center flex-col items-center text-center">
+                    <div class="relative w-40 h-40 rounded-full border-white shadow-md overflow-hidden">
+                        <img src="https://i.pravatar.cc/150" class="w-full h-full object-cover" alt="Profile Picture">
+                        <label for="profileImage"
+                            class="absolute bottom-0 right-0 bg-black/70  text-white w-full p-1 flex justify-center items-center rounded-full cursor-pointer shadow transition">
+                            <i class="ri-camera-line text-lg"></i>
+                        </label>
+                        <input type="file" id="profileImage" class="hidden">
+                    </div>
+                    <h2 class="mt-4 text-xl font-semibold text-slate-800 flex items-center gap-2 relative">Arbaz Karimi
+                        <button
+                            class="absolute top-1/2 -translate-y-1/2 -right-10 edit-btn py-1 px-2 rounded-md hover:bg-slate-50"
+                            data-key="email" aria-label="Edit email">
+                            <i class="ri-pencil-line text-lg text-slate-600"></i>
+                        </button>
+                    </h2>
+
+                    <!-- Profile Info — Editable Card -->
+                    <div class="mt-6 w-full">
+                        <div class="bg-white rounded-lg p-4 text-left text-sm text-slate-600">
+                            <div class="flex md:items-center justify-between mb-3 flex-col md:flex-row">
+                                <h3 class="text-base font-semibold text-slate-800">Contact & Location</h3>
+                                <p class="text-xs text-slate-400">Keep your personal details up to date</p>
+                            </div>
+
+                            <ul class="space-y-3" id="editable-info-list">
+                                <!-- Email -->
+                                <li class="flex items-center justify-between gap-3 p-3 bg-[#fafafa] rounded-lg">
+                                    <div>
+                                        <div class="text-xs text-slate-900 font-medium">Email</div>
+                                        <div class="mt-1 text-xs sm:text-sm text-slate-700 info-value" data-key="email">
+                                            arbaz@example.com</div>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <button class="edit-btn p-2" data-key="email" aria-label="Edit email">
+                                            <i class="ri-pencil-line text-lg text-slate-600"></i>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <!-- Phone -->
+                                <li class="flex items-center justify-between gap-3 p-3 bg-[#fafafa] rounded-lg">
+                                    <div>
+                                        <div class="text-xs text-slate-900 font-medium">Phone</div>
+                                        <div class="mt-1 text-xs sm:text-sm text-slate-700 info-value" data-key="phone">
+                                            +91
+                                            9876543210</div>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <button class="edit-btn p-2" data-key="phone" aria-label="Edit phone">
+                                            <i class="ri-pencil-line text-lg text-slate-600"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- Password -->
+                                <li class="flex items-center justify-between gap-3 p-3 bg-[#fafafa] rounded-lg">
+                                    <div>
+                                        <div class="text-xs text-slate-900 font-medium">Password</div>
+                                        <div class="mt-1 text-xs sm:text-sm text-slate-700 info-value"
+                                            data-key="password">********</div>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <button class="edit-btn p-2" data-key="password" aria-label="Edit password">
+                                            <i class="ri-pencil-line text-lg text-slate-600"></i>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <!-- Location -->
+                                <li class="flex items-center justify-between gap-3 p-3 bg-[#fafafa] rounded-lg">
+                                    <div>
+                                        <div class="text-xs text-slate-900 font-medium">Location</div>
+                                        <div class="mt-1 text-xs sm:text-sm text-slate-700 info-value"
+                                            data-key="location">Mumbai,
+                                            India</div>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <button class="edit-btn p-2" data-key="location" aria-label="Edit location">
+                                            <i class="ri-pencil-line text-lg text-slate-600"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+
+        <!-- Main content (Replace your current <main> or place inside main) -->
+        <main class="flex-1 p-8 min-h-screen bg-gray-50 hidden">
+            <!-- Top Header -->
+            <div class="flex items-center justify-between gap-4 mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">Welcome back, <span class="text-blue-600">Arbaz</span>
+                    </h2>
+                    <p class="text-sm text-slate-500">Manage your account and marketplace activity</p>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <!-- Search -->
+                    <div class="relative">
+                        <input type="search" placeholder="Search products, orders, suppliers..."
+                            class="w-72 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200 text-sm bg-white">
+                        <i class="ri-search-line absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    </div>
+
+                    <!-- Notifications -->
+                    <button class="relative p-2 rounded-lg hover:bg-gray-100">
+                        <i class="ri-notification-3-line text-2xl text-slate-600"></i>
+                        <span
+                            class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-500 text-xs text-white flex items-center justify-center">3</span>
+                    </button>
+
+                    <!-- Quick Profile -->
+                    <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100">
+                        <img src="https://i.pravatar.cc/40?u=arbaz" class="w-8 h-8 rounded-full" alt="avatar">
+                        <div class="text-left">
+                            <div class="text-sm font-medium text-slate-700">Arbaz Karimi</div>
+                            <div class="text-xs text-slate-400">Buyer • India</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats / Hero Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-white p-5 rounded-2xl shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400">Total Orders</p>
+                            <p class="text-2xl font-semibold text-slate-800 mt-1">1,284</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
+                            <i class="ri-shopping-bag-3-line text-xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-xs text-slate-500">Up 8% from last month</div>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400">Pending Shipments</p>
+                            <p class="text-2xl font-semibold text-slate-800 mt-1">62</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center">
+                            <i class="ri-truck-line text-xl text-orange-500"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-xs text-slate-500">Awaiting seller confirmation</div>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400">Messages</p>
+                            <p class="text-2xl font-semibold text-slate-800 mt-1">14</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center">
+                            <i class="ri-chat-3-line text-xl text-green-600"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-xs text-slate-500">3 unread from suppliers</div>
+                </div>
+            </div>
+
+            <!-- Main Grid: left (content) and right (side widgets) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left / Main (span 2) -->
+                <section class="lg:col-span-2 space-y-6">
+                    <!-- Quick Actions -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex flex-wrap gap-3 items-center">
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center gap-2 hover:bg-blue-700 transition">
+                            <i class="ri-add-circle-line"></i> Add Product
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-white border border-gray-200 rounded-lg flex items-center gap-2 hover:shadow">
+                            <i class="ri-questionnaire-line"></i> Post Inquiry
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-white border border-gray-200 rounded-lg flex items-center gap-2 hover:shadow">
+                            <i class="ri-shopping-cart-line"></i> View Orders
+                        </button>
+                        <div class="ml-auto text-sm text-slate-500">Tip: Click <span
+                                class="font-medium text-slate-700">Add Product</span> to list a new item</div>
+                    </div>
+
+                    <!-- Recent Orders (table) -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-slate-800">Recent Orders</h3>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">View all</a>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead class="text-left text-xs text-slate-400 border-b">
+                                    <tr>
+                                        <th class="py-3">Order ID</th>
+                                        <th class="py-3">Product</th>
+                                        <th class="py-3">Supplier</th>
+                                        <th class="py-3">Qty</th>
+                                        <th class="py-3">Status</th>
+                                        <th class="py-3">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b">
+                                        <td class="py-3 font-medium">#A1243</td>
+                                        <td class="py-3">Premium Cotton Shirts</td>
+                                        <td class="py-3">ShirtWorld</td>
+                                        <td class="py-3">120</td>
+                                        <td class="py-3"><span
+                                                class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs">Pending</span>
+                                        </td>
+                                        <td class="py-3">₹56,000</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-3 font-medium">#B5531</td>
+                                        <td class="py-3">Industrial Washer</td>
+                                        <td class="py-3">WashTech Ltd.</td>
+                                        <td class="py-3">2</td>
+                                        <td class="py-3"><span
+                                                class="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs">Shipped</span>
+                                        </td>
+                                        <td class="py-3">₹1,20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 font-medium">#C3322</td>
+                                        <td class="py-3">Laundry Detergent (20L)</td>
+                                        <td class="py-3">CleanSupplies</td>
+                                        <td class="py-3">40</td>
+                                        <td class="py-3"><span
+                                                class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Confirmed</span>
+                                        </td>
+                                        <td class="py-3">₹24,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Activity Feed -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-4">Activity Feed</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center">
+                                    <i class="ri-mail-open-line text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <div class="text-slate-700 font-medium">New message from <span
+                                            class="text-slate-900">ShirtWorld</span></div>
+                                    <div class="text-slate-400">2 hours ago</div>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center">
+                                    <i class="ri-truck-line text-green-600"></i>
+                                </div>
+                                <div>
+                                    <div class="text-slate-700 font-medium">Order #B5531 has been shipped</div>
+                                    <div class="text-slate-400">1 day ago</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Right Sidebar Widgets -->
+                <aside class="space-y-6">
+                    <!-- Profile / Company Card -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm text-center">
+                        <img src="https://i.pravatar.cc/80?u=arbaz" class="mx-auto w-16 h-16 rounded-full mb-3"
+                            alt="avatar">
+                        <div class="text-lg font-semibold text-slate-800">Arbaz Karimi</div>
+                        <div class="text-sm text-slate-400">Buyer • Trade Overseas</div>
+                        <div class="mt-4 flex justify-center gap-3">
+                            <button class="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm">Edit
+                                Profile</button>
+                            <button class="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm">Verify</button>
+                        </div>
+                    </div>
+
+                    <!-- Small Stats -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <div>
+                                <div class="text-xs text-slate-400">Avg. Response Time</div>
+                                <div class="text-sm font-semibold text-slate-800">1.2 hours</div>
+                            </div>
+                            <div class="text-xs text-slate-400">Feedback</div>
+                        </div>
+
+                        <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                            <div style="width:72%" class="h-2 bg-blue-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- Support CTA -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+                        <div class="text-sm text-slate-700 font-medium mb-2">Need help?</div>
+                        <p class="text-xs text-slate-400 mb-4">Contact our support team for order or payment issues.
+                        </p>
+                        <button class="w-full px-3 py-2 bg-indigo-600 text-white rounded-lg">Open Support
+                            Ticket</button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        // Open Sidebar
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.remove('!-left-full');
+            overlay.classList.remove('hidden');
+        });
+
+        // Close Sidebar on Overlay Click
+        overlay.addEventListener('click', () => {
+            sidebar.classList.add('!-left-full');
+            overlay.classList.add('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

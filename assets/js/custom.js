@@ -261,11 +261,11 @@
 // User Account Dropdown: Show on hover and click (for accessibility)
 document.addEventListener("DOMContentLoaded", function () {
   const accountBtn = document.querySelector(
-    ".user-account-dropdown .account-btn"
+    ".user-account-dropdown"
   );
-  const accountMenu = document.getElementById("accountDropdownMenu");
+  const accountMenu = document.querySelector(".account-dropdown-menu");
   const languageBtn = document.querySelector(".language-btn");
-  const languageMenu = document.getElementById("languageDropdownMenu");
+  const languageMenu = document.querySelector(".language-dropdown-menu");
 
   // Toggle account dropdown on click
   if (accountBtn && accountMenu) {

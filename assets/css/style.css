@@ -984,9 +984,9 @@
 .factory-card {
   position: relative;
   overflow: hidden;
-  border-radius: 1rem; /* rounded-2xl */
+  border-radius: 1rem;
   box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
-  background: #f3f4f6; /* bg-gray-100 */
+  background: #f3f4f6;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .factory-card:hover .factory-card-img {
@@ -995,7 +995,7 @@
 
 .factory-card-img {
   width: 100%;
-  height: 16rem; /* h-64 */
+  height: 20rem;
   object-fit: cover;
   transition: transform 0.3s;
   display: block;

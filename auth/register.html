@@ -43,7 +43,7 @@
             </div>
             <!-- Right: Register Form -->
             <div
-                class="col-span-4 xl:col-span-3 w-full sm:max-w-2xl mx-auto lg:w-full flex flex-col overflow-auto p-8 sm:px-10 sm:py-10 bg-white/80 backdrop-blur-lg relative">
+                class="right-form col-span-4 xl:col-span-3 w-full sm:max-w-2xl mx-auto lg:w-full flex flex-col overflow-hidden overflow-auto p-8 sm:px-10 sm:py-10 bg-white/80 backdrop-blur-lg relative">
                 <!-- Overlay -->
                 <div id="registerOverlay"
                     class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white transition-opacity duration-300 px-5">
@@ -115,6 +115,11 @@
                         </button>
                         <button
                             class="flex items-center justify-center gap-2 w-full py-2 border border-gray-200 rounded-lg bg-white hover:bg-gray-50 transition">
+                            <img src="../assets/images/social-media/linkedin.png" class="w-6" alt="linkedin">
+                            <span class="text-sm font-medium text-gray-700">Sign up with Linkedin</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center gap-2 w-full py-2 border border-gray-200 rounded-lg bg-white hover:bg-gray-50 transition">
                             <img src="../assets/images/social-media/facebook.png" class="w-6" alt="facebook">
                             <span class="text-sm font-medium text-gray-700">Sign up with Facebook</span>
                         </button>
@@ -136,9 +141,11 @@
         //register overlay hide on Get Started button click
         document.addEventListener('DOMContentLoaded', function () {
             const register_overlay = document.getElementById('registerOverlay');
+            const right_form = document.querySelector('.right-form');
             const register_overlay_btn = register_overlay.querySelector('.register-overlay-btn');
             register_overlay_btn.addEventListener('click', function () {
                 register_overlay.classList.add('hidden');
+                right_form.classList.remove('overflow-hidden');
             });
         });
     </script>
