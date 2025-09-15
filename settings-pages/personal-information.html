@@ -15,8 +15,8 @@
     <link rel="icon" href="assets/img/fevicon.webp" type="image/png" />
 
     <!-- custom css link -->
-    <link rel="stylesheet" href="assets/css/profile.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/setting.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
 
     <!-- Google Fonts: Inter -->
     <link
@@ -54,32 +54,32 @@
                     </div>
 
                 </div>
-                <nav class="mt-4 px-4 space-y-3">
+                <nav class="mt-4 px-4">
                     <!-- Dashboard Sidebar Menu -->
-                    <ul class="">
+                    <ul class=" space-y-1">
                         <!-- Personal Info -->
                         <li>
-                            <a href="#" class="nav-link"><i class="ri-user-line"></i>Personal Information</a>
+                            <a href="settings-pages/personal-information.html" class="nav-link active"><i class="ri-user-line"></i>Personal Information</a>
                         </li>
 
                         <!-- Orders -->
                         <li>
-                            <a href="#" class="nav-link"><i class="ri-shopping-bag-3-line"></i>Orders</a>
+                            <a href="settings-pages/orders.html" class="nav-link"><i class="ri-shopping-bag-3-line"></i>Orders</a>
                         </li>
 
                         <!-- Wishlist -->
                         <li>
-                            <a href="#" class="nav-link"><i class="ri-heart-line"></i>Wishlist</a>
+                            <a href="settings-pages/wishlist.html" class="nav-link"><i class="ri-heart-line"></i>Wishlist</a>
                         </li>
 
                         <!-- Information -->
                         <li>
-                            <a href="#" class="nav-link"><i class="ri-information-line"></i>Information</a>
+                            <a href="settings-pages/information.html" class="nav-link"><i class="ri-information-line"></i>Information</a>
                         </li>
 
                         <!-- Support -->
                         <li>
-                            <a href="#" class="nav-link"><i class="ri-customer-service-2-line"></i>Support</a>
+                            <a href="settings-pages/support.html" class="nav-link"><i class="ri-customer-service-2-line"></i>Support</a>
                         </li>
 
                         <!-- Home Button -->
@@ -95,8 +95,8 @@
                     <img src="https://i.pravatar.cc/150" alt="Profile"
                         class="w-12 h-12 rounded-full shadow-md object-cover">
                     <div>
-                        <h2 class="text-base font-semibold">Welcome back,</h2>
-                        <p class="text-gray-700 font-medium text-sm">Arbaz Karimi</p>
+                        <h2 class="text-sm md:text-base font-semibold">Welcome back,</h2>
+                        <p class="text-gray-700 font-medium text-xs md:text-sm">Arbaz Karimi</p>
                     </div>
                 </div>
 
@@ -106,11 +106,11 @@
         <!-- Overlay -->
         <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-40"></div>
 
-        <main class="bg-gray-50 py-5 md:py-8 px-5 md:px-8 w-full">
+        <main class="bg-gray-50 w-full pb-10">
 
             <!-- Top Header -->
-            <div class="flex-1">
-                <div class="xl:flex items-center justify-between gap-4 pb-4 border-b hidden">
+            <div class="flex-1 pb-4 pt-6 sticky top-0 z-[999] border-b bg-gray-50 ">
+                <div class="xl:flex items-center justify-between px-5 md:px-8 gap-4hidden">
                     <div>
                         <h2 class="text-lg xl:text-xl font-bold text-slate-800">Welcome back, <span
                                 class="text-blue-500 font-bold">Arbaz</span>
@@ -147,7 +147,7 @@
 
                     </div>
                 </div>
-                <div class="w-full flex justify-between border-b pb-4 xl:hidden">
+                <div class="w-full flex justify-between px-5 md:px-8 xl:hidden">
                     <div class="flex items-center gap-4">
                         <img src="assets/images/logo/logo.webp" alt="logo" class="h-10 hidden">
                         <div class="">
@@ -161,12 +161,12 @@
                 </div>
             </div>
             <!-- Header -->
-            <div class="mb-12 mt-5">
+            <div class="mb-12 mt-5  px-5 md:px-8">
                 <h1 class="text-lg sm:text-xl font-bold text-slate-800">Personal Information</h1>
             </div>
 
             <!-- Content -->
-            <div class="gap-8 flex flex-col items-center">
+            <div class="gap-8 flex flex-col items-center  px-5 md:px-8">
                 <!-- Profile Summary Card -->
                 <div class="w-full flex justify-center flex-col items-center text-center">
                     <div class="relative w-40 h-40 rounded-full border-white shadow-md overflow-hidden">
